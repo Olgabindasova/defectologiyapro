@@ -1,0 +1,546 @@
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./fonts/Lato-Light.woff2) format('woff2'),
+        url(./fonts/Lato-Light.woff) format('woff'),
+        url(./fonts/Lato-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Lato-Regular.woff2) format('woff2'),
+        url(./fonts/Lato-Regular.woff) format('woff'),
+        url(./fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(./fonts/Lato-Medium.woff2) format('woff2'),
+        url(./fonts/Lato-Medium.woff) format('woff'),
+        url(./fonts/Lato-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./fonts/Lato-SemiBold.woff2) format('woff2'),
+        url(./fonts/Lato-SemiBold.woff) format('woff'),
+        url(./fonts/Lato-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/Lato-Bold.woff2) format('woff2'),
+        url(./fonts/Lato-Bold.woff) format('woff'),
+        url(./fonts/Lato-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(./fonts/Lato-ExtraBold.woff2) format('woff2'),
+        url(./fonts/Lato-ExtraBold.woff) format('woff'),
+        url(./fonts/Lato-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(./fonts/Lato-Black.woff2) format('woff2'),
+        url(./fonts/Lato-Black.woff) format('woff'),
+        url(./fonts/Lato-Black.ttf) format('truetype');
+}
+
+:root {
+    --dfp-color-0: #4F6382;
+    --dfp-color-1: #fff;
+    --dfp-color-2: #F9FBFE;
+    --dfp-color-3: #E9F0F6;
+    --dfp-color-4: #889EC1;
+    --dfp-color-5: #1A3055;
+    --dfp-color-6: #3E68A8;
+    --dfp-color-7: #2DC36A;
+    --dfp-color-8: #242424;
+    --dfp-color-9: #66727F;
+    --dfp-shadow: 0px 0px 15px 0px rgba(139, 139, 139, 0.2);
+    --dfp-radius-1: 10px;
+    --dfp-radius-2: 15px;
+    --dfp-radius-3: 20px;
+    --dfp-radius-4: 0px 15px 15px 15px;
+}
+
+/*Шрифты*/
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+    font-family: 'Lato' !important;
+    color: var(--dfp-color-8);
+}
+
+.df-h1 {
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(28px, 4vw, 36px);
+    line-height: clamp(32px, 4.5vw, 38px);
+}
+
+.df-h2 {
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(24px, 3.5vw, 32px);
+    line-height: clamp(28px, 4vw, 36px);
+}
+
+.df-h3 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(22px, 3vw, 28px);
+    line-height: clamp(26px, 3.5vw, 34px);
+}
+
+.df-h4 {
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(20px, 2.8vw, 24px);
+    line-height: clamp(24px, 3.2vw, 28px);
+}
+
+.df-h5 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(20px, 2.8vw, 24px);
+    line-height: clamp(24px, 3.2vw, 28px);
+}
+
+.df-h6 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
+}
+
+.df-p {
+    font-weight: 400;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: clamp(16px, 2.5vw, 18px);
+}
+
+.df-p-card {
+    font-weight: 400;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: clamp(16px, 2.5vw, 18px);
+}
+
+/* Цвет фона */
+.df-bg-0 {
+    background-color: var(--dfp-color-0);
+}
+
+.df-bg-1 {
+    background-color: var(--dfp-color-1);
+}
+
+.df-bg-2 {
+    background-color: var(--dfp-color-2);
+}
+
+.df-bg-3 {
+    background-color: var(--dfp-color-3);
+}
+
+.df-bg-4 {
+    background-color: var(--dfp-color-4);
+}
+
+.df-bg-5 {
+    background-color: var(--dfp-color-5);
+}
+
+.df-bg-6 {
+    background-color: var(--dfp-color-6);
+}
+
+.df-bg-7 {
+    background-color: var(--dfp-color-7);
+}
+
+/* Бордеры */
+.df-bc-0 {
+    border: 1px solid var(--dfp-color-0);
+}
+
+.df-bc-2 {
+    border: 1px solid var(--dfp-color-2);
+}
+
+.df-bc-3 {
+    border: 1px solid var(--dfp-color-3);
+}
+
+.df-bc-4 {
+    border: 1px solid var(--dfp-color-4);
+}
+
+.df-bc-5 {
+    border: 1px solid var(--dfp-color-5);
+}
+
+
+/* Тень*/
+
+.df-shadow {
+    box-shadow: var(--dfp-shadow);
+}
+
+/* Цвет текста*/
+
+.df-tc-1 {
+    color: var(--dfp-color-1);
+}
+
+.df-tc-2 {
+    color: var(--dfp-color-2);
+}
+
+.df-tc-3 {
+    color: var(--dfp-color-3);
+}
+
+.df-tc-4 {
+    color: var(--dfp-color-4);
+}
+
+.df-tc-5 {
+    color: var(--dfp-color-5);
+}
+
+.df-tc-8 {
+    color: var(--dfp-color-8);
+}
+
+.df-tc-9 {
+    color: var(--dfp-color-9);
+}
+
+/* Радиусы*/
+
+.df-brr-1 {
+    border-radius: var(--dfp-radius-1);
+}
+
+.df-brr-2 {
+    border-radius: var(--dfp-radius-2);
+}
+
+.df-brr-3 {
+    border-radius: var(--dfp-radius-3);
+}
+
+.df-brr-4 {
+    border-radius: var(--dfp-radius-4);
+}
+
+/* Кнопки*/
+
+.df-button {
+    border-radius: 0px 15px 15px 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.df-button-1 {
+    background-color: var(--dfp-color-5);
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-1);
+}
+
+.df-button-1:hover {
+    background-color: var(--dfp-color-0);
+    border: 1px solid var(--dfp-color-0);
+}
+
+.df-button-2 {
+    background-color: var(--dfp-color-0);
+    border: 1px solid var(--dfp-color-0);
+    color: var(--dfp-color-1);
+}
+
+.df-button-2:hover {
+    background-color: var(--dfp-color-4);
+    border: 1px solid var(--dfp-color-4);
+}
+
+.df-button-3 {
+    background-color: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5);
+}
+
+.df-button-3:hover {
+    background-color: var(--dfp-color-2);
+    border: 1px solid var(--dfp-color-4);
+    color: var(--dfp-color-0);
+}
+
+.df-button-4 {
+    padding: 10px 0px 5px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: start;
+    width: fit-content;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: clamp(20px, 2.8vw, 24px);
+    white-space: nowrap;
+    color: var(--dfp-color-0);
+    border-bottom: 1px dashed var(--dfp-color-0);
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.df-button-4:hover {
+    border-bottom: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5);
+}
+
+
+.df-button-4.arrow::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234F6382' viewBox='0 0 17 8'%3E%3Cpath d='m13.172.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 1 1-.708-.708L14.793 4.5H1a.5.5 0 1 1 0-1h13.793l-2.329-2.328a.5.5 0 1 1 .708-.708Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 20px;
+    min-width: 20px;
+    height: 15px;
+    content: '';
+    display: block;
+    position: relative;
+    top: 2px;
+    transition: all 0.3s;
+}
+
+.df-button-4:hover.arrow::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231A3055' viewBox='0 0 17 8'%3E%3Cpath d='m13.172.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 1 1-.708-.708L14.793 4.5H1a.5.5 0 1 1 0-1h13.793l-2.329-2.328a.5.5 0 1 1 .708-.708Z'/%3E%3C/svg%3E");
+}
+
+.arrow-r1.arrow::after {
+    transform: rotate(90deg);
+    top: 1px;
+    background-size: 16px;
+}
+
+.arrow-r2.arrow::after {
+    transform: rotate(-90deg);
+    top: 1px;
+    background-size: 16px;
+}
+
+/* Списки*/
+
+.df-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+}
+
+.df-list li {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+}
+
+.df-list li::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232DC36A' viewBox='0 0 20 15'%3E%3Cpath d='M19.546 1.111a1.5 1.5 0 0 1 0 2.121L8.303 14.475a1.6 1.6 0 0 1-2.263 0L.454 8.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L17.424 1.111a1.5 1.5 0 0 1 2.122 0Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 20px;
+    min-width: 20px;
+    height: 15px;
+    content: '';
+    display: block;
+    color: var(--dfp-color-7);
+}
+
+.df-list-1 {
+    padding: 0;
+    list-style: none;
+    counter-reset: li;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.df-list-1 li {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+}
+
+.df-list-1>li>a,
+.df-list-1>li>p {
+    border: 1px solid var(--dfp-color-4);
+    background: var(--dfp-color-2);
+    border-radius: var(--dfp-radius-1);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    padding: 20px 15px 25px 70px;
+    width: 100%;
+    min-width: 100%;
+    display: block;
+    text-decoration: none;
+    color: var(--dfp-color-8);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+}
+
+.df-list-1>li>div {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.df-list-1>li>div>span {
+    background: var(--dfp-color-4);
+    border-radius: var(--dfp-radius-2);
+    color: var(--dfp-color-1);
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 15px;
+    position: relative;
+    display: inline-block;
+    top: -15px;
+    left: -20px;
+    transition-duration: 0.3s;
+    text-align: center;
+}
+
+.df-list-1>li:hover>div>span {
+    background: var(--dfp-color-5);
+}
+
+
+.df-list-1>li:hover>a,
+.df-list-1>li:hover>p {
+    border: 1px solid var(--dfp-color-0);
+    border-radius: var(--dfp-radius-1);
+    color: var(--dfp-color-5);
+    background: var(--dfp-color-3);
+}
+
+.df-list-1 li:before {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    padding: 0px 5px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    font-weight: 700;
+    color: var(--dfp-color-1);
+    background: var(--dfp-color-4);
+    counter-increment: li;
+    content: counter(li);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-align: center;
+    border-radius: var(--dfp-radius-1);
+}
+
+.df-list-1 li:hover:before {
+    background: var(--dfp-color-5);
+    color: var(--dfp-color-1);
+    -webkit-transform: translate(-5px, 0);
+    -ms-transform: translate(-5px, 0);
+    -o-transform: translate(-5px, 0);
+    transform: translate(-5px, 0);
+}
+
+@media (max-width: 600px) {
+
+    .df-list li {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .df-list li::before {
+        background-size: 16px;
+        width: 16px;
+        min-width: 16px;
+        height: 12px;
+    }
+
+    .df-list-1 li:before {
+        top: -20px;
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .df-list-1>li>a,
+    .df-list-1>li>p {
+        padding: 30px 20px 30px 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .df-list-1>li>div>span {
+        font-size: 12px;
+        max-width: 175px;
+        left: -5%;
+    }
+
+    .df-list-1 {
+        gap: 15px;
+    }
+
+    .df-button {
+        font-size: 12px;
+    }
+}
