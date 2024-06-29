@@ -247,6 +247,10 @@ div {
     color: var(--dfp-color-9);
 }
 
+.df-tc-10 {
+    color: var(--dfp-color-0);
+}
+
 /* Радиусы*/
 
 .df-brr-1 {
@@ -506,8 +510,8 @@ div {
 
 
 /* Блоки и карточки*/
-   
-    /* Блоки c кнопкой для обраьной связи*/
+
+/* Блоки c кнопкой для обраьной связи*/
 
 .df-feedback {
     display: flex;
@@ -521,6 +525,7 @@ div {
 .df-feedback>div:nth-child(1) {
     width: 65%;
 }
+
 .df-feedback>button {
     width: 25%;
 }
@@ -538,6 +543,8 @@ div {
     line-height: clamp(20px, 3vw, 24px);
 }
 
+/* Блоки c тизерами */
+
 .df-tizer {
     width: 250px;
     display: flex;
@@ -547,6 +554,7 @@ div {
     padding: 10px;
     justify-content: flex-start;
 }
+
 .df-tizer_svg {
     width: 100px;
     height: 100px;
@@ -556,27 +564,73 @@ div {
     justify-content: center;
     align-items: center;
 }
-.df-tizer_svg>svg{
+
+.df-tizer_svg>svg {
     fill: var(--dfp-color-1);
     width: 50px;
 }
-.df-tizer_text{
+
+.df-tizer_text {
     font-weight: 500;
     font-size: clamp(13px, 1.7vw, 14px);
     line-height: clamp(16px, 2.5vw, 17px);
 }
+
+/* Блоки c номерами*/
+
+.df-block-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.df-block-number {
+    width: 48%;
+}
+
+.df-block-number {
+    padding: 25px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.df-block-number_numeral {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 60px;
+    font-size: clamp(48px, 6vw, 70px);
+    line-height: clamp(44px, 5.5vw, 60px);
+    display: block;
+    position: relative;
+    top: 0px;
+}
+
+.df-block-number_text {
+    font-weight: 500;
+    font-size: clamp(13px, 1.7vw, 15px);
+    line-height: clamp(16px, 2.2vw, 18px);
+}
+
 /* Адаптив*/
 
 
 @media (max-width: 1000px) {
 
-    .df-feedback>div:nth-child(1), .df-feedback>button  {
+    .df-feedback>div:nth-child(1),
+    .df-feedback>button {
         width: 100%;
     }
-    .df-feedback-block-1, .df-feedback-block-2 {
+
+    .df-feedback-block-1,
+    .df-feedback-block-2 {
         text-align: center;
     }
-     
+
+    .df-block-number {
+        width: 100%;
+    }
+
 }
 
 
