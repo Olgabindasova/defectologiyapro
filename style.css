@@ -506,6 +506,8 @@ div {
 
 
 /* Блоки и карточки*/
+   
+    /* Блоки c кнопкой для обраьной связи*/
 
 .df-feedback {
     display: flex;
@@ -535,6 +537,36 @@ div {
     font-size: clamp(16px, 2.5vw, 20px);
     line-height: clamp(20px, 3vw, 24px);
 }
+
+.df-tizer {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    justify-content: flex-start;
+}
+.df-tizer_svg {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+.df-tizer_svg>svg{
+    fill: var(--dfp-color-1);
+    width: 50px;
+}
+.df-tizer_text{
+    font-weight: 500;
+    font-size: clamp(13px, 1.7vw, 14px);
+    line-height: clamp(16px, 2.5vw, 17px);
+}
+/* Адаптив*/
+
 
 @media (max-width: 1000px) {
 
