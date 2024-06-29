@@ -154,6 +154,8 @@ div {
     line-height: clamp(16px, 2.5vw, 18px);
 }
 
+
+
 /* Цвет фона */
 .df-bg-0 {
     background-color: var(--dfp-color-0);
@@ -501,6 +503,50 @@ div {
     -o-transform: translate(-5px, 0);
     transform: translate(-5px, 0);
 }
+
+
+/* Блоки и карточки*/
+
+.df-feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px 40px;
+}
+
+.df-feedback>div:nth-child(1) {
+    width: 65%;
+}
+.df-feedback>button {
+    width: 25%;
+}
+
+.df-feedback-block-1 {
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 26px);
+    line-height: clamp(24px, 3vw, 30px);
+    letter-spacing: 1px;
+}
+
+.df-feedback-block-2 {
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: clamp(20px, 3vw, 24px);
+}
+
+@media (max-width: 1000px) {
+
+    .df-feedback>div:nth-child(1), .df-feedback>button  {
+        width: 100%;
+    }
+    .df-feedback-block-1, .df-feedback-block-2 {
+        text-align: center;
+    }
+     
+}
+
 
 @media (max-width: 600px) {
 
