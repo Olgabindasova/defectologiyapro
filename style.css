@@ -147,7 +147,7 @@ div {
 .df-p {
     font-weight: 400;
     font-size: clamp(14px, 2vw, 16px);
-    line-height: clamp(16px, 2.5vw, 18px);
+    line-height: clamp(20px, 2.5vw, 22px);
 }
 
 .df-p-card {
@@ -393,7 +393,7 @@ div {
 .df-list {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 15px;
     padding: 0;
 }
 
@@ -405,7 +405,7 @@ div {
     display: flex;
     justify-content: flex-start;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .df-list li::before {
@@ -601,7 +601,7 @@ div {
 .df-block-number {
     padding: 25px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 20px;
 }
 
