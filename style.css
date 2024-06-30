@@ -84,6 +84,8 @@
     --dfp-radius-2: 15px;
     --dfp-radius-3: 20px;
     --dfp-radius-4: 0px 15px 15px 15px;
+    --dfp-radius-5: 20px 0px 0px 20px;
+    --dfp-radius-6: 20px 20px 0px 0px;
 }
 
 /*Шрифты*/
@@ -267,6 +269,14 @@ div {
 
 .df-brr-4 {
     border-radius: var(--dfp-radius-4);
+}
+
+.df-brr-5 {
+    border-radius: var(--dfp-radius-5);
+}
+
+.df-brr-6 {
+    border-radius: var(--dfp-radius-6);
 }
 
 /* Кнопки*/
@@ -511,7 +521,7 @@ div {
 
 /* Блоки и карточки*/
 
-/* Блоки c кнопкой для обраьной связи*/
+/* Блоки c кнопкой для обратной связи*/
 
 .df-feedback {
     display: flex;
@@ -603,13 +613,50 @@ div {
     line-height: clamp(44px, 5.5vw, 60px);
     display: block;
     position: relative;
-    top: 0px;
+    top: -3px;
 }
 
 .df-block-number_text {
     font-weight: 500;
     font-size: clamp(13px, 1.7vw, 15px);
     line-height: clamp(16px, 2.2vw, 18px);
+}
+
+/* Блоки c этапами'*/
+
+.df-block-number_stage {
+    padding: 0;
+    gap: 0;
+}
+
+.df-block-number_numeral_stage {
+    height: 100%;
+    top: 0;
+    padding: 20px 30px;
+    font-size: clamp(60px, 7vw, 80px);
+    line-height: clamp(55px, 6.5vw, 75px);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--dfp-radius-5);
+}
+
+.df-block-number_numeral_stage::after {
+    content: 'этап';
+    display: block;
+    position: relative;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
+    font-weight: 700;
+}
+
+.df-block-number_text_stage {
+    padding: 20px;
+}
+
+.df-block-number_text_stage>div {
+    font-weight: 700;
 }
 
 /* Адаптив*/
@@ -674,5 +721,38 @@ div {
 
     .df-button {
         font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .df-block-number_numeral {
+        border-bottom: 1px solid var(--dfp-color-3);
+        width: 100%;
+        padding-bottom: 5px;
+    }
+    .df-block-number {
+        flex-direction: column;
+    }
+
+    .df-block-number_stage {
+        flex-direction: column;
+    }
+    .df-block-number_numeral_stage {
+        border-radius: var(--dfp-radius-6);
+        width: 100%;
+        padding: 15px 30px;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 5px;
+    }
+    .df-block-number_numeral_stage::after {
+        font-size: clamp(32px, 4vw, 40px);
+        line-height: clamp(32px, 4vw, 40px);
+        font-weight: 500;
+    }
+    .df-block-number_text_stage {
+        padding: 20px 30px;
     }
 }
