@@ -632,7 +632,7 @@ div {
 .df-block-number_numeral_stage {
     height: 100%;
     top: 0;
-    padding: 20px 30px;
+    padding: 20px 40px;
     font-size: clamp(60px, 7vw, 80px);
     line-height: clamp(55px, 6.5vw, 75px);
     display: flex;
@@ -659,6 +659,22 @@ div {
     font-weight: 700;
 }
 
+/* Блоки c этапами'*/
+
+.df-block-icon {
+    padding: 0;
+    gap: 0;
+}
+
+.df-block-icon>.df-tizer_svg {
+    min-width: 130px;
+    height: 100%;
+    border-radius: var(--dfp-radius-5);
+}
+
+.df-block-icon>.df-tizer_svg>svg{
+    width: 70px;
+} 
 /* Адаптив*/
 
 
@@ -731,6 +747,7 @@ div {
         width: 100%;
         padding-bottom: 5px;
     }
+
     .df-block-number {
         flex-direction: column;
     }
@@ -738,6 +755,7 @@ div {
     .df-block-number_stage {
         flex-direction: column;
     }
+
     .df-block-number_numeral_stage {
         border-radius: var(--dfp-radius-6);
         width: 100%;
@@ -747,12 +765,20 @@ div {
         flex-direction: row;
         gap: 5px;
     }
+
     .df-block-number_numeral_stage::after {
-        font-size: clamp(32px, 4vw, 40px);
+        font-size: clamp(28px, 4vw, 36px);
         line-height: clamp(32px, 4vw, 40px);
         font-weight: 500;
     }
+
     .df-block-number_text_stage {
         padding: 20px 30px;
+    }
+
+    .df-block-icon>.df-tizer_svg {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--dfp-radius-6);
     }
 }
