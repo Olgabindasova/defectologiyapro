@@ -1,5 +1,5 @@
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 300;
     font-display: swap;
@@ -9,7 +9,7 @@
 }
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 400;
     font-display: swap;
@@ -19,7 +19,7 @@
 }
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 500;
     font-display: swap;
@@ -29,7 +29,7 @@
 }
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 600;
     font-display: swap;
@@ -39,7 +39,7 @@
 }
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 700;
     font-display: swap;
@@ -49,7 +49,7 @@
 }
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 800;
     font-display: swap;
@@ -59,7 +59,7 @@
 }
 
 @font-face {
-    font-family: 'Lato';
+    font-family: 'Lato', sans-serif;
     font-style: normal;
     font-weight: 900;
     font-display: swap;
@@ -88,7 +88,17 @@
     --dfp-radius-6: 20px 20px 0px 0px;
 }
 
+.carousel__button {
+
+    color: var(--dfp-color-1) !important;
+
+}
+
 /*Шрифты*/
+body {
+    color: var(--dfp-color-8);
+}
+
 body,
 h1,
 h2,
@@ -97,44 +107,46 @@ h4,
 h5,
 h6,
 p,
+li,
+span,
 div {
-    font-family: 'Lato' !important;
-    color: var(--dfp-color-8);
+    font-family: 'Lato', sans-serif !important;
+    color: inherit;
 }
 
 .df-h1 {
     font-weight: 700;
     letter-spacing: 0px;
-    font-size: clamp(28px, 4vw, 36px);
-    line-height: clamp(32px, 4.5vw, 38px);
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: clamp(28px, 4.5vw, 38px);
 }
 
 .df-h2 {
     font-weight: 700;
     letter-spacing: 0px;
-    font-size: clamp(24px, 3.5vw, 32px);
-    line-height: clamp(28px, 4vw, 36px);
+    font-size: clamp(22px, 3.5vw, 32px);
+    line-height: clamp(26px, 4vw, 36px);
 }
 
 .df-h3 {
     font-weight: 500;
     letter-spacing: 0px;
-    font-size: clamp(22px, 3vw, 28px);
-    line-height: clamp(26px, 3.5vw, 34px);
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: clamp(24px, 3.5vw, 34px);
 }
 
 .df-h4 {
     font-weight: 700;
     letter-spacing: 0px;
-    font-size: clamp(20px, 2.8vw, 24px);
-    line-height: clamp(24px, 3.2vw, 28px);
+    font-size: clamp(18px, 2.8vw, 24px);
+    line-height: clamp(22px, 3.2vw, 28px);
 }
 
 .df-h5 {
     font-weight: 500;
     letter-spacing: 0px;
-    font-size: clamp(20px, 2.8vw, 24px);
-    line-height: clamp(24px, 3.2vw, 28px);
+    font-size: clamp(18px, 2.8vw, 24px);
+    line-height: clamp(22px, 3.2vw, 28px);
 }
 
 .df-h6 {
@@ -156,7 +168,33 @@ div {
     line-height: clamp(16px, 2.5vw, 18px);
 }
 
+.df-weight-300 {
+    font-weight: 300 !important;
+}
 
+.df-weight-400 {
+    font-weight: 400 !important;
+}
+
+.df-weight-500 {
+    font-weight: 500 !important;
+}
+
+.df-weight-600 {
+    font-weight: 600 !important;
+}
+
+.df-weight-700 {
+    font-weight: 700 !important;
+}
+
+.df-weight-800 {
+    font-weight: 800 !important;
+}
+
+.df-weight-900 {
+    font-weight: 900 !important;
+}
 
 /* Цвет фона */
 .df-bg-0 {
@@ -388,13 +426,23 @@ div {
     background-size: 16px;
 }
 
+.arrow-r3.arrow::after {
+    transform: rotate(-90deg);
+    top: 1px;
+    background-size: 16px;
+}
+
+.df-button-4.arrow.arrow-r1[aria-expanded="true"] {
+    display: none;
+}
+
 /* Списки*/
 
 .df-list {
     display: flex;
     flex-direction: column;
     gap: 15px;
-    padding: 0;
+    padding: 0 0 0 10px;
 }
 
 .df-list li {
@@ -672,13 +720,196 @@ div {
     border-radius: var(--dfp-radius-5);
 }
 
-.df-block-icon>.df-tizer_svg>svg{
+.df-block-icon>.df-tizer_svg>svg {
     width: 70px;
-} 
-/* Адаптив*/
+}
 
+
+/* Блок с рекламой цены*/
+.price-module {
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+.price-module>div:nth-child(1),
+.price-module>div:nth-child(2) {
+    border-right: 1px solid var(--dfp-color-5);
+}
+
+.price-module>div:nth-child(1),
+.price-module>div:nth-child(2) {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.price-module>div:nth-child(3) {
+    width: fit-content;
+}
+
+.price-module>div:nth-child(1)::before {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 25px solid transparent;
+    border-left: 25px solid var(--dfp-color-5);
+    top: 75px;
+    left: 114%;
+    background-image: none;
+    content: '';
+}
+
+.price-module_vig {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    left: 60%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.price-module_vig2 {
+    font-weight: 800;
+    letter-spacing: 0px;
+    font-size: clamp(40px, 5vw, 50px);
+    line-height: clamp(40px, 5.5vw, 50px);
+}
+
+.price-module_procent {
+    font-size: 14px;
+    display: block;
+    position: relative;
+    top: 10px;
+}
+
+/* Картинки с фансибокс*/
+
+.img_pic1 {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    height: 150px;
+    text-decoration: none;
+}
+
+.img_pic1>img {
+    width: 180px;
+}
+
+.zoom-pic1 {
+    position: relative;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: var(--dfp-color-5);
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(233, 240, 246, 0.5);
+    transition: all 0.3s;
+}
+
+.zoom-pic1:hover {
+    background: rgba(233, 240, 246, 1);
+    width: 35px;
+    height: 35px;
+}
+
+.zoom-pic1::after {
+    content: '+';
+    display: block;
+    font-size: 30px;
+    color: var(--dfp-color-5);
+    font-weight: 300;
+    position: relative;
+}
+
+
+
+/* Адаптив*/
+@media (max-width: 1200px) {
+    .price-module {
+        flex-wrap: wrap;
+    }
+
+    .price-module>div:nth-child(1),
+    .price-module>div:nth-child(2) {
+        min-width: 50%;
+        max-width: 400px;
+    }
+
+    .price-module>div:nth-child(1)::before {
+        left: 112.5%;
+    }
+
+    .price-module>div:nth-child(2) {
+        border: 0;
+    }
+
+    .price-module>div:nth-child(3) {
+        width: 100%;
+        margin-top: 50px;
+    }
+}
 
 @media (max-width: 1000px) {
+
+    .price-module>div:nth-child(1),
+    .price-module>div:nth-child(2) {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .price-module>div:nth-child(1) {
+        border-right: 0;
+        border-bottom: 1px solid var(--dfp-color-5);
+        margin-bottom: 50px;
+        padding-right: 0 !important;
+    }
+
+    .price-module>div:nth-child(1)>.df-button {
+        margin-bottom: 20px;
+    }
+
+    .price-module>div:nth-child(1)::before {
+        width: 0;
+        height: 0;
+        display: block;
+        position: relative;
+        border: 25px solid transparent;
+        border-top: 25px solid var(--dfp-color-5);
+        top: 100%;
+        left: 25%;
+        background-image: none;
+        content: '';
+    }
+
+    .price-module>div:nth-child(1)::after {
+        width: 0;
+        height: 0;
+        display: block;
+        position: relative;
+        border: 25px solid transparent;
+        border-top: 25px solid var(--dfp-color-5);
+        top: 50px;
+        left: 25%;
+        background-image: none;
+        content: '';
+        display: none;
+    }
 
     .df-feedback>div:nth-child(1),
     .df-feedback>button {
