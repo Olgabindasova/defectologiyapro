@@ -79,6 +79,7 @@
     --dfp-color-7: #2DC36A;
     --dfp-color-8: #242424;
     --dfp-color-9: #66727F;
+    --dfp-color-10: #FAFCFF;
     --dfp-shadow: 0px 0px 15px 0px rgba(139, 139, 139, 0.2);
     --dfp-radius-1: 10px;
     --dfp-radius-2: 15px;
@@ -788,6 +789,14 @@ div {
     position: relative;
     top: 10px;
 }
+/* Блок с картинками - документы*/
+
+.block-img_pic {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
 
 /* Картинки с фансибокс*/
 
@@ -800,7 +809,7 @@ div {
 }
 
 .img_pic1>img {
-    width: 180px;
+    width: 100%;
 }
 
 .zoom-pic1 {
@@ -837,8 +846,106 @@ div {
     position: relative;
 }
 
+/* Блок с преподавателями*/
 
+.educators-block {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.educator-item {
+    background: var(--dfp-color-10);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 35px;
+    margin-left: 35px;
+    width: 45%;
+    border: 1px solid var(--dfp-color-10);
+    transition: all .5s;
+}
+/*.educator-item:hover {
+    border: 1px solid var(--dfp-color-5);
+}*/
 
+.educator_img {
+    min-width: 0;
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    top: -55px;
+    left: -55px;
+}
+.educator_img-1 {
+    min-width: 105px;
+    width: 105px;
+    height: 105px;
+    display: block;
+    border: 1px solid var(--dfp-color-3);
+}
+.educator_img-1:hover{
+    border: 1px solid var(--dfp-color-5);
+}
+
+.educator-item:has(.educator_img-1:hover) {
+    border: 1px solid var(--dfp-color-5);
+}
+.educator-item:has(.educator_title:hover) {
+    border: 1px solid var(--dfp-color-5);
+}
+ 
+.educator_content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 45px;
+}
+.educator_title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.1vw, 18px);
+    line-height: clamp(20px, 2.8vw, 24px);
+    color: var(--dfp-color-0);
+    align-items: center;
+    text-decoration: none;
+}
+
+.educator_title:hover {
+    color: var(--dfp-color-5);
+}
+ 
+.educator_star {
+    display: flex;
+    color: var(--dfp-color-4);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid var(--dfp-color-4);
+    text-decoration: none;
+    transition: all .5s;
+}
+.educator_star.inactive{
+    display: none;
+}
+.educator_star>svg{
+    fill: var(--dfp-color-4);
+    width: 15px;
+    transition: all .5s;
+}
+.educator_title:hover>.educator_star {
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5);
+}
+.educator_title:hover>.educator_star>svg{
+    fill: var(--dfp-color-5);
+}
 /* Адаптив*/
 @media (max-width: 1200px) {
     .price-module {
@@ -861,11 +968,14 @@ div {
 
     .price-module>div:nth-child(3) {
         width: 100%;
-        margin-top: 50px;
+        margin-top: 30px;
     }
 }
 
 @media (max-width: 1000px) {
+    .educator-item {
+        width: 100%;
+    }
 
     .price-module>div:nth-child(1),
     .price-module>div:nth-child(2) {
@@ -911,6 +1021,18 @@ div {
         display: none;
     }
 
+    .price-module>div:nth-child(2)>div:nth-child(2){
+        align-items: center;
+    }
+    .price-module>div:nth-child(2) {
+        border-bottom: 1px solid var(--dfp-color-5);
+        padding-bottom: 20px;
+    }
+    .price-module_vig {
+        left: 70px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
     .df-feedback>div:nth-child(1),
     .df-feedback>button {
         width: 100%;
@@ -972,7 +1094,11 @@ div {
 }
 
 @media (max-width: 500px) {
-
+    .img_pic1 {
+        width: 260px;
+        padding: 10px;
+        height: 190px;
+    }
     .df-block-number_numeral {
         border-bottom: 1px solid var(--dfp-color-3);
         width: 100%;
