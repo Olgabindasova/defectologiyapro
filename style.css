@@ -80,6 +80,7 @@
     --dfp-color-8: #242424;
     --dfp-color-9: #66727F;
     --dfp-color-10: #FAFCFF;
+    --dfp-color-11: #EAEBEC;
     --dfp-shadow: 0px 0px 15px 0px rgba(139, 139, 139, 0.2);
     --dfp-radius-1: 10px;
     --dfp-radius-2: 15px;
@@ -110,7 +111,11 @@ h6,
 p,
 li,
 span,
-div {
+div,
+button,
+a,
+input,
+label {
     font-family: 'Lato', sans-serif !important;
     color: inherit;
 }
@@ -229,7 +234,10 @@ div {
 .df-bg-7 {
     background-color: var(--dfp-color-7);
 }
-
+.df-bg-tr {
+    background-color: transparent !important;
+    background: transparent !important;
+} 
 /* Бордеры */
 .df-bc-0 {
     border: 1px solid var(--dfp-color-0);
@@ -864,9 +872,7 @@ div {
     border: 1px solid var(--dfp-color-10);
     transition: all .5s;
 }
-/*.educator-item:hover {
-    border: 1px solid var(--dfp-color-5);
-}*/
+
 
 .educator_img {
     min-width: 0;
@@ -877,6 +883,7 @@ div {
     top: -55px;
     left: -55px;
 }
+
 .educator_img-1 {
     min-width: 105px;
     width: 105px;
@@ -884,6 +891,7 @@ div {
     display: block;
     border: 1px solid var(--dfp-color-3);
 }
+
 .educator_img-1:hover{
     border: 1px solid var(--dfp-color-5);
 }
@@ -946,6 +954,151 @@ div {
 .educator_title:hover>.educator_star>svg{
     fill: var(--dfp-color-5);
 }
+
+/* Блок с модулями аккордеон*/
+
+.accordion-modul_header{
+    border-bottom: 1px solid var(--dfp-color-4);
+}
+.accordion-modul>div>.accordion-modul-item_header_bottom, .accordion-modul>div>h2>button {
+    color: var(--dfp-color-9);
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
+}
+.accordion-modul>div>h2>button{
+    border-bottom: 1px solid var(--dfp-color-4);
+}
+.accordion-modul>div>h2>button>div:nth-child(1){
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(24px, 4.2vw, 38px);
+    line-height: clamp(28px, 4.5vw, 38px);
+}
+.accordion-modul>div>h2>button>div:nth-child(2){
+    text-transform: uppercase;
+}
+.accordion-modul>div>h2>button::after{
+    display: block;
+    position: relative;
+    left: -25px;
+    background-image: none;
+    content: '+';
+    font-size: 1.2em;
+}
+.accordion-modul>div>h2>button:not(.collapsed) {
+    color: var(--dfp-color-5);
+    background-color: var(--dfp-color-1);
+    box-shadow: none;
+    border-bottom: 2px solid var(--dfp-color-4);
+}
+.accordion-modul>div>h2>button:not(.collapsed)::after {
+    display: block;
+    position: relative;
+    left: -25px;
+    top:-2px;
+    transform: rotate(0);
+    background-image: none;
+    content: '-';
+    font-size: 1.5em;
+}
+.accordion-modul>div>h2>button:focus, .accordion-modul-educator-item>div>h2>button:focus {
+    box-shadow: none;
+}
+.accordion-modul>div>div.accordion-collapse{
+    padding: 20px 35px 35px 35px;
+}
+.accordion-modul-educator-item_heder {
+    width: 100% !important;
+    background: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-1);
+}
+
+.accordion-modul-educator-item>div>h2>.accordion-button{
+    display: flex;
+    flex-direction: column;
+}
+.accordion-modul-educator-item>div>h2>.accordion-button::after {
+    background-image: none;
+    content: url("/img/Смотретьсодержание.svg");
+    background: var(--dfp-color-4);
+    border-radius: var(--dfp-radius-1);
+    width: 220px;
+    height: fit-content;
+    padding: 5px 20px;
+    position: relative;
+    top: 30px;
+    transition: all 0.5s;
+    margin-top: -45px;
+}
+.accordion-modul-educator-item>div>h2>.accordion-button:hover::after{
+    background: var(--dfp-color-0);
+}
+.accordion-modul-educator-item>div>h2>.accordion-button:not(.collapsed)::after{
+    background-image: none;
+    transform: rotate(0);
+    background: var(--dfp-color-0);
+    content: url("/img/Скрытьсодержание.svg");
+}
+.accordion-modul-educator-item>div>h2>button{
+    border-bottom: 1px solid var(--dfp-color-3);
+}
+.accordion-modul-educator-item>div>h2>button:not(.collapsed) {
+    color: var(--dfp-color-5);
+    background-color: var(--dfp-color-1);
+    box-shadow: none;
+    border-bottom: 1px solid transparent;
+}
+.accordion-modul-educator-item {
+    margin-bottom: 10px;
+}
+.accordion-modul-educator-item>div>div{
+    padding-left: 45px;
+}
+.educator_img>div {
+    min-width: fit-content;
+    width: 105px;
+    text-align: center;
+    background: var(--dfp-color-4);
+}
+.educator_img-2 {
+    min-width: 105px;
+    width: 105px;
+    height: 105px;
+    display: block;
+    border: 1px solid var(--dfp-color-4);
+}
+.educator-modul_title, .educator-modul_footer {
+    color: var(--dfp-color-4);
+}
+.accordion-modul-educator-item_videoclass {
+    border: 1px solid var(--dfp-color-2);
+    text-decoration: none;
+    transition: all 0.5s;
+}
+.accordion-modul-educator-item_videoclass>span{
+    color: var(--dfp-color-4);
+}
+.accordion-modul-educator-item_videoclass:hover{
+    border: 1px solid var(--dfp-color-4);
+    background: var(--dfp-color-1);
+}
+.accordion-modul-educator-item_videoclass:hover>span{
+    color: var(--dfp-color-0);
+}
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder,
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_img>.educator_img-2 {
+    border: 1px solid var(--dfp-color-0);
+}
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_img>div{
+    background: var(--dfp-color-0);
+}
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_content>.educator-modul_title,
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_content>.educator-modul_footer
+ {
+    color: var(--dfp-color-0);
+} 
 /* Адаптив*/
 @media (max-width: 1200px) {
     .price-module {
@@ -1094,6 +1247,31 @@ div {
 }
 
 @media (max-width: 500px) {
+    .accordion-modul-educator-item>div>div {
+        padding-left: 0;
+        width: 110%;
+        position: relative;
+        left: -20px;
+    }
+    .accordion-modul>div>h2>button::after, .accordion-modul>div>h2>button:not(.collapsed)::after {
+        left: -10px;
+    }
+    .educator_img-1, .educator_img-2 {
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+    }
+    .educator_img>div {
+        width: 80px;
+    }
+    .educator_content {
+        padding: 0 0 0 15px;
+    }
+    .educator_title {
+        align-items: flex-start;
+        text-decoration: none;
+        flex-direction: column;
+    }
     .img_pic1 {
         width: 260px;
         padding: 10px;
