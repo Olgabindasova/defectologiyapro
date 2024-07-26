@@ -1021,7 +1021,7 @@ label {
 }
 .accordion-modul-educator-item>div>h2>.accordion-button::after {
     background-image: none;
-    content: url("/img/Смотретьсодержание.svg");
+    content: url("https://www.defectologiya.pro/assets/images/svg/Смотретьсодержание.svg");
     background: var(--dfp-color-4);
     border-radius: var(--dfp-radius-1);
     width: 220px;
@@ -1039,7 +1039,7 @@ label {
     background-image: none;
     transform: rotate(0);
     background: var(--dfp-color-0);
-    content: url("/img/Скрытьсодержание.svg");
+    content: url("https://www.defectologiya.pro/assets/images/svg/Скрытьсодержание.svg");
 }
 .accordion-modul-educator-item>div>h2>button{
     border-bottom: 1px solid var(--dfp-color-3);
