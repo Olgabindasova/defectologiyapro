@@ -1,0 +1,1431 @@
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-display: swap;
+    src: url(./fonts/Lato-Light.woff2) format('woff2'),
+        url(./fonts/Lato-Light.woff) format('woff'),
+        url(./fonts/Lato-Light.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./fonts/Lato-Regular.woff2) format('woff2'),
+        url(./fonts/Lato-Regular.woff) format('woff'),
+        url(./fonts/Lato-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url(./fonts/Lato-Medium.woff2) format('woff2'),
+        url(./fonts/Lato-Medium.woff) format('woff'),
+        url(./fonts/Lato-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url(./fonts/Lato-SemiBold.woff2) format('woff2'),
+        url(./fonts/Lato-SemiBold.woff) format('woff'),
+        url(./fonts/Lato-SemiBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url(./fonts/Lato-Bold.woff2) format('woff2'),
+        url(./fonts/Lato-Bold.woff) format('woff'),
+        url(./fonts/Lato-Bold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-display: swap;
+    src: url(./fonts/Lato-ExtraBold.woff2) format('woff2'),
+        url(./fonts/Lato-ExtraBold.woff) format('woff'),
+        url(./fonts/Lato-ExtraBold.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-display: swap;
+    src: url(./fonts/Lato-Black.woff2) format('woff2'),
+        url(./fonts/Lato-Black.woff) format('woff'),
+        url(./fonts/Lato-Black.ttf) format('truetype');
+}
+
+:root {
+    --dfp-color-0: #4F6382;
+    --dfp-color-1: #fff;
+    --dfp-color-2: #F9FBFE;
+    --dfp-color-3: #E9F0F6;
+    --dfp-color-4: #889EC1;
+    --dfp-color-5: #1A3055;
+    --dfp-color-6: #3E68A8;
+    --dfp-color-7: #2DC36A;
+    --dfp-color-8: #242424;
+    --dfp-color-9: #66727F;
+    --dfp-color-10: #FAFCFF;
+    --dfp-color-11: #EAEBEC;
+    --dfp-shadow: 0px 0px 15px 0px rgba(139, 139, 139, 0.2);
+    --dfp-radius-1: 10px;
+    --dfp-radius-2: 15px;
+    --dfp-radius-3: 20px;
+    --dfp-radius-4: 0px 15px 15px 15px;
+    --dfp-radius-5: 20px 0px 0px 20px;
+    --dfp-radius-6: 20px 20px 0px 0px;
+}
+
+.carousel__button {
+
+    color: var(--dfp-color-1) !important;
+
+}
+
+/*Шрифты*/
+body {
+    color: var(--dfp-color-8);
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+span,
+div,
+button,
+a,
+input,
+label {
+    font-family: 'Lato', sans-serif !important;
+    color: inherit;
+}
+
+.df-h1 {
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(24px, 4vw, 36px);
+    line-height: clamp(28px, 4.5vw, 38px);
+}
+
+.df-h2 {
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(22px, 3.5vw, 32px);
+    line-height: clamp(26px, 4vw, 36px);
+}
+
+.df-h3 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(20px, 3vw, 28px);
+    line-height: clamp(24px, 3.5vw, 34px);
+}
+
+.df-h4 {
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(18px, 2.8vw, 24px);
+    line-height: clamp(22px, 3.2vw, 28px);
+}
+
+.df-h5 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(18px, 2.8vw, 24px);
+    line-height: clamp(22px, 3.2vw, 28px);
+}
+
+.df-h6 {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
+}
+
+.df-p {
+    font-weight: 400;
+    font-size: clamp(14px, 2vw, 16px);
+    line-height: clamp(20px, 2.5vw, 22px);
+}
+
+.df-p-card {
+    font-weight: 400;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: clamp(16px, 2.5vw, 18px);
+}
+
+.df-weight-300 {
+    font-weight: 300 !important;
+}
+
+.df-weight-400 {
+    font-weight: 400 !important;
+}
+
+.df-weight-500 {
+    font-weight: 500 !important;
+}
+
+.df-weight-600 {
+    font-weight: 600 !important;
+}
+
+.df-weight-700 {
+    font-weight: 700 !important;
+}
+
+.df-weight-800 {
+    font-weight: 800 !important;
+}
+
+.df-weight-900 {
+    font-weight: 900 !important;
+}
+
+/* Цвет фона */
+.df-bg-0 {
+    background-color: var(--dfp-color-0);
+}
+
+.df-bg-1 {
+    background-color: var(--dfp-color-1);
+}
+
+.df-bg-2 {
+    background-color: var(--dfp-color-2);
+}
+
+.df-bg-3 {
+    background-color: var(--dfp-color-3);
+}
+
+.df-bg-4 {
+    background-color: var(--dfp-color-4);
+}
+
+.df-bg-5 {
+    background-color: var(--dfp-color-5);
+}
+
+.df-bg-6 {
+    background-color: var(--dfp-color-6);
+}
+
+.df-bg-7 {
+    background-color: var(--dfp-color-7);
+}
+
+.df-bg-tr {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+/* Бордеры */
+.df-bc-0 {
+    border: 1px solid var(--dfp-color-0);
+}
+
+.df-bc-2 {
+    border: 1px solid var(--dfp-color-2);
+}
+
+.df-bc-3 {
+    border: 1px solid var(--dfp-color-3);
+}
+
+.df-bc-4 {
+    border: 1px solid var(--dfp-color-4);
+}
+
+.df-bc-5 {
+    border: 1px solid var(--dfp-color-5);
+}
+
+
+/* Тень*/
+
+.df-shadow {
+    box-shadow: var(--dfp-shadow);
+}
+
+/* Цвет текста*/
+
+.df-tc-1 {
+    color: var(--dfp-color-1);
+}
+
+.df-tc-2 {
+    color: var(--dfp-color-2);
+}
+
+.df-tc-3 {
+    color: var(--dfp-color-3);
+}
+
+.df-tc-4 {
+    color: var(--dfp-color-4);
+}
+
+.df-tc-5 {
+    color: var(--dfp-color-5);
+}
+
+.df-tc-8 {
+    color: var(--dfp-color-8);
+}
+
+.df-tc-9 {
+    color: var(--dfp-color-9);
+}
+
+.df-tc-10 {
+    color: var(--dfp-color-0);
+}
+
+/* Радиусы*/
+
+.df-brr-1 {
+    border-radius: var(--dfp-radius-1);
+}
+
+.df-brr-2 {
+    border-radius: var(--dfp-radius-2);
+}
+
+.df-brr-3 {
+    border-radius: var(--dfp-radius-3);
+}
+
+.df-brr-4 {
+    border-radius: var(--dfp-radius-4);
+}
+
+.df-brr-5 {
+    border-radius: var(--dfp-radius-5);
+}
+
+.df-brr-6 {
+    border-radius: var(--dfp-radius-6);
+}
+
+/* Кнопки*/
+
+.df-button {
+    border-radius: 0px 15px 15px 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.df-button-1 {
+    background-color: var(--dfp-color-5);
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-1);
+}
+
+.df-button-1:hover {
+    background-color: var(--dfp-color-0);
+    border: 1px solid var(--dfp-color-0);
+}
+
+.df-button-2 {
+    background-color: var(--dfp-color-0);
+    border: 1px solid var(--dfp-color-0);
+    color: var(--dfp-color-1);
+}
+
+.df-button-2:hover {
+    background-color: var(--dfp-color-4);
+    border: 1px solid var(--dfp-color-4);
+}
+
+.df-button-3 {
+    background-color: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5);
+}
+
+.df-button-3:hover {
+    background-color: var(--dfp-color-2);
+    border: 1px solid var(--dfp-color-4);
+    color: var(--dfp-color-0);
+}
+
+.df-button-4 {
+    padding: 10px 0px 5px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.3s;
+    display: flex;
+    justify-content: start;
+    width: fit-content;
+    font-weight: 400;
+    font-size: clamp(16px, 2vw, 18px);
+    line-height: clamp(20px, 2.8vw, 24px);
+    white-space: nowrap;
+    color: var(--dfp-color-0);
+    border-bottom: 1px dashed var(--dfp-color-0);
+    background-color: transparent;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    gap: 10px;
+    align-items: center;
+}
+
+.df-button-4:hover {
+    border-bottom: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5);
+}
+
+
+.df-button-4.arrow::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234F6382' viewBox='0 0 17 8'%3E%3Cpath d='m13.172.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 1 1-.708-.708L14.793 4.5H1a.5.5 0 1 1 0-1h13.793l-2.329-2.328a.5.5 0 1 1 .708-.708Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 20px;
+    min-width: 20px;
+    height: 15px;
+    content: '';
+    display: block;
+    position: relative;
+    top: 2px;
+    transition: all 0.3s;
+}
+
+.df-button-4:hover.arrow::after {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231A3055' viewBox='0 0 17 8'%3E%3Cpath d='m13.172.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 1 1-.708-.708L14.793 4.5H1a.5.5 0 1 1 0-1h13.793l-2.329-2.328a.5.5 0 1 1 .708-.708Z'/%3E%3C/svg%3E");
+}
+
+.arrow-r1.arrow::after {
+    transform: rotate(90deg);
+    top: 1px;
+    background-size: 16px;
+}
+
+.arrow-r2.arrow::after {
+    transform: rotate(-90deg);
+    top: 1px;
+    background-size: 16px;
+}
+
+.arrow-r3.arrow::after {
+    transform: rotate(-90deg);
+    top: 1px;
+    background-size: 16px;
+}
+
+.df-button-4.arrow.arrow-r1[aria-expanded="true"] {
+    display: none;
+}
+
+/* Списки*/
+
+.df-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 0 0 0 10px;
+    margin-bottom: 0;
+}
+
+.df-list li {
+    list-style-type: none;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.df-list li::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232DC36A' viewBox='0 0 20 15'%3E%3Cpath d='M19.546 1.111a1.5 1.5 0 0 1 0 2.121L8.303 14.475a1.6 1.6 0 0 1-2.263 0L.454 8.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L17.424 1.111a1.5 1.5 0 0 1 2.122 0Z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+    width: 20px;
+    min-width: 20px;
+    height: 15px;
+    content: '';
+    display: block;
+    color: var(--dfp-color-7);
+}
+
+.df-list-1 {
+    padding: 0;
+    list-style: none;
+    counter-reset: li;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.df-list-1 li {
+    position: relative;
+    width: 100%;
+    min-width: 100%;
+}
+
+.df-list-1>li>a,
+.df-list-1>li>p {
+    border: 1px solid var(--dfp-color-4);
+    background: var(--dfp-color-2);
+    border-radius: var(--dfp-radius-1);
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    padding: 20px 15px 25px 70px;
+    width: 100%;
+    min-width: 100%;
+    display: block;
+    text-decoration: none;
+    color: var(--dfp-color-8);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 22px;
+    margin: 0;
+}
+
+.df-list-1>li>div {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.df-list-1>li>div>span {
+    background: var(--dfp-color-4);
+    border-radius: var(--dfp-radius-2);
+    color: var(--dfp-color-1);
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 500;
+    padding: 5px 15px;
+    position: relative;
+    display: inline-block;
+    top: -15px;
+    left: -20px;
+    transition-duration: 0.3s;
+    text-align: center;
+}
+
+.df-list-1>li:hover>div>span {
+    background: var(--dfp-color-5);
+}
+
+
+.df-list-1>li:hover>a,
+.df-list-1>li:hover>p {
+    border: 1px solid var(--dfp-color-0);
+    border-radius: var(--dfp-radius-1);
+    color: var(--dfp-color-5);
+    background: var(--dfp-color-3);
+}
+
+.df-list-1 li:before {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    padding: 0px 5px;
+    font-size: 24px;
+    width: 40px;
+    height: 40px;
+    font-weight: 700;
+    color: var(--dfp-color-1);
+    background: var(--dfp-color-4);
+    counter-increment: li;
+    content: counter(li);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    text-align: center;
+    border-radius: var(--dfp-radius-1);
+}
+
+.df-list-1 li:hover:before {
+    background: var(--dfp-color-5);
+    color: var(--dfp-color-1);
+    -webkit-transform: translate(-5px, 0);
+    -ms-transform: translate(-5px, 0);
+    -o-transform: translate(-5px, 0);
+    transform: translate(-5px, 0);
+}
+
+
+/* Блоки и карточки*/
+
+/* Блоки c кнопкой для обратной связи*/
+
+.df-feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px 40px;
+}
+
+.df-feedback>div:nth-child(1) {
+    width: 65%;
+}
+
+.df-feedback>button {
+    width: 25%;
+}
+
+.df-feedback-block-1 {
+    font-weight: 800;
+    font-size: clamp(22px, 3vw, 26px);
+    line-height: clamp(24px, 3vw, 30px);
+    letter-spacing: 1px;
+}
+
+.df-feedback-block-2 {
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20px);
+    line-height: clamp(20px, 3vw, 24px);
+}
+
+/* Блоки c тизерами */
+
+.df-tizer {
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+    justify-content: flex-start;
+}
+
+.df-tizer_svg {
+    width: 100px;
+    height: 100px;
+    padding: 20px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.df-tizer_svg>svg {
+    fill: var(--dfp-color-1);
+    width: 50px;
+}
+
+.df-tizer_text {
+    font-weight: 500;
+    font-size: clamp(13px, 1.7vw, 14px);
+    line-height: clamp(16px, 2.5vw, 17px);
+}
+
+/* Блоки c номерами*/
+
+.df-block-numbers {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.df-block-number {
+    width: 48%;
+}
+
+.df-block-number {
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.df-block-number_numeral {
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 60px;
+    font-size: clamp(48px, 6vw, 70px);
+    line-height: clamp(44px, 5.5vw, 60px);
+    display: block;
+    position: relative;
+    top: -3px;
+}
+
+.df-block-number_text {
+    font-weight: 500;
+    font-size: clamp(13px, 1.7vw, 15px);
+    line-height: clamp(16px, 2.2vw, 18px);
+}
+
+/* Блоки c этапами'*/
+
+.df-block-number_stage {
+    padding: 0;
+    gap: 0;
+}
+
+.df-block-number_numeral_stage {
+    height: 100%;
+    top: 0;
+    padding: 20px 40px;
+    font-size: clamp(60px, 7vw, 80px);
+    line-height: clamp(55px, 6.5vw, 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: var(--dfp-radius-5);
+}
+
+.df-block-number_numeral_stage::after {
+    content: 'этап';
+    display: block;
+    position: relative;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
+    font-weight: 700;
+}
+
+.df-block-number_text_stage {
+    padding: 20px;
+}
+
+.df-block-number_text_stage>div {
+    font-weight: 700;
+}
+
+/* Блоки c этапами'*/
+
+.df-block-icon {
+    padding: 0;
+    gap: 0;
+}
+
+.df-block-icon>.df-tizer_svg {
+    min-width: 130px;
+    height: 100%;
+    border-radius: var(--dfp-radius-5);
+}
+
+.df-block-icon>.df-tizer_svg>svg {
+    width: 70px;
+}
+
+
+/* Блок с рекламой цены*/
+.price-module {
+    padding: 35px;
+    display: flex;
+    flex-direction: row;
+}
+
+.price-module>div:nth-child(1),
+.price-module>div:nth-child(2) {
+    border-right: 1px solid var(--dfp-color-5);
+}
+
+.price-module>div:nth-child(1),
+.price-module>div:nth-child(2) {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.price-module>div:nth-child(3) {
+    width: fit-content;
+}
+
+.price-module>div:nth-child(1)::before {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 25px solid transparent;
+    border-left: 25px solid var(--dfp-color-5);
+    top: 75px;
+    left: 114%;
+    background-image: none;
+    content: '';
+}
+
+.price-module_vig {
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    height: 120px;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    left: 60%;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.price-module_vig2 {
+    font-weight: 800;
+    letter-spacing: 0px;
+    font-size: clamp(40px, 5vw, 50px);
+    line-height: clamp(40px, 5.5vw, 50px);
+}
+
+.price-module_procent {
+    font-size: 14px;
+    display: block;
+    position: relative;
+    top: 10px;
+}
+
+/* Блок с картинками - документы*/
+
+.block-img_pic {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Картинки с фансибокс*/
+
+.img_pic1 {
+    display: block;
+    width: 200px;
+    padding: 10px;
+    height: 150px;
+    text-decoration: none;
+}
+
+.img_pic1>img {
+    width: 100%;
+}
+
+.zoom-pic1 {
+    position: relative;
+    left: 50%;
+    top: -50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 1px solid;
+    border-color: var(--dfp-color-5);
+    padding: 10px;
+    width: 30px;
+    height: 30px;
+    background: rgba(233, 240, 246, 0.5);
+    transition: all 0.3s;
+}
+
+.zoom-pic1:hover {
+    background: rgba(233, 240, 246, 1);
+    width: 35px;
+    height: 35px;
+}
+
+.zoom-pic1::after {
+    content: '+';
+    display: block;
+    font-size: 30px;
+    color: var(--dfp-color-5);
+    font-weight: 300;
+    position: relative;
+}
+
+/* Блок с преподавателями*/
+
+.educators-block {
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.educator-item {
+    background: var(--dfp-color-10);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 35px;
+    margin-left: 35px;
+    width: 45%;
+    border: 1px solid var(--dfp-color-10);
+    transition: all .5s;
+}
+
+
+.educator_img {
+    min-width: 0;
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    top: -55px;
+    left: -55px;
+}
+
+.educator_img-1 {
+    min-width: 105px;
+    width: 105px;
+    height: 105px;
+    display: block;
+    border: 1px solid var(--dfp-color-3);
+}
+
+.educator_img-1:hover {
+    border: 1px solid var(--dfp-color-5);
+}
+
+.educator-item:has(.educator_img-1:hover) {
+    border: 1px solid var(--dfp-color-5);
+}
+
+.educator-item:has(.educator_title:hover) {
+    border: 1px solid var(--dfp-color-5);
+}
+
+.educator_content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 45px;
+}
+
+.educator_title {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.1vw, 18px);
+    line-height: clamp(20px, 2.8vw, 24px);
+    color: var(--dfp-color-0);
+    align-items: center;
+    text-decoration: none;
+}
+
+.educator_title:hover {
+    color: var(--dfp-color-5);
+}
+
+.educator_star {
+    display: flex;
+    color: var(--dfp-color-4);
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 10px;
+    padding: 5px 10px;
+    border: 1px solid var(--dfp-color-4);
+    text-decoration: none;
+    transition: all .5s;
+}
+
+.educator_star.inactive {
+    display: none;
+}
+
+.educator_star>svg {
+    fill: var(--dfp-color-4);
+    width: 15px;
+    transition: all .5s;
+}
+
+.educator_title:hover>.educator_star {
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5);
+}
+
+.educator_title:hover>.educator_star>svg {
+    fill: var(--dfp-color-5);
+}
+
+/* Блок с модулями аккордеон*/
+
+.accordion-modul_header {
+    border-bottom: 1px solid var(--dfp-color-4);
+}
+
+.accordion-modul>div>.accordion-modul-item_header_bottom,
+.accordion-modul>div>h2>button {
+    color: var(--dfp-color-9);
+    font-weight: 400;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
+}
+
+.accordion-modul>div>h2>button {
+    border-bottom: 1px solid var(--dfp-color-4);
+}
+
+.accordion-modul>div>h2>button>div:nth-child(1) {
+    font-weight: 500;
+    letter-spacing: 0px;
+    font-size: clamp(24px, 4.2vw, 38px);
+    line-height: clamp(28px, 4.5vw, 38px);
+}
+
+.accordion-modul>div>h2>button>div:nth-child(2) {
+    text-transform: uppercase;
+}
+
+.accordion-modul>div>h2>button::after {
+    display: block;
+    position: relative;
+    left: -25px;
+    background-image: none;
+    content: '+';
+    font-size: 1.2em;
+}
+
+.accordion-modul>div>h2>button:not(.collapsed) {
+    color: var(--dfp-color-5);
+    background-color: var(--dfp-color-1);
+    box-shadow: none;
+    border-bottom: 2px solid var(--dfp-color-4);
+}
+
+.accordion-modul>div>h2>button:not(.collapsed)::after {
+    display: block;
+    position: relative;
+    left: -25px;
+    top: -2px;
+    transform: rotate(0);
+    background-image: none;
+    content: '-';
+    font-size: 1.5em;
+}
+
+.accordion-modul>div>h2>button:focus,
+.accordion-modul-educator-item>div>h2>button:focus {
+    box-shadow: none;
+}
+
+.accordion-modul-educator-item_heder {
+    width: 100% !important;
+    background: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-1);
+}
+
+.accordion-modul-educator-item>div>h2>.accordion-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.accordion-modul-educator-item>div>h2>.accordion-button::after {
+    background-image: none;
+    content: url("https://www.defectologiya.pro/assets/images/svg/Смотретьсодержание.svg");
+    background: var(--dfp-color-4);
+    border-radius: var(--dfp-radius-1);
+    width: 220px;
+    height: fit-content;
+    padding: 5px 20px;
+    position: relative;
+    top: 30px;
+    transition: all 0.5s;
+    margin-top: -45px;
+}
+
+.accordion-modul-educator-item>div>h2>.accordion-button:hover::after {
+    background: var(--dfp-color-0);
+}
+
+.accordion-modul-educator-item>div>h2>.accordion-button:not(.collapsed)::after {
+    background-image: none;
+    transform: rotate(0);
+    background: var(--dfp-color-0);
+    content: url("https://www.defectologiya.pro/assets/images/svg/Скрытьсодержание.svg");
+}
+
+.accordion-modul-educator-item>div>h2>button {
+    border-bottom: 1px solid var(--dfp-color-3);
+}
+
+.accordion-modul-educator-item>div>h2>button:not(.collapsed) {
+    color: var(--dfp-color-5);
+    background-color: var(--dfp-color-1);
+    box-shadow: none;
+    border-bottom: 1px solid transparent;
+}
+
+.accordion-modul-educator-item {
+    padding: 20px 35px 55px 35px;
+}
+
+.accordion-modul-educator-item>div>div {
+    padding-left: 45px;
+}
+
+.educator_img>div {
+    min-width: fit-content;
+    width: 105px;
+    text-align: center;
+    background: var(--dfp-color-4);
+}
+
+.educator_img-2 {
+    min-width: 105px;
+    width: 105px;
+    height: 105px;
+    display: block;
+    border: 1px solid var(--dfp-color-4);
+}
+
+.educator-modul_title,
+.educator-modul_footer {
+    color: var(--dfp-color-4);
+}
+
+.accordion-modul-educator-item_videoclass {
+    border: 1px solid var(--dfp-color-2);
+    text-decoration: none;
+    transition: all 0.5s;
+    color: var(--dfp-color-9) !important;
+    width: 95%;
+    margin: auto;
+}
+
+.accordion-modul-educator-item_videoclass>span {
+    color: var(--dfp-color-4);
+}
+
+.accordion-modul-educator-item_videoclass:hover,
+a.accordion-modul-educator-item_videoclass:hover {
+    border: 1px solid var(--dfp-color-4);
+    background: var(--dfp-color-1);
+    color: var(--dfp-color-9) !important;
+}
+
+.accordion-modul-educator-item_videoclass:hover>span {
+    color: var(--dfp-color-0);
+}
+
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder,
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_img>.educator_img-2 {
+    border: 1px solid var(--dfp-color-0);
+}
+
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_img>div {
+    background: var(--dfp-color-0);
+}
+
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_content>.educator-modul_title,
+.accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_content>.educator-modul_footer {
+    color: var(--dfp-color-0);
+}
+
+/* Блок с востребованостью и практикой, элементы с тизерами*/
+
+.practice-tizer {
+    width: 135px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    position: relative;
+    top: -50px;
+    height: 130px;
+}
+
+.practice-tizer>.df-p-card {
+    text-align: end;
+}
+
+.practice-tizer_img {
+    width: 190px;
+    position: relative;
+    height: 140px;
+}
+
+.df-tizer_svg_practice>img {
+    width: 100px;
+}
+
+/* Адаптив*/
+@media (max-width: 1200px) {
+    .price-module {
+        flex-wrap: wrap;
+    }
+
+    .price-module>div:nth-child(1),
+    .price-module>div:nth-child(2) {
+        min-width: 50%;
+        max-width: 400px;
+    }
+
+    .price-module>div:nth-child(1)::before {
+        left: 112.5%;
+    }
+
+    .price-module>div:nth-child(2) {
+        border: 0;
+    }
+
+    .price-module>div:nth-child(3) {
+        width: 100%;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .educator-item {
+        width: 100%;
+    }
+
+    .price-module>div:nth-child(1),
+    .price-module>div:nth-child(2) {
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .price-module>div:nth-child(1) {
+        border-right: 0;
+        border-bottom: 1px solid var(--dfp-color-5);
+        margin-bottom: 50px;
+        padding-right: 0 !important;
+    }
+
+    .price-module>div:nth-child(1)>.df-button {
+        margin-bottom: 20px;
+    }
+
+    .price-module>div:nth-child(1)::before {
+        width: 0;
+        height: 0;
+        display: block;
+        position: relative;
+        border: 25px solid transparent;
+        border-top: 25px solid var(--dfp-color-5);
+        top: 100%;
+        left: 25%;
+        background-image: none;
+        content: '';
+    }
+
+    .price-module>div:nth-child(1)::after {
+        width: 0;
+        height: 0;
+        display: block;
+        position: relative;
+        border: 25px solid transparent;
+        border-top: 25px solid var(--dfp-color-5);
+        top: 50px;
+        left: 25%;
+        background-image: none;
+        content: '';
+        display: none;
+    }
+
+    .price-module>div:nth-child(2)>div:nth-child(2) {
+        align-items: center;
+    }
+
+    .price-module>div:nth-child(2) {
+        border-bottom: 1px solid var(--dfp-color-5);
+        padding-bottom: 20px;
+    }
+
+    .price-module_vig {
+        left: 70px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .df-feedback>div:nth-child(1),
+    .df-feedback>button {
+        width: 100%;
+    }
+
+    .df-feedback-block-1,
+    .df-feedback-block-2 {
+        text-align: center;
+    }
+
+    .df-block-number {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 992px) {
+    .practice-tizer {
+        width: 265px;
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        position: relative;
+        top: 25px;
+        right: 70px;
+        height: 0;
+        flex-direction: row;
+        margin-bottom: 15px;
+    }
+
+    .practice-tizer>.df-p-card {
+        text-align: left;
+    }
+    .practice-tizer_img {
+        width: 120px;
+        position: relative;
+        height: 90px;
+        padding: 10px;
+    }
+
+    .df-tizer_svg_practice>img {
+        width: 70px;
+    }
+}
+
+@media (max-width: 600px) {
+    .practice-tizer {
+        right: 0px;
+    }
+
+    .df-list li {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+    .df-list li::before {
+        background-size: 16px;
+        width: 16px;
+        min-width: 16px;
+        height: 12px;
+    }
+
+    .df-list-1 li:before {
+        top: -20px;
+        font-size: 20px;
+        width: 35px;
+        height: 35px;
+    }
+
+    .df-list-1>li>a,
+    .df-list-1>li>p {
+        padding: 30px 20px 30px 30px;
+        font-size: 15px;
+        line-height: 20px;
+    }
+
+    .df-list-1>li>div>span {
+        font-size: 12px;
+        max-width: 175px;
+        left: -5%;
+    }
+
+    .df-list-1 {
+        gap: 15px;
+    }
+
+    .df-button {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 500px) {
+    .accordion-modul-educator-item>div>div {
+        padding-left: 0;
+        width: 110%;
+        position: relative;
+        left: -20px;
+    }
+
+    .accordion-modul>div>h2>button::after,
+    .accordion-modul>div>h2>button:not(.collapsed)::after {
+        left: -10px;
+    }
+
+    .educator_img-1,
+    .educator_img-2 {
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .educator_img>div {
+        width: 80px;
+    }
+
+    .educator_content {
+        padding: 0 0 0 15px;
+    }
+
+    .educator_title {
+        align-items: flex-start;
+        text-decoration: none;
+        flex-direction: column;
+    }
+
+    .img_pic1 {
+        width: 260px;
+        padding: 10px;
+        height: 190px;
+    }
+
+    .df-block-number_numeral {
+        border-bottom: 1px solid var(--dfp-color-3);
+        width: 100%;
+        padding-bottom: 5px;
+    }
+
+    .df-block-number {
+        flex-direction: column;
+    }
+
+    .df-block-number_stage {
+        flex-direction: column;
+    }
+
+    .df-block-number_numeral_stage {
+        border-radius: var(--dfp-radius-6);
+        width: 100%;
+        padding: 15px 30px;
+        justify-content: flex-start;
+        align-items: flex-end;
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .df-block-number_numeral_stage::after {
+        font-size: clamp(28px, 4vw, 36px);
+        line-height: clamp(32px, 4vw, 40px);
+        font-weight: 500;
+    }
+
+    .df-block-number_text_stage {
+        padding: 20px 30px;
+    }
+
+    .df-block-icon>.df-tizer_svg {
+        width: 100%;
+        height: 100%;
+        border-radius: var(--dfp-radius-6);
+    }
+}
