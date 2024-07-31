@@ -1200,17 +1200,40 @@ a.accordion-modul-educator-item_videoclass:hover {
     position: relative;
     right: 40px;
 }
+
 .block-img-doc_img-text {
     right: 45px;
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
+
+
+.discounts-training {
+    border-top: 1px solid var(--dfp-color-5);
+    max-width: 700px;
+}
+
+.discounts-training::before {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 25px solid transparent;
+    border-top: 25px solid var(--dfp-color-5);
+    top: 100%;
+    left: 25%;
+    background-image: none;
+    content: '';
+}
+
+
 /* Адаптив*/
 @media (max-width: 1200px) {
     .block-img {
-    width: 100%;
+        width: 100%;
     }
+
     .price-module {
         flex-wrap: wrap;
     }
@@ -1320,9 +1343,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     .block-img-doc_img-text {
         gap: 15px;
     }
+
     .img_pic2>.practice-tizer_img>img {
         width: 70%;
     }
+
     .practice-tizer {
         width: 265px;
         display: flex;
@@ -1339,6 +1364,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .practice-tizer>.df-p-card {
         text-align: left;
     }
+
     .practice-tizer_img {
         width: 120px;
         position: relative;
@@ -1402,7 +1428,7 @@ a.accordion-modul-educator-item_videoclass:hover {
         width: 100%;
         height: auto;
     }
-    
+
     .block-img-doc_img-text {
         right: -30px;
         bottom: 20px;
@@ -1413,13 +1439,16 @@ a.accordion-modul-educator-item_videoclass:hover {
         margin-left: 0;
         margin-top: 35px;
     }
+
     .block-img-doc_text {
         right: 0;
     }
+
     .block-img-doc {
         right: -50px;
         bottom: 20px;
     }
+
     .accordion-modul-educator-item>div>div {
         padding-left: 0;
         width: 110%;
@@ -1458,11 +1487,13 @@ a.accordion-modul-educator-item_videoclass:hover {
         padding: 10px;
         height: 190px;
     }
+
     .img_pic2 {
         height: 190px;
         width: 140px;
         min-width: 140px;
     }
+
     .df-block-number_numeral {
         border-bottom: 1px solid var(--dfp-color-3);
         width: 100%;
