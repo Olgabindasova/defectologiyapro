@@ -378,6 +378,18 @@ label {
     color: var(--dfp-color-0);
 }
 
+.df-button-5 {
+    background-color: var(--dfp-color-4);
+    border: 1px solid var(--dfp-color-4);
+    color: var(--dfp-color-1);
+}
+
+.df-button-5:hover {
+    background-color: var(--dfp-color-0);
+    border: 1px solid var(--dfp-color-0);
+    color: var(--dfp-color-1);
+}
+
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -1251,6 +1263,62 @@ a.accordion-modul-educator-item_videoclass:hover {
     width: fit-content;
 }
 
+
+.list1b {
+    margin: 20px 0 0;
+    padding:0;
+    list-style: none;
+    counter-reset: li;
+}
+.list1b>li {
+    box-shadow: var(--dfp-shadow);
+    border-radius: var(--dfp-radius-1);
+    position: relative;
+    margin-bottom: 30px;
+    padding: 35px 35px 35px 100px;
+    border-top: 10px solid var(--dfp-color-4);
+}
+
+.list1b>li:before {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    padding: 10px;
+    font-size: 24px;
+    border-radius: var(--dfp-radius-1);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    font-weight: 600;
+    color: var(--dfp-color-1);
+    background: var(--dfp-color-4);
+    counter-increment: li;
+    content: counter(li);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    align-items: center;
+    justify-content: center;
+}
+
+.list1b>li:after {
+    content: "";
+    position: absolute;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    -webkit-transition-property: width;
+    transition-property: width;
+    z-index: -1;
+    background: #F0F5FB;
+    height: 100%;
+    left: 0;
+    top: 0;
+    width: 0;
+}
+.list1b>li:hover:after {
+    width: 100%;
+}
+
+
 /* Адаптив*/
 @media (max-width: 1200px) {
     .discount-block_item {
@@ -1461,6 +1529,17 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 500px) {
+    .list1b>li:before {
+        top: 15px;
+        left: 15px;
+        padding: 5px;
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+    }
+    .list1b>li {
+        padding: 15px 25px 15px 60px;
+    }
     .discount-block_item {
         padding: 10px;
         gap: 5px;
