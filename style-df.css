@@ -401,6 +401,7 @@ label {
     border: 1px solid var(--dfp-color-4);
     color: var(--dfp-color-4);
 }
+
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -1380,9 +1381,71 @@ a.accordion-modul-educator-item_videoclass:hover {
     border-radius: var(--dfp-radius-1);
     border: 1px solid var(--dfp-color-0);
 }
+
 .video-case_item:has(.video-case_item-class-button:hover) {
     border: 1px solid var(--dfp-color-4);
     box-shadow: var(--dfp-shadow);
+}
+
+.trust-us {
+    box-sizing: border-box;
+    padding: 20px 40px;
+}
+
+.trust-us_item {
+    display: flex !important;
+    justify-content: center;
+}
+
+.trust-us_item>a {
+    text-decoration: none;
+    width: 200px;
+    display: block;
+}
+
+.trust-us_item-img {
+    width: 99%;
+    height: auto;
+    border: 1px solid var(--dfp-color-4);
+    border-radius: var(--dfp-radius-3);
+}
+
+.trust-us_item-icon {
+    height: 0;
+}
+
+.trust-us_item>a>div>img {
+    height: fit-content;
+    position: relative;
+    top: -80px;
+    left: 90px;
+}
+
+.trust-us>i {
+    width: 30px;
+    height: 30px;
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow2.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    position: absolute;
+    top: calc(44%);
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.trust-us>.right {
+    right: 5px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+.trust-us>.left {
+    left: 5px;
+}
+
+.trust-us>i:hover {
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow1.svg");
 }
 
 /* Адаптив*/
@@ -1390,6 +1453,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .video-cases {
         grid-template-columns: 2fr 2fr;
     }
+
     .discount-block_item {
         width: 48%;
     }
@@ -1558,6 +1622,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .video-cases {
         grid-template-columns: 1fr;
     }
+
     .practice-tizer {
         right: 0px;
     }
