@@ -638,10 +638,12 @@ label {
 }
 
 /* Блоки c тизерами */
+.df-tizers-block {
+    box-sizing: border-box;
+}
 
 .df-tizer {
-    width: 250px;
-    display: flex;
+    display: flex !important;
     flex-direction: column;
     align-items: center;
     gap: 20px;
@@ -668,8 +670,12 @@ label {
     font-weight: 500;
     font-size: clamp(13px, 1.7vw, 14px);
     line-height: clamp(16px, 2.5vw, 17px);
+    width: 200px;
 }
 
+.df-tizers-block>button.slick-arrow{
+    display: none;
+}
 /* Блоки c номерами*/
 
 .df-block-numbers {
@@ -1387,6 +1393,8 @@ a.accordion-modul-educator-item_videoclass:hover {
     box-shadow: var(--dfp-shadow);
 }
 
+/* Блок  с видео каруселью*/
+
 .trust-us {
     box-sizing: border-box;
     padding: 20px 40px;
@@ -1447,6 +1455,35 @@ a.accordion-modul-educator-item_videoclass:hover {
 .trust-us>i:hover {
     background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow1.svg");
 }
+
+/* Меню-табы на странице переподготовки*/
+
+.retraining-menu {
+    border-bottom: 1px solid transparent;
+    display: flex;
+    justify-content: space-between;
+}
+
+.retraining-menu>button {
+    border: 1px solid;
+    border-color: transparent !important;
+    color: var(--dfp-color-0);
+    padding-bottom: 25px;
+}
+
+.retraining-menu>button.active {
+    border: 1px solid;
+    border-color: transparent !important;
+    color: var(--dfp-color-5) !important;
+    border-bottom: 1px solid var(--dfp-color-5) !important;
+}
+
+.retraining-menu>button:hover {
+    color: var(--dfp-color-5) !important;
+}
+
+
+
 
 /* Адаптив*/
 @media (max-width: 1200px) {
