@@ -390,6 +390,17 @@ label {
     color: var(--dfp-color-1);
 }
 
+.df-button-6 {
+    background-color: var(--dfp-color-4);
+    border: 1px solid var(--dfp-color-4);
+    color: var(--dfp-color-1);
+}
+
+.df-button-6:hover {
+    background-color: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-4);
+    color: var(--dfp-color-4);
+}
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -1220,6 +1231,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-content: center;
 }
 
+/* Блоки с лояльностями*/
 
 .discounts-training {
     border-top: 1px solid var(--dfp-color-5);
@@ -1255,21 +1267,25 @@ a.accordion-modul-educator-item_videoclass:hover {
     gap: 5%;
     align-items: center;
 }
+
 .discount-block_item>div:nth-child(3) {
     line-height: 14px;
     font-size: 14px;
 }
+
 .discount-block_item>div:nth-child(3)>span {
     width: fit-content;
 }
 
+/* Блоки с этапами обучение*/
 
 .list1b {
     margin: 20px 0 0;
-    padding:0;
+    padding: 0;
     list-style: none;
     counter-reset: li;
 }
+
 .list1b>li {
     box-shadow: var(--dfp-shadow);
     border-radius: var(--dfp-radius-1);
@@ -1314,16 +1330,70 @@ a.accordion-modul-educator-item_videoclass:hover {
     top: 0;
     width: 0;
 }
+
 .list1b>li:hover:after {
     width: 100%;
 }
 
+/* Блоки с видео кейсами*/
+
+.video-cases {
+    display: grid;
+    justify-content: space-between;
+    gap: 20px;
+    justify-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.video-case_item {
+    padding: 25px;
+    background: var(--dfp-color-2);
+    border-radius: var(--dfp-radius-3);
+    border: 1px solid var(--dfp-color-3);
+    transition: all 0.5s;
+}
+
+.video-case_item-pre-title {
+    border-bottom: 1px solid var(--dfp-color-3);
+    padding-bottom: 10px;
+}
+
+.video-case_item-class {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 0;
+}
+
+.video-case_item-class>div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: start;
+    gap: 12px;
+    align-items: center;
+}
+
+.video-case_item-class>div>img {
+    width: 60px;
+    background: var(--dfp-color-1);
+    border-radius: var(--dfp-radius-1);
+    border: 1px solid var(--dfp-color-0);
+}
+.video-case_item:has(.video-case_item-class-button:hover) {
+    border: 1px solid var(--dfp-color-4);
+    box-shadow: var(--dfp-shadow);
+}
 
 /* Адаптив*/
 @media (max-width: 1200px) {
+    .video-cases {
+        grid-template-columns: 2fr 2fr;
+    }
     .discount-block_item {
         width: 48%;
     }
+
     .block-img {
         width: 100%;
     }
@@ -1356,6 +1426,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .discount-block_item {
         width: 47%;
     }
+
     .educator-item {
         width: 100%;
     }
@@ -1439,6 +1510,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .discount-block_item {
         width: 100%;
     }
+
     .block-img-doc_img-text {
         gap: 15px;
     }
@@ -1479,10 +1551,13 @@ a.accordion-modul-educator-item_videoclass:hover {
 @media (max-width: 768px) {
     .discount-block_item {
         width: 100%;
-    } 
+    }
 }
 
 @media (max-width: 600px) {
+    .video-cases {
+        grid-template-columns: 1fr;
+    }
     .practice-tizer {
         right: 0px;
     }
@@ -1537,14 +1612,17 @@ a.accordion-modul-educator-item_videoclass:hover {
         width: 30px;
         height: 30px;
     }
+
     .list1b>li {
         padding: 15px 25px 15px 60px;
     }
+
     .discount-block_item {
         padding: 10px;
         gap: 5px;
         align-items: center;
     }
+
     .img_pic2>.practice-tizer_img {
         width: 100%;
         height: auto;
