@@ -41,7 +41,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-       
+
     <script src="script.js"></script>
 
 
@@ -217,35 +217,45 @@
             </div>
         </div>
     </section>
- 
-    
-    
-   
-
 
     <!-- Четвертая секция: блок с меню-->
 
-    <section class="py-5 df-bg-1">
-        <nav>
-            <div class="nav nav-tabs container retraining-menu" id="nav-tab" role="tablist">
-              <button class="nav-link df-h4 active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">О курсе</button>
-              <button class="nav-link df-h4" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Учебный план</button>
-              <button class="nav-link df-h4" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Практика</button>
-              <button class="nav-link df-h4" id="nav-home-tab2" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Карьера</button>
-              <button class="nav-link df-h4" id="nav-profile-tab2" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Скидки</button>
-              <button class="nav-link df-h4" id="nav-contact-tab2" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Отзывы</button>
-              <button class="nav-link df-h4" id="nav-contact-tab3" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Требования к поступлению</button>
+    <section class="df-bg-1 menuWrapper">
+        <nav class="menuLimiter container">
+            <div class="nav nav-tabs retraining-menu" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="nav-tab-1" data-bs-toggle="tab" data-bs-target="#tab-content-1"
+                    type="button" role="tab" aria-controls="tab-content-1" aria-selected="true">О курсе</button>
+                <button class="nav-link" id="nav-tab-2" data-bs-toggle="tab" data-bs-target="#tab-content-2"
+                    type="button" role="tab" aria-controls="tab-content-2" aria-selected="false">Учебный план</button>
+                <button class="nav-link" id="nav-tab-3" data-bs-toggle="tab" data-bs-target="#tab-content-3"
+                    type="button" role="tab" aria-controls="tab-content-3" aria-selected="false">Практика</button>
+                <button class="nav-link" id="nav-tab-4" data-bs-toggle="tab" data-bs-target="#tab-content-4"
+                    type="button" role="tab" aria-controls="tab-content-4" aria-selected="false">Карьера</button>
+                <button class="nav-link" id="nav-tab-5" data-bs-toggle="tab" data-bs-target="#tab-content-5"
+                    type="button" role="tab" aria-controls="tab-content-5" aria-selected="false">Скидки</button>
+                <button class="nav-link" id="nav-tab-6" data-bs-toggle="tab" data-bs-target="#tab-content-6"
+                    type="button" role="tab" aria-controls="tab-content-6" aria-selected="false">Отзывы</button>
+                <button class="nav-link" id="nav-tab-7" data-bs-toggle="tab" data-bs-target="#tab-content-7"
+                    type="button" role="tab" aria-controls="tab-content-7" aria-selected="false">Требования к
+                    поступлению</button>
             </div>
-          </nav>
-          <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active container" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
-            <div class="tab-pane fade container" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
-            <div class="tab-pane fade container" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade container" id="nav-home2" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
-            <div class="tab-pane fade container" id="nav-profile2" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
-            <div class="tab-pane fade container" id="nav-contact2" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-            <div class="tab-pane fade container" id="nav-contact3" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-          </div>
+        </nav>
+    </section>
+    <section class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="tab-content-1" role="tabpanel" aria-labelledby="nav-tab-1"
+            tabindex="0">О курсе</div>
+        <div class="tab-pane fade" id="tab-content-2" role="tabpanel" aria-labelledby="nav-tab-2" tabindex="0">
+            Учебный план</div>
+        <div class="tab-pane fade" id="tab-content-3" role="tabpanel" aria-labelledby="nav-tab-3" tabindex="0">
+            Практика</div>
+        <div class="tab-pane fade" id="tab-content-4" role="tabpanel" aria-labelledby="nav-tab-4" tabindex="0">Карьера
+        </div>
+        <div class="tab-pane fade" id="tab-content-5" role="tabpanel" aria-labelledby="nav-tab-5" tabindex="0">
+            Скидки</div>
+        <div class="tab-pane fade" id="tab-content-6" role="tabpanel" aria-labelledby="nav-tab-6" tabindex="0">
+            Отзывы</div>
+        <div class="tab-pane fade" id="tab-content-7" role="tabpanel" aria-labelledby="nav-tab-7" tabindex="0">
+            Требования к поступлению</div>
     </section>
 
     <!-- Пятая секция: блок о курсе-->
@@ -1848,73 +1858,81 @@
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
                 <div class="trust-us_item">
                     <a href="https://www.youtube.com/watch?v=egNbJTHEbAE
                     " target="_blank" tabindex="-1">
-                    <img class="trust-us_item-img" src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
-                            <div  class="trust-us_item-icon">
-                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
-                            </div>
+                        <img class="trust-us_item-img"
+                            src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                        <div class="trust-us_item-icon">
+                            <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon1.svg" alt="">
+                        </div>
                     </a>
                 </div>
             </div>
@@ -1973,7 +1991,7 @@
     </script>
     
     -->
-    
+
     <!-- Двадцать девятая секция: Отзывы-->
 
     <section class="py-5 df-bg-2">
@@ -2368,10 +2386,10 @@
     </section>
 
 
-   
+
     <script type="text/javascript" src="https://www.defectologiya.pro/assets/js/vendor/slick.js"></script>
     <script type="text/javascript" src="https://www.defectologiya.pro/js/sliders-init.js"></script>
- <!--  <script>
+    <!--  <script>
         $('.df-tizers-block').slick({
             lazyLoad: 'ondemand',
             slidesToShow: 4,
@@ -2403,7 +2421,11 @@
                 }
             ]
     });
-    </script> --> 
+    </script> -->
+
+
+
+
 </body>
 
 </html>

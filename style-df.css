@@ -99,6 +99,11 @@
 /*Шрифты*/
 body {
     color: var(--dfp-color-8);
+    overflow-x: hidden;
+}
+
+section {
+    overflow-x: hidden;
 }
 
 body,
@@ -673,9 +678,10 @@ label {
     width: 200px;
 }
 
-.df-tizers-block>button.slick-arrow{
+.df-tizers-block>button.slick-arrow {
     display: none;
 }
+
 /* Блоки c номерами*/
 
 .df-block-numbers {
@@ -1458,21 +1464,48 @@ a.accordion-modul-educator-item_videoclass:hover {
 
 /* Меню-табы на странице переподготовки*/
 
+.menuLimiter {
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+}
+
+.menuWrapper {
+    overflow: hidden;
+    position: sticky;
+    top: -5px;
+    height: fit-content;
+    z-index: 1000;
+}
+
 .retraining-menu {
     border-bottom: 1px solid transparent;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+    gap: 20px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .retraining-menu>button {
-    border: 1px solid;
+    border: 1px solid !important;
     border-color: transparent !important;
-    color: var(--dfp-color-0);
-    padding-bottom: 25px;
+    color: var(--dfp-color-0) !important;
+    padding: 0px 0px 10px;
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: 0px;
+    font-size: clamp(16px, 2.2vw, 20px);
+    line-height: clamp(20px, 2.8vw, 24px);
 }
-
+.retraining-menu>button:focus-visible{
+    box-shadow: none;
+}
 .retraining-menu>button.active {
-    border: 1px solid;
+    border: 1px solid !important;
     border-color: transparent !important;
     color: var(--dfp-color-5) !important;
     border-bottom: 1px solid var(--dfp-color-5) !important;
