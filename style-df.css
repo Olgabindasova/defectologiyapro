@@ -11,7 +11,7 @@
 @font-face {
     font-family: 'Lato', sans-serif;
     font-style: normal;
-    font-weight: 350;
+    font-weight: 300;
     font-display: swap;
     src: url(./fonts/Lato-Light.woff2) format('woff2'),
         url(./fonts/Lato-Light.woff) format('woff'),
@@ -189,12 +189,14 @@ label {
     line-height: clamp(16px, 2.5vw, 18px);
 }
 
-.df-weight-300 {
+.df-weight-250 {
     font-weight: 250 !important;
 }
-.df-weight-350 {
-    font-weight: 350 !important;
+
+.df-weight-300 {
+    font-weight: 300 !important;
 }
+
 .df-weight-400 {
     font-weight: 400 !important;
 }
@@ -1602,7 +1604,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-items: stretch;
     grid-template-columns: 1fr 1fr 1fr;
 }
- 
+
 .upcoming-classe_item {
     text-decoration: none;
     padding: 15px;
@@ -1616,12 +1618,14 @@ a.accordion-modul-educator-item_videoclass:hover {
     color: var(--dfp-color-8);
     transition: all 0.5s;
 }
-.upcoming-classe_item:hover{
+
+.upcoming-classe_item:hover {
     color: var(--dfp-color-8) !important;
     background: var(--dfp-color-3);
     border: 1px solid var(--dfp-color-4);
     box-shadow: var(--dfp-shadow);
 }
+
 .upcoming-classe_item>div:nth-child(1)>div:nth-child(1) {
     padding: 15px;
     background: var(--dfp-color-1);
@@ -1629,12 +1633,15 @@ a.accordion-modul-educator-item_videoclass:hover {
     border: 1px solid var(--dfp-color-0);
     width: 90px;
 }
+
 .upcoming-classe_item>div:nth-child(1)>img {
     width: 100%;
 }
+
 .upcoming-classe_item>div:nth-child(2)>div:nth-child(2) {
     border-bottom: 1px solid var(--dfp-color-0);
 }
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -1646,6 +1653,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .upcoming-classes-block {
         grid-template-columns: 1fr;
     }
+
     .video-cases {
         grid-template-columns: 2fr 2fr;
     }
@@ -1686,6 +1694,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .recommended {
         grid-template-columns: 1fr 1fr;
     }
+
     .discount-block_item {
         width: 47%;
     }
@@ -1773,6 +1782,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .upcoming-classes {
         grid-template-columns: 1fr;
     }
+
     .discount-block_item {
         width: 100%;
     }
@@ -1825,6 +1835,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .recommended {
         grid-template-columns: 1fr;
     }
+
     .video-cases {
         grid-template-columns: 1fr;
     }
