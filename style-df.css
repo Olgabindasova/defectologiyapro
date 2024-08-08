@@ -1680,6 +1680,50 @@ a.accordion-modul-educator-item_videoclass:hover {
     height: 130px;
 }
 
+/* Блок Поступайте сейчас, платите частями*/
+
+.payment-installments {
+    padding: 50px 0px;
+    display: grid;
+    justify-content: space-between;
+    justify-items: stretch;
+    grid-template-columns: 1fr 1fr;
+}
+.payment-installments>div {
+    padding: 0 50px;
+    display: grid;
+    grid-template-rows: 60% 1fr;
+}
+
+.payment-installments>div>ul {
+    border-top: 1px solid var(--dfp-color-11);
+    justify-content: space-between;
+}
+
+.payment-installments>div:nth-child(1){
+    border-right: 2px solid var(--dfp-color-11);
+}
+.payment-installments>div:nth-child(1)>div>div:nth-child(2) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
+    gap: 10px;
+}
+.payment-installments>div:nth-child(1)>div>div:nth-child(2)>img {
+    width: 100%;
+}
+
+/* Блок   Стоимость обучения*/
+
+.tuition-fees {
+    display: grid;
+    justify-content: space-between;
+    justify-items: stretch;
+    grid-template-columns: 45% 1fr;
+    gap: 40px;
+}
+
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -1688,6 +1732,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 1200px) {
+    
     .upcoming-classes-block {
         grid-template-columns: 1fr;
     }
@@ -1729,6 +1774,13 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 1000px) {
+    .tuition-fees {
+        grid-template-columns: 1fr;
+    }
+    .tuition-fees>div:nth-child(1)>div, .tuition-fees>div:nth-child(1){
+        max-width: 700px;
+        margin: 0 auto;
+    }
     .recommended {
         grid-template-columns: 1fr 1fr;
     }
@@ -1817,6 +1869,17 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 992px) {
+
+    .payment-installments>div:nth-child(1) {
+        border-right: 0px solid var(--dfp-color-11);
+        border-bottom: 2px solid var(--dfp-color-11);
+        padding-bottom: 35px;
+        margin-bottom: 15px;
+    }
+
+    .payment-installments {
+        grid-template-columns: 1fr;
+    }
     .issued-documents {
         grid-template-columns: 1fr;
     }
@@ -1927,6 +1990,9 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 500px) {
+    .payment-installments>div:nth-child(1) {
+        padding-bottom: 40px;
+    }
     
     .issued-documents_item>div:nth-child(1) {
         min-width: 150px;
@@ -2073,3 +2139,17 @@ a.accordion-modul-educator-item_videoclass:hover {
         border-radius: var(--dfp-radius-6);
     }
 }
+
+@media (max-width: 420px) {
+    .payment-installments>div:nth-child(1)>div>div:nth-child(2) {
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+        grid-column-gap: 15px;
+    }
+    .payment-installments>div {
+        padding: 0 25px;
+        display: grid;
+        grid-template-rows: 70% 1fr;
+    }
+}
+
