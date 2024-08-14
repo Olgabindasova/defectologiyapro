@@ -110,13 +110,12 @@
 body {
     color: var(--dfp-color-8);
     overflow-x: hidden;
+    font-family: sans-serif;
 }
 
-section {
-    overflow-x: hidden;
-}
 
-body,
+
+
 h1,
 h2,
 h3,
@@ -130,9 +129,17 @@ div,
 button,
 a,
 input,
-label {
-    font-family: 'Lato', sans-serif !important;
+label,
+section {
+    font-family: 'Lato', sans-serif;
     color: inherit;
+}
+
+a[name] {
+    padding-top: 75px;
+    margin-top: -75px;
+    display: inline-block;
+    /* required for webkit browsers */
 }
 
 .df-h1 {
@@ -1450,7 +1457,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     left: 90px;
 }
 
-.trust-us>i {
+.trust-us>i, .img-doc-slide>i, .df-doc2_item>i {
     width: 30px;
     height: 30px;
     background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow2.svg");
@@ -1463,17 +1470,17 @@ a.accordion-modul-educator-item_videoclass:hover {
     transition: all 0.5s;
 }
 
-.trust-us>.right {
+.trust-us>.right,  .img-doc-slide>.right, .df-doc2_item>.right {
     right: 5px;
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
 
-.trust-us>.left {
+.trust-us>.left, .img-doc-slide>.left, .df-doc2_item>.left {
     left: 5px;
 }
 
-.trust-us>i:hover {
+.trust-us>i:hover, .img-doc-slide>i:hover, .df-doc2_item>i:hover {
     background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow1.svg");
 }
 
@@ -1505,7 +1512,8 @@ a.accordion-modul-educator-item_videoclass:hover {
     white-space: nowrap;
 }
 
-.retraining-menu>button {
+.retraining-menu>button,
+.retraining-menu>a {
     border: 1px solid !important;
     border-color: transparent !important;
     color: var(--dfp-color-0) !important;
@@ -1517,18 +1525,21 @@ a.accordion-modul-educator-item_videoclass:hover {
     line-height: clamp(20px, 2.4vw, 24px);
 }
 
-.retraining-menu>button:focus-visible {
+.retraining-menu>button:focus-visible,
+.retraining-menu>a:focus-visible {
     box-shadow: none;
 }
 
-.retraining-menu>button.active {
+.retraining-menu>button.active,
+.retraining-menu>a.active {
     border: 1px solid !important;
     border-color: transparent !important;
     color: var(--dfp-color-5) !important;
     border-bottom: 1px solid var(--dfp-color-5) !important;
 }
 
-.retraining-menu>button:hover {
+.retraining-menu>button:hover,
+.retraining-menu>a:hover {
     color: var(--dfp-color-5) !important;
 }
 
@@ -1669,12 +1680,14 @@ a.accordion-modul-educator-item_videoclass:hover {
 .issued-documents_item>div:nth-child(2) {
     display: block;
 }
+
 .img_pic3 {
     max-width: 130px;
     height: 180px;
     width: 130px;
     min-width: 130px;
 }
+
 .img_pic4 {
     width: 175px;
     height: 130px;
@@ -1689,6 +1702,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-items: stretch;
     grid-template-columns: 1fr 1fr;
 }
+
 .payment-installments>div {
     padding: 0 50px;
     display: grid;
@@ -1700,15 +1714,17 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-content: space-between;
 }
 
-.payment-installments>div:nth-child(1){
+.payment-installments>div:nth-child(1) {
     border-right: 2px solid var(--dfp-color-11);
 }
+
 .payment-installments>div:nth-child(1)>div>div:nth-child(2) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     align-items: center;
     gap: 10px;
 }
+
 .payment-installments>div:nth-child(1)>div>div:nth-child(2)>img {
     width: 100%;
 }
@@ -1723,16 +1739,119 @@ a.accordion-modul-educator-item_videoclass:hover {
     gap: 40px;
 }
 
-
+/* Блоки Выдаваемые документы*/
+.df-doc1 {
+    display: flex;
+    align-items: center;
+}
+.df-doc2 {
+    display: flex;
+    align-items: center;
+}
+.img-doc-slide {
+    display: flex;
+    height: fit-content;
+    width: 500px;
+}
+.img_pic5 {
+    width: 395px;
+    height: 290px;
+    margin: 0 5px;
+    border: 2px solid var(--dfp-color-4);
+    text-align: center;
+}
+.img_pic5>img {
+    width: fit-content;
+    height: 100%;
+    margin: 0 auto;
+    padding: 5px;
+}
+.zoom-pic5 {
+    top: -50% !important;
+    left: 50% !important;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+.docs-block-content {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+    padding-bottom: 10px;
+    justify-items: stretch;
+    justify-content: space-between;
+}
+.docs-block2-content {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 10px;
+    padding-bottom: 10px;
+    justify-items: stretch;
+    justify-content: space-between;
+}
+.docs-block2-content>a {
+    white-space: normal;
+    text-align: center;
+}
+.img_pic6 {
+    width: 213px !important;
+    height: 300px !important;
+}
+.img_pic7 {
+    width: 213px !important;
+    height: 300px !important;
+    text-decoration: none;
+    margin: 0px;
+    background: var(--dfp-color-1);
+}
+.img_pic7>img {
+    width: 200px;
+    height: 100%;
+}
+.df-doc1_item {
+    display: flex;
+    height: 0;
+    align-items: center;
+}
+.df-doc2_item {
+    height: 0;
+    display: flex;
+    align-items: center;
+    width: 301px !important;
+}
+.df-doc2_item>div.slick-list {
+    height: 300px;
+}
+.df-doc2_item>div.slick-list>div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
         grid-template-columns: 300px 3fr;
     }
+    .docs-block2-content {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 1200px) {
-    
+    .df-doc1_item {
+        height: fit-content;
+        padding: 0 10px !important;
+    }
+    .df-doc1 {
+        flex-direction: column;
+    }
+    .df-doc1>div:nth-child(2){
+        width: 90%;
+        margin: 0 auto;
+    }
+    .df-doc2_item {
+        height: 300px;
+    }
     .upcoming-classes-block {
         grid-template-columns: 1fr;
     }
@@ -1777,10 +1896,13 @@ a.accordion-modul-educator-item_videoclass:hover {
     .tuition-fees {
         grid-template-columns: 1fr;
     }
-    .tuition-fees>div:nth-child(1)>div, .tuition-fees>div:nth-child(1){
+
+    .tuition-fees>div:nth-child(1)>div,
+    .tuition-fees>div:nth-child(1) {
         max-width: 700px;
         margin: 0 auto;
     }
+
     .recommended {
         grid-template-columns: 1fr 1fr;
     }
@@ -1880,9 +2002,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     .payment-installments {
         grid-template-columns: 1fr;
     }
+
     .issued-documents {
         grid-template-columns: 1fr;
     }
+
     .upcoming-classes {
         grid-template-columns: 1fr;
     }
@@ -1936,6 +2060,16 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 600px) {
+    .img-doc-slide>.right, .df-doc2_item>.right {
+        right: 20px;
+    }
+    .img-doc-slide>.left, .df-doc2_item>.left {
+        left: 20px;
+    }
+    .trust-us>i, .img-doc-slide>i {
+        width: 25px;
+        height: 25px;
+    }
     .recommended {
         grid-template-columns: 1fr;
     }
@@ -1990,23 +2124,40 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 500px) {
+    .docs-block-content {
+        grid-template-columns: 100%;
+        gap: 5px;
+    }
+    .img-doc-slide {
+        width: 320px;
+        padding-bottom: 5px;
+    }
+    
+    .df-block-number_numeral.df-doc {
+        width: fit-content;
+        border-bottom: 0;
+    }
     .payment-installments>div:nth-child(1) {
         padding-bottom: 40px;
     }
-    
+
     .issued-documents_item>div:nth-child(1) {
         min-width: 150px;
     }
+
     .issued-documents_item {
         height: calc(100% - 0px);
         flex-direction: column;
     }
+
     .issued-documents {
         margin: 0;
     }
+
     .issued-documents_item>div:nth-child(2) {
         text-align: center;
     }
+
     .list1b>li:before {
         top: 15px;
         left: 15px;
@@ -2095,9 +2246,15 @@ a.accordion-modul-educator-item_videoclass:hover {
         width: 140px;
         min-width: 140px;
     }
+
     .img_pic4 {
         width: 150px;
         height: 115px;
+    }
+    .img_pic5 {
+        width: 213px !important;
+        padding: 0px;
+        height: 154px;
     }
     .df-block-number_numeral {
         border-bottom: 1px solid var(--dfp-color-3);
@@ -2146,10 +2303,10 @@ a.accordion-modul-educator-item_videoclass:hover {
         gap: 0;
         grid-column-gap: 15px;
     }
+
     .payment-installments>div {
         padding: 0 25px;
         display: grid;
         grid-template-rows: 70% 1fr;
     }
 }
-
