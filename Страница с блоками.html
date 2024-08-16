@@ -243,7 +243,7 @@
     </section>
     <section class="df-bg-1 menuWrapper">
         <nav class="menuLimiter container">
-            <div class="nav nav-tabs retraining-menu" id="nav-tab2" role="tablist">
+            <div class="nav nav-tabs retraining-menu nav-underline" id="nav-tab2" role="tablist">
                 <a class="nav-link" id="nav-tab2-1" href="#tab-content2-1" type="button" aria-controls=""
                     aria-selected="true">О курсе</a>
                 <a class="nav-link" id="nav-tab2-2" href="#tab-content2-2" type="button" aria-controls=""
@@ -262,6 +262,40 @@
             </div>
         </nav>
     </section>
+    <section class="df-bg-1 menuWrapper border-menu">
+        <nav class="menuLimiter container">
+            <ul class="nav nav-tabs retraining-menu">
+                <li>
+                <a class="nav-link active-point"  href="#tab-content2-1">О курсе</a>
+                </li>
+                <li>
+                <a class="nav-link active-point"  href="#tab-content2-2">Учебный план</a>
+                </li>  
+                <li> 
+                <a class="nav-link active-point"  href="#tab-content2-3">Практика</a>
+                </li>     
+                <li>    
+                <a class="nav-link active-point"  href="#tab-content2-4">Карьера</a>
+                </li> 
+                <li>
+                <a class="nav-link active-point"  href="#tab-content2-5">Скидки</a>
+                </li>
+               <li>
+                <a class="nav-link active-point"  href="#tab-content2-6">Отзывы</a>
+                </li>
+                <li>
+                <a class="nav-link active-point"  href="#tab-content2-7">Требования к
+                    поступлению</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+    <script>
+      $(".active-point").click(function(){
+  $(".active-point").removeClass("active");
+  $(this).addClass("active");
+})
+    </script>
     <section class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="tab-content-1" role="tabpanel" aria-labelledby="nav-tab-1"
             tabindex="0">О курсе</div>
@@ -280,7 +314,7 @@
     </section>
 
     <!-- Пятая секция: блок о курсе-->
-
+    <a name="tab-content2-1"></a>
     <section class="py-5 df-bg-1">
         <div class="container">
             <h4 class="df-h4 pb-3">Цель курса</h4>
@@ -1081,9 +1115,9 @@
             </div>
         </div>
     </section>
-
+    
     <!-- Двенадцатая секция: Настоящая практика-->
-
+    <a name="tab-content2-3"></a>
     <section class="py-5 df-bg-1">
         <div class="container">
             <h2 class="df-h2 pb-2 pt-4 df-tc-5">Настоящая практика</h2>
@@ -3639,7 +3673,7 @@
 
     <script type="text/javascript" src="https://www.defectologiya.pro/assets/js/vendor/slick.js"></script>
     <script type="text/javascript" src="https://www.defectologiya.pro/js/sliders-init.js"></script>
-    <!--
+   <!--
     <script>
         $('.img-doc-slide1').slick({
 
@@ -3648,6 +3682,7 @@
             nextArrow: '<i class="arrow right">',
             prevArrow: '<i class="arrow left">'
         });
+       
     </script>
 -->
 

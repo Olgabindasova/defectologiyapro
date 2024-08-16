@@ -1490,7 +1490,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     width: 100%;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    padding-top: 30px;
+    padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: -20px;
 }
@@ -1498,7 +1498,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 .menuWrapper {
     overflow: hidden;
     position: sticky;
-    top: -5px;
+    top: 0px;
     height: fit-content;
     z-index: 1000;
 }
@@ -1513,7 +1513,8 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 .retraining-menu>button,
-.retraining-menu>a {
+.retraining-menu>a,
+.retraining-menu>li>a {
     border: 1px solid !important;
     border-color: transparent !important;
     color: var(--dfp-color-0) !important;
@@ -1526,23 +1527,40 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 .retraining-menu>button:focus-visible,
-.retraining-menu>a:focus-visible {
+.retraining-menu>a:focus-visible,
+.retraining-menu>li>a:focus-visible
+ {
     box-shadow: none;
 }
 
 .retraining-menu>button.active,
-.retraining-menu>a.active {
+.retraining-menu>a.active,
+.retraining-menu>li>a.active
+ {
     border: 1px solid !important;
     border-color: transparent !important;
     color: var(--dfp-color-5) !important;
     border-bottom: 1px solid var(--dfp-color-5) !important;
 }
-
+.retraining-menu>li>a.active-point.active {
+    border-bottom: 2px solid var(--dfp-color-5) !important;
+}
 .retraining-menu>button:hover,
-.retraining-menu>a:hover {
+.retraining-menu>a:hover,
+.retraining-menu>li>a:hover {
     color: var(--dfp-color-5) !important;
 }
 
+.border-menu {
+    border-bottom: 2px solid var(--dfp-color-3);
+}
+/*
+.retraining-menu> li> .active-point.active {
+    color: brown;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    background: #54cdf1;
+    
+}*/
 /* Блок нас рекомендуют*/
 
 .recommended {
@@ -1804,9 +1822,15 @@ a.accordion-modul-educator-item_videoclass:hover {
     margin: 0px;
     background: var(--dfp-color-1);
 }
+.img_pic7_d {
+    height: 280px !important;
+}
 .img_pic7>img {
     width: 200px;
     height: 100%;
+}
+.zoom-pic6 {
+    left: 15px !important;
 }
 .df-doc1_item {
     display: flex;
@@ -1822,11 +1846,16 @@ a.accordion-modul-educator-item_videoclass:hover {
 .df-doc2_item>div.slick-list {
     height: 300px;
 }
+.df-doc2_item.dop>div.slick-list {
+    height: 280px !important;
+}
 .df-doc2_item>div.slick-list>div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
