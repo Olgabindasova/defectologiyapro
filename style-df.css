@@ -356,7 +356,7 @@ a[name] {
 
 /* Кнопки*/
 
-.df-button {
+.df-button, a.df-button, button.df-button {
     border-radius: 0px 15px 15px 15px;
     padding: 10px 20px;
     cursor: pointer;
@@ -370,26 +370,28 @@ a[name] {
     white-space: nowrap;
 }
 
-.df-button-1 {
+.df-button-1,  a.df-button-1, button.df-button-1 {
     background-color: var(--dfp-color-5);
     border: 1px solid var(--dfp-color-5);
-    color: var(--dfp-color-1);
+    color: var(--dfp-color-1) !important;
 }
 
 .df-button-1:hover {
     background-color: var(--dfp-color-0);
     border: 1px solid var(--dfp-color-0);
+    color: var(--dfp-color-1) !important;
 }
 
 .df-button-2 {
     background-color: var(--dfp-color-0);
     border: 1px solid var(--dfp-color-0);
-    color: var(--dfp-color-1);
+    color: var(--dfp-color-1) !important;
 }
 
 .df-button-2:hover {
     background-color: var(--dfp-color-4);
     border: 1px solid var(--dfp-color-4);
+    color: var(--dfp-color-1) !important;
 }
 
 .df-button-3 {
@@ -399,9 +401,9 @@ a[name] {
 }
 
 .df-button-3:hover {
-    background-color: var(--dfp-color-2);
-    border: 1px solid var(--dfp-color-4);
-    color: var(--dfp-color-0);
+    background-color: var(--dfp-color-5);
+    border: 1px solid var(--dfp-color-1);
+    color: var(--dfp-color-1) !important;
 }
 
 .df-button-5 {
@@ -413,7 +415,7 @@ a[name] {
 .df-button-5:hover {
     background-color: var(--dfp-color-0);
     border: 1px solid var(--dfp-color-0);
-    color: var(--dfp-color-1);
+    color: var(--dfp-color-1) !important;
 }
 
 .df-button-6 {
@@ -425,7 +427,7 @@ a[name] {
 .df-button-6:hover {
     background-color: var(--dfp-color-1);
     border: 1px solid var(--dfp-color-4);
-    color: var(--dfp-color-4);
+    color: var(--dfp-color-4) !important;
 }
 
 .df-button-4 {
@@ -452,7 +454,7 @@ a[name] {
 
 .df-button-4:hover {
     border-bottom: 1px solid var(--dfp-color-5);
-    color: var(--dfp-color-5);
+    color: var(--dfp-color-5) !important;
 }
 
 
@@ -1542,7 +1544,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     color: var(--dfp-color-5) !important;
     border-bottom: 1px solid var(--dfp-color-5) !important;
 }
-.retraining-menu>li>a.active-point.active {
+.retraining-menu>li>a.active-point.active, .retraining-menu>li>a.active-point:hover {
     border-bottom: 2px solid var(--dfp-color-5) !important;
 }
 .retraining-menu>button:hover,
