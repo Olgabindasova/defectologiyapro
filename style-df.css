@@ -135,11 +135,14 @@ section {
     color: inherit;
 }
 
-a[name] {
-    padding-top: 75px;
-    margin-top: -75px;
-    display: inline-block;
-    /* required for webkit browsers */
+a[name].anchor {
+    border-top: 35px solid transparent;
+    margin-top: -35px;
+    padding: 15px;
+    /* паддинги - без проблем */
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
 }
 
 .df-h1 {
@@ -194,6 +197,12 @@ a[name] {
     font-weight: 400;
     font-size: clamp(13px, 1.8vw, 15px);
     line-height: clamp(16px, 2.5vw, 18px);
+}
+
+.df-p-card-min {
+    font-weight: 400;
+    font-size: clamp(12px, 1.6vw, 13px);
+    line-height: clamp(13px, 2.2vw, 15px);
 }
 
 .df-weight-250 {
@@ -316,6 +325,14 @@ a[name] {
     color: var(--dfp-color-5);
 }
 
+.df-tc-6 {
+    color: var(--dfp-color-6);
+}
+
+.df-tc-7 {
+    color: var(--dfp-color-7);
+}
+
 .df-tc-8 {
     color: var(--dfp-color-8);
 }
@@ -356,7 +373,9 @@ a[name] {
 
 /* Кнопки*/
 
-.df-button, a.df-button, button.df-button {
+.df-button,
+a.df-button,
+button.df-button {
     border-radius: 0px 15px 15px 15px;
     padding: 10px 20px;
     cursor: pointer;
@@ -370,7 +389,9 @@ a[name] {
     white-space: nowrap;
 }
 
-.df-button-1,  a.df-button-1, button.df-button-1 {
+.df-button-1,
+a.df-button-1,
+button.df-button-1 {
     background-color: var(--dfp-color-5);
     border: 1px solid var(--dfp-color-5);
     color: var(--dfp-color-1) !important;
@@ -566,7 +587,9 @@ a[name] {
     line-height: 22px;
     margin: 0;
 }
-
+.df-list-2>li>p {
+    padding: 10px 15px 15px 55px !important;
+}
 .df-list-1>li>div {
     display: flex;
     justify-content: flex-end;
@@ -620,7 +643,13 @@ a[name] {
     text-align: center;
     border-radius: var(--dfp-radius-1);
 }
-
+.df-list-2 li:before {
+    top: -15px;
+    left: 15px;
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+}
 .df-list-1 li:hover:before {
     background: var(--dfp-color-5);
     color: var(--dfp-color-1);
@@ -670,6 +699,10 @@ a[name] {
     box-sizing: border-box;
 }
 
+.df-tizers-block>div>div.slick-track {
+    margin: 0 auto;
+}
+
 .df-tizer {
     display: flex !important;
     flex-direction: column;
@@ -702,7 +735,7 @@ a[name] {
 }
 
 .df-tizers-block>button.slick-arrow {
-    display: none;
+    display: none !important;
 }
 
 /* Блоки c номерами*/
@@ -856,6 +889,27 @@ a[name] {
     position: relative;
     top: 10px;
 }
+.price-module_discounts {
+    border-top: 1px solid var(--dfp-color-5);
+    max-width: 700px;
+    height: 0;
+    margin-top: 15px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.price-module_discounts::before {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 15px solid transparent;
+    border-top: 15px solid var(--dfp-color-5);
+    top: 100%;
+    left: 10%;
+    background-image: none;
+    content: '';
+}
 
 /* Блок с картинками - документы*/
 
@@ -970,6 +1024,7 @@ a[name] {
     display: flex;
     flex-direction: column;
     padding: 0 0 0 45px;
+    width: 100%;
 }
 
 .educator_title {
@@ -996,9 +1051,9 @@ a[name] {
     color: var(--dfp-color-4);
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     gap: 10px;
-    padding: 5px 10px;
+    padding: 7px 10px 4px;
     border: 1px solid var(--dfp-color-4);
     text-decoration: none;
     transition: all .5s;
@@ -1305,6 +1360,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     align-items: center;
 }
 
+.discount-block_item>div:nth-child(2) {
+    min-width: 20px;
+    max-width: 20px;
+}
+
 .discount-block_item>div:nth-child(3) {
     line-height: 14px;
     font-size: 14px;
@@ -1459,7 +1519,10 @@ a.accordion-modul-educator-item_videoclass:hover {
     left: 90px;
 }
 
-.trust-us>i, .img-doc-slide>i, .df-doc2_item>i {
+.trust-us>i,
+.img-doc-slide>i,
+.df-doc2_item>i,
+.recommended-1>i {
     width: 30px;
     height: 30px;
     background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow2.svg");
@@ -1472,17 +1535,26 @@ a.accordion-modul-educator-item_videoclass:hover {
     transition: all 0.5s;
 }
 
-.trust-us>.right,  .img-doc-slide>.right, .df-doc2_item>.right {
+.recommended-1>.right,
+.trust-us>.right,
+.img-doc-slide>.right,
+.df-doc2_item>.right {
     right: 5px;
     transform: rotate(180deg);
     -webkit-transform: rotate(180deg);
 }
 
-.trust-us>.left, .img-doc-slide>.left, .df-doc2_item>.left {
+.recommended-1>.left,
+.trust-us>.left,
+.img-doc-slide>.left,
+.df-doc2_item>.left {
     left: 5px;
 }
 
-.trust-us>i:hover, .img-doc-slide>i:hover, .df-doc2_item>i:hover {
+.trust-us>i:hover,
+.img-doc-slide>i:hover,
+.df-doc2_item>i:hover,
+.recommended-1>i:hover {
     background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow1.svg");
 }
 
@@ -1508,7 +1580,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 .retraining-menu {
     border-bottom: 1px solid transparent;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     gap: 20px;
     flex-wrap: nowrap;
     white-space: nowrap;
@@ -1530,23 +1602,25 @@ a.accordion-modul-educator-item_videoclass:hover {
 
 .retraining-menu>button:focus-visible,
 .retraining-menu>a:focus-visible,
-.retraining-menu>li>a:focus-visible
- {
+.retraining-menu>li>a:focus-visible {
     box-shadow: none;
 }
 
 .retraining-menu>button.active,
 .retraining-menu>a.active,
-.retraining-menu>li>a.active
- {
+.retraining-menu>li>a.active {
     border: 1px solid !important;
     border-color: transparent !important;
     color: var(--dfp-color-5) !important;
     border-bottom: 1px solid var(--dfp-color-5) !important;
 }
-.retraining-menu>li>a.active-point.active, .retraining-menu>li>a.active-point:hover {
-    border-bottom: 2px solid var(--dfp-color-5) !important;
+
+.retraining-menu>li>a.active-point.active,
+.retraining-menu>li>a.active-point:hover {
+    border-bottom: 1px solid var(--dfp-color-5) !important;
 }
+
+
 .retraining-menu>button:hover,
 .retraining-menu>a:hover,
 .retraining-menu>li>a:hover {
@@ -1556,6 +1630,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 .border-menu {
     border-bottom: 2px solid var(--dfp-color-3);
 }
+
 /*
 .retraining-menu> li> .active-point.active {
     color: brown;
@@ -1617,7 +1692,22 @@ a.accordion-modul-educator-item_videoclass:hover {
     left: 0 !important;
 }
 
+.recommended-1 {
+    display: flex !important;
+    padding: 0 35px;
+    box-sizing: border-box;
+}
 
+.recommended-1 .recommended_item {
+    margin: 0 5px;
+}
+.recommended-2>div>div.slick-track {
+     display: flex;
+     align-items: stretch;
+}
+.recommended-2 .recommended_item{
+    height: auto;
+}
 /* Блок Ближайшие занятия*/
 .upcoming-classes-block {
     display: grid;
@@ -1764,15 +1854,18 @@ a.accordion-modul-educator-item_videoclass:hover {
     display: flex;
     align-items: center;
 }
+
 .df-doc2 {
     display: flex;
     align-items: center;
 }
+
 .img-doc-slide {
     display: flex;
     height: fit-content;
     width: 500px;
 }
+
 .img_pic5 {
     width: 395px;
     height: 290px;
@@ -1780,12 +1873,14 @@ a.accordion-modul-educator-item_videoclass:hover {
     border: 2px solid var(--dfp-color-4);
     text-align: center;
 }
+
 .img_pic5>img {
     width: fit-content;
     height: 100%;
     margin: 0 auto;
     padding: 5px;
 }
+
 .zoom-pic5 {
     top: -50% !important;
     left: 50% !important;
@@ -1793,6 +1888,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-content: center;
     position: relative;
 }
+
 .docs-block-content {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -1801,6 +1897,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-items: stretch;
     justify-content: space-between;
 }
+
 .docs-block2-content {
     display: grid;
     grid-template-columns: auto 1fr;
@@ -1809,14 +1906,17 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-items: stretch;
     justify-content: space-between;
 }
+
 .docs-block2-content>a {
     white-space: normal;
     text-align: center;
 }
+
 .img_pic6 {
     width: 213px !important;
     height: 300px !important;
 }
+
 .img_pic7 {
     width: 213px !important;
     height: 300px !important;
@@ -1824,45 +1924,114 @@ a.accordion-modul-educator-item_videoclass:hover {
     margin: 0px;
     background: var(--dfp-color-1);
 }
+
 .img_pic7_d {
     height: 280px !important;
 }
+
 .img_pic7>img {
     width: 200px;
     height: 100%;
 }
+
 .zoom-pic6 {
     left: 15px !important;
 }
+
 .df-doc1_item {
     display: flex;
     height: 0;
     align-items: center;
 }
+
 .df-doc2_item {
     height: 0;
     display: flex;
     align-items: center;
     width: 301px !important;
 }
+
 .df-doc2_item>div.slick-list {
     height: 300px;
 }
+
 .df-doc2_item.dop>div.slick-list {
     height: 280px !important;
 }
+
 .df-doc2_item>div.slick-list>div {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
+/*--Тултип --*/
+.df-tooltip {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    flex-wrap: wrap;
+}
 
+.df-tooltip .df-tooltiptext {
+    visibility: hidden;
+    width: 200px;
+    background-color: var(--dfp-color-2);
+    color: var(--dfp-color-9);
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px 10px 0px 10px;
+    margin-bottom: 25px;
+    position: absolute;
+    z-index: 1;
+    box-shadow: var(--dfp-shadow);
+    border: 1px solid var(--dfp-color-0);
+    transition: all 0.5s;
+    opacity: 0;
+}
 
+.df-tooltip:hover .df-tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+.df-tooltiptext::after {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 7px solid transparent;
+    border-top: 7px solid var(--dfp-color-0);
+    top: 100%;
+    left: 164px;
+    top: 13px;
+    background-image: none;
+    content: '';
+}
+.df-tooltip_question {
+    font-size: 10px;
+    line-height: normal;
+    font-weight: 800;
+    padding: 3px;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: var(--dfp-color-1);
+    background: var(--dfp-color-5);
+    margin-right: 10px;
+}
+.df-tooltip_question:hover{
+    background: var(--dfp-color-0);
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
         grid-template-columns: 300px 3fr;
     }
+
     .docs-block2-content {
         grid-template-columns: 1fr;
     }
@@ -1873,16 +2042,20 @@ a.accordion-modul-educator-item_videoclass:hover {
         height: fit-content;
         padding: 0 10px !important;
     }
+
     .df-doc1 {
         flex-direction: column;
     }
-    .df-doc1>div:nth-child(2){
+
+    .df-doc1>div:nth-child(2) {
         width: 90%;
         margin: 0 auto;
     }
+
     .df-doc2_item {
         height: 300px;
     }
+
     .upcoming-classes-block {
         grid-template-columns: 1fr;
     }
@@ -2006,7 +2179,8 @@ a.accordion-modul-educator-item_videoclass:hover {
     }
 
     .df-feedback>div:nth-child(1),
-    .df-feedback>button {
+    .df-feedback>button,
+    .df-feedback>a {
         width: 100%;
     }
 
@@ -2091,16 +2265,23 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 600px) {
-    .img-doc-slide>.right, .df-doc2_item>.right {
+
+    .img-doc-slide>.right,
+    .df-doc2_item>.right {
         right: 20px;
     }
-    .img-doc-slide>.left, .df-doc2_item>.left {
+
+    .img-doc-slide>.left,
+    .df-doc2_item>.left {
         left: 20px;
     }
-    .trust-us>i, .img-doc-slide>i {
+
+    .trust-us>i,
+    .img-doc-slide>i {
         width: 25px;
         height: 25px;
     }
+
     .recommended {
         grid-template-columns: 1fr;
     }
@@ -2144,7 +2325,9 @@ a.accordion-modul-educator-item_videoclass:hover {
         max-width: 175px;
         left: -5%;
     }
-
+    .df-list-2>li>p {
+        padding: 20px 15px 15px 20px !important;
+    }
     .df-list-1 {
         gap: 15px;
     }
@@ -2152,6 +2335,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .df-button {
         font-size: 12px;
     }
+
 }
 
 @media (max-width: 500px) {
@@ -2159,15 +2343,17 @@ a.accordion-modul-educator-item_videoclass:hover {
         grid-template-columns: 100%;
         gap: 5px;
     }
+
     .img-doc-slide {
         width: 320px;
         padding-bottom: 5px;
     }
-    
+
     .df-block-number_numeral.df-doc {
         width: fit-content;
         border-bottom: 0;
     }
+
     .payment-installments>div:nth-child(1) {
         padding-bottom: 40px;
     }
@@ -2282,11 +2468,13 @@ a.accordion-modul-educator-item_videoclass:hover {
         width: 150px;
         height: 115px;
     }
+
     .img_pic5 {
         width: 213px !important;
         padding: 0px;
         height: 154px;
     }
+
     .df-block-number_numeral {
         border-bottom: 1px solid var(--dfp-color-3);
         width: 100%;

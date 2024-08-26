@@ -20,6 +20,7 @@
     <link rel="stylesheet" type="text/css" href="https://www.defectologiya.pro/assets/css/vendor/slick.css" />
     <link rel="stylesheet" type="text/css"
         href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        <link rel="stylesheet" href="https://www.defectologiya.pro/css/fontawesome-all.min.css">
     <link rel="prefetch" href="/fonts/Lato-Thin.woff2" as="font" crossorigin="anonymous">
     <link rel="prefetch" href="/fonts/Lato-Light.woff2" as="font" crossorigin="anonymous">
     <link rel="prefetch" href="/fonts/Lato-Regular.woff2" as="font" crossorigin="anonymous">
@@ -86,7 +87,7 @@
     <section class="py-5 df-bg-3">
         <div class="container">
             <div class="price-module df-shadow df-brr-3 df-bg-1">
-                <div class="pe-5 d-flex flex-column justify-content-between align-self-stretch">
+                <div class="pe-5 d-flex flex-column justify-content-between align-self-stretch gap-1">
                     <div class="df-tc-5 df-weight-700 d-flex justify-content-between gap-1 pb-3">Профессиональная
                         переподготовка<span class="df-h6 text-nowrap">1338 ч.</span></div>
                     <div class="df-p-card df-weight-600 d-flex gap-2 pb-3"><span
@@ -102,9 +103,9 @@
                             class="df-weight-400 col-5 df-tc-9">Формат:</span>Дистанционно, 34 недели (9 мес.)</div>
                     <div class="df-p-card df-weight-600 d-flex gap-2 pb-3"><span
                             class="df-weight-400 col-5 df-tc-9">Ближайший набор:</span>Июнь 2024 г.</div>
-                    <button class="df-button df-button-1 df-p-card w-100 ">Заявка на консультацию</button>
+                    <button class="df-button df-button-2 df-p-card w-100 ">Заявка на консультацию</button>
                 </div>
-                <div class="pe-4 ps-5 d-flex flex-column justify-content-start align-self-stretch">
+                <div class="pe-2 pe-sm-4 ps-2 ps-sm-5 d-flex flex-column justify-content-start align-self-stretch">
                     <div class="df-h6 df-tc-5 df-weight-800">Стоимость обучения</div>
                     <div class="d-flex flex-column justify-content-between">
                         <div class="price-module_vig df-bg-6 df-tc-1">
@@ -120,10 +121,30 @@
                                 -10%
                             </div>
                             <div class="df-p df-tc-5">
-                                <span class="df-h2 df-weight-500">42660</span><span class="df-h6">₽</span> при
-                                единовременной оплате
+                                <div>
+                                    <span class="df-h2 df-weight-500">42660<span class="df-h6">₽</span></span>
+                                    <span class="text-nowrap">при единовременной оплате</span>
+                                </div>
+                                <div class="pt-1 d-flex flex-wrap align-items-baseline justify-content-end gap-2">
+                                    <span>по промокоду</span>
+                                    <span class="df-h3 df-tc-5 df-weight-800">555</span>
+                                    <span class="df-p-card-min df-weight-800">до 31 августа</span>
+                                </div>
                             </div>
                         </div>
+                        <button class="df-button df-button-3 df-p-card w-100 mt-3">Выбрать способ оплаты</button>
+                        <div class="price-module_discounts"></div>
+                        <div class="pb-2 df-p-card-min d-flex gap-1 justify-content-end align-items-end">
+                            Бесплатный доступ на три дня
+                            <div class="df-tooltip">
+                                <span class="df-tooltip_question">?</span>
+                                <span class="df-tooltiptext">
+                                    <strong>Смарт-тайм (умное время)</strong> - бесплатный доступ на 3 дня к первому модулю и тесту, чтобы убедиться в качестве курса и организации всего учебного процесса.<br>
+                                    <strong>Сколько раз?</strong> - Смарт-таймом можно воспользоваться не чаще 1 раза в год, выбрав любой курс на сайте.
+                                </span>
+                            </div>
+                        </div>
+                        <button class="df-button df-button-1 df-p-card w-100 ">Активировать смартайм</button>
                     </div>
                 </div>
                 <div class="ps-4 d-flex flex-column justify-content-between align-self-stretch gap-3">
@@ -266,37 +287,33 @@
         <nav class="menuLimiter container">
             <ul class="nav nav-tabs retraining-menu">
                 <li>
-                <a class="nav-link active-point"  href="#tab-content2-1">О курсе</a>
+                    <a class="nav-link active-point active" href="#tab-content2-1">О курсе</a>
                 </li>
                 <li>
-                <a class="nav-link active-point"  href="#tab-content2-2">Учебный план</a>
-                </li>  
-                <li> 
-                <a class="nav-link active-point"  href="#tab-content2-3">Практика</a>
-                </li>     
-                <li>    
-                <a class="nav-link active-point"  href="#tab-content2-4">Карьера</a>
-                </li> 
-                <li>
-                <a class="nav-link active-point"  href="#tab-content2-5">Скидки</a>
-                </li>
-               <li>
-                <a class="nav-link active-point"  href="#tab-content2-6">Отзывы</a>
+                    <a class="nav-link active-point" href="#tab-content2-2">Учебный план</a>
                 </li>
                 <li>
-                <a class="nav-link active-point"  href="#tab-content2-7">Требования к
-                    поступлению</a>
+                    <a class="nav-link active-point" href="#tab-content2-3">Практика</a>
+                </li>
+                <li>
+                    <a class="nav-link active-point" href="#tab-content2-4">Карьера</a>
+                </li>
+                <li>
+                    <a class="nav-link active-point" href="#tab-content2-5">Скидки</a>
+                </li>
+                <li>
+                    <a class="nav-link active-point" href="#tab-content2-6">Отзывы</a>
+                </li>
+                <li>
+                    <a class="nav-link active-point" href="#tab-content2-7">Требования к
+                        поступлению</a>
                 </li>
             </ul>
         </nav>
     </section>
-    <script>
-      $(".active-point").click(function(){
-  $(".active-point").removeClass("active");
-  $(this).addClass("active");
-})
-    </script>
-    <section class="tab-content" id="nav-tabContent">
+
+
+    <!--  <section class="tab-content" id="nav-tabContent">
         <div class="tab-pane fade show active" id="tab-content-1" role="tabpanel" aria-labelledby="nav-tab-1"
             tabindex="0">О курсе</div>
         <div class="tab-pane fade" id="tab-content-2" role="tabpanel" aria-labelledby="nav-tab-2" tabindex="0">
@@ -312,12 +329,12 @@
         <div class="tab-pane fade" id="tab-content-7" role="tabpanel" aria-labelledby="nav-tab-7" tabindex="0">
             Требования к поступлению</div>
     </section>
-
+-->
     <!-- Пятая секция: блок о курсе-->
-    <a name="tab-content2-1"></a>
+    <a name="tab-content2-1" class="anchor"></a>
     <section class="py-5 df-bg-1">
         <div class="container">
-            <h4 class="df-h4 pb-3">Цель курса</h4>
+            <h4 class="df-h4 pb-3 ancor">Цель курса</h4>
             <p class="df-h6 ">Изучение теоретических знаний и овладение практическими умениями и навыками,
                 обеспечивающими
                 формирование профессиональных компетенций педагогического работника, необходимых для самостоятельной
@@ -628,12 +645,12 @@
             </div>
         </div>
     </section>
-    <a name="tab-content2-2"></a>
+    <a name="tab-content2-2" class="anchor"></a>
     <!-- Девятая секция: Программа обучения-->
 
     <section class="py-5 df-bg-2">
         <div class="container">
-            <h2 class="df-h1 pb-4 pt-2">Программа обучения</h2>
+            <h2 class="df-h1 pb-4 pt-2 ancor">Программа обучения</h2>
             <ul class="df-list">
                 <li>Разработано совместно с преподавателями Московского Педагогического Государственного Университета
                     (МПГУ)
@@ -1115,12 +1132,12 @@
             </div>
         </div>
     </section>
-    
+
     <!-- Двенадцатая секция: Настоящая практика-->
-    <a name="tab-content2-3"></a>
+    <a name="tab-content2-3" class="anchor"></a>
     <section class="py-5 df-bg-1">
         <div class="container">
-            <h2 class="df-h2 pb-2 pt-4 df-tc-5">Настоящая практика</h2>
+            <h2 class="df-h2 pb-2 pt-4 df-tc-5 ancor">Настоящая практика</h2>
             <div class="df-block-numbers py-4">
                 <div class="df-bg-2 df-shadow df-brr-3 df-block-number block-img df-block-number_stage">
                     <div class="df-block-number_numeral">
@@ -2477,7 +2494,29 @@
             <p class="df-p py-3">
                 Посмотрите видеорекомендации от ведущих курса
             </p>
-            <div class="recommended">
+            <div class="recommended-1 recommended-slider">
+                <div class="recommended_item">
+                    <div class="trust-us_item">
+                        <a class="recommended_item_img" href="https://www.youtube.com/watch?v=egNbJTHEbAE
+                            " target="_blank" tabindex="-1">
+                            <img class="trust-us_item-img"
+                                src="https://www.defectologiya.pro/assets/images/svg/image-video.svg">
+                            <div class="recommended_item_icon">
+                                <img src="https://www.defectologiya.pro/assets/images/svg/logos_youtube-icon2.svg"
+                                    alt="">
+                            </div>
+                        </a>
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10">
+                            Д.п.н. Архипова Елена Филипповна
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            Кандидат педагогических наук, учитель-логопед высшей категории, доцент кафедры логопедии,
+                            детский писатель, член Союза писателей России
+                        </div>
+                    </div>
+                </div>
                 <div class="recommended_item">
                     <div class="trust-us_item">
                         <a class="recommended_item_img" href="https://www.youtube.com/watch?v=egNbJTHEbAE
@@ -3669,11 +3708,161 @@
         </div>
     </section>
 
+<!-- Сорок первая секция: переподготовка нейросеминары -->
 
+<section class="py-5 df-bg-3">
+    <div class="container">
+        <div class="df-h1 py-3 df-tc-5">
+            В переподготовке нейросеминары на 598 часов
+        </div>
+        <div class=" discounts-training">
+        </div>
+        <div class="pb-3">
+            <span class="df-bg-5 df-brr-1 df-tc-1 p-2 px-3">
+                Расширенные знания в переподготовке. Итоговый сертификат.
+            </span>
+        </div>
+        <div class="df-h2 py-3 pb-4 df-weight-600 df-tc-5 d-flex gap-3">
+            <div> 
+                Тема: 
+            </div>
+            <div class="df-h3 df-weight-400 d-flex flex-column">
+                <span class="d-block">«Нейропсихологический подход в смежных профессиях»</span>
+                <span class="d-block">+ 24 супервизии нейропсихолога</span>
+            </div>
+        </div>
+        <div class="p-4 df-bg-1 df-brr-3 df-shadow">
+            <div class="df-h4 df-weight-800 df-tc-5 px-sm-3 pt-2">
+                Разделы нейросеминаров 
+            </div>
+            <ul class="df-list-1 df-list-2 pt-5 pb-2 px-sm-3">
+                <li class="pb-3">
+                    <p>Основы нейропсихологии. Базовые теории и понятия
+                    </p>
+                </li>
+                <li class="pb-3">
+                    <p>Особенности онтогенеза психики человека в норме и патологии</p>
+                </li>
+                <li class="pb-3">
+                    <p>Нейропсихологическая диагностика и коррекция детей
+                    </p>
+                </li>
+                <li class="pb-3">
+                    <p>Основные аспекты отклоняющегося поведения и стресса</p>
+                </li>
+                <li class="pb-3">
+                    <p>Нейропсихологическая диагностика и коррекция пациентов взрослого возраста</p>
+                </li>
+                <li class="pb-3">
+                    <p>Нейропсихология в системе медицинской реабилитации. Профилактика нарушений когнитивных функций</p>
+                </li>
+            </ul>
+            <div class="df-h4 df-weight-800 df-tc-5 px-sm-4 pb-4">
+                Авторы
+            </div>
+            <div class="recommended-1 recommended-slider recommended-2">
+                <div class="recommended_item d-flex flex-column gap-1 p-2 df-brr-2 df-bc-3 df-bg-1">
+                    <div class="trust-us_item">
+                        <img class="trust-us_item-img"
+                        src="https://www.defectologiya.pro/assets/images/authors_new/2022/Shevtsova%20330.jpg">
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10 pt-2">
+                            Шевцова Е.Е.
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            доц. кафедры логопедии
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class="recommended_item d-flex flex-column gap-1 p-2 df-brr-2 df-bc-3 df-bg-1">
+                    <div class="trust-us_item">
+                        <img class="trust-us_item-img"
+                        src="https://www.defectologiya.pro/assets/images/authors_new/2022/Malukova 330.jpg">
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10 pt-2">
+                            Малюкова Н.Г.
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            канд. психол. наук
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class="recommended_item d-flex flex-column gap-1 p-2 df-brr-2 df-bc-3 df-bg-1">
+                    <div class="trust-us_item">
+                        <img class="trust-us_item-img"
+                        src="https://www.defectologiya.pro/assets/images/authors_new/2022/Fridman%20330-min.jpg">
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10 pt-2">
+                            Фридман Т.В
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            врач-невролог выс. кв. кат.
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class="recommended_item d-flex flex-column gap-1 p-2 df-brr-2 df-bc-3 df-bg-1">
+                    <div class="trust-us_item">
+                        <img class="trust-us_item-img"
+                        src="https://www.defectologiya.pro/assets/images/authors_new/2022/Shaklein_330.jpg">
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10 pt-2">
+                            Шаклеин А.В.
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            канд. психол. наук
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class="recommended_item d-flex flex-column gap-1 p-2 df-brr-2 df-bc-3 df-bg-1">
+                    <div class="trust-us_item">
+                        <img class="trust-us_item-img"
+                        src="https://www.defectologiya.pro/assets/images/authors_new/2022/Павличенко%20330.jpg">
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10 pt-2">
+                            Павличенко А.В.
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            врач-психиатр выс. кв. кат.
+                        </div>
+                    </div>
+                      
+                </div>
+                <div class="recommended_item d-flex flex-column gap-1 p-2 df-brr-2 df-bc-3 df-bg-1">
+                    <div class="trust-us_item">
+                        <img class="trust-us_item-img"
+                        src="https://www.defectologiya.pro/assets/images/authors_new/2022/Ковеленова.jpg">
+                    </div>
+                    <div class="recommended_item_label">
+                        <div class="df-p df-weight-900 df-tc-10 pt-2">
+                            Ковеленова М.В.
+                        </div>
+                        <div class="df-p-card  df-tc-9">
+                            канд. мед. наук
+                        </div>
+                    </div>
+                      
+                </div>
+            </div>
+            <div class="px-5 pt-4 col-lg-4 pb-3">   
+                <a href="cs/nejro_smezhnyix_professiyax/" class="df-button df-button-2 df-p-card w-100" target="_blank">
+                    Подробнее</a>
+            </div>
+        </div>
+    </div>
+</section>
 
     <script type="text/javascript" src="https://www.defectologiya.pro/assets/js/vendor/slick.js"></script>
     <script type="text/javascript" src="https://www.defectologiya.pro/js/sliders-init.js"></script>
-   <!--
+    <!--
     <script>
         $('.img-doc-slide1').slick({
 
@@ -3720,7 +3909,14 @@
     });
     </script> -->
 
+    <script>
 
+
+        $(".active-point").click(function () {
+            $(".active-point").removeClass("active");
+            $(this).addClass("active");
+        });
+    </script>
 
 
 </body>
