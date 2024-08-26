@@ -587,9 +587,11 @@ button.df-button-1 {
     line-height: 22px;
     margin: 0;
 }
+
 .df-list-2>li>p {
     padding: 10px 15px 15px 55px !important;
 }
+
 .df-list-1>li>div {
     display: flex;
     justify-content: flex-end;
@@ -643,13 +645,15 @@ button.df-button-1 {
     text-align: center;
     border-radius: var(--dfp-radius-1);
 }
+
 .df-list-2 li:before {
     top: -15px;
     left: 15px;
-    font-size: 20px;
+    font-size: 18px;
     width: 30px;
     height: 30px;
 }
+
 .df-list-1 li:hover:before {
     background: var(--dfp-color-5);
     color: var(--dfp-color-1);
@@ -889,6 +893,7 @@ button.df-button-1 {
     position: relative;
     top: 10px;
 }
+
 .price-module_discounts {
     border-top: 1px solid var(--dfp-color-5);
     max-width: 700px;
@@ -1082,6 +1087,7 @@ button.df-button-1 {
 
 .accordion-modul_header {
     border-bottom: 1px solid var(--dfp-color-4);
+    gap: 5px;
 }
 
 .accordion-modul>div>.accordion-modul-item_header_bottom,
@@ -1089,23 +1095,30 @@ button.df-button-1 {
     color: var(--dfp-color-9);
     font-weight: 400;
     letter-spacing: 0px;
-    font-size: clamp(16px, 2.2vw, 20px);
-    line-height: clamp(20px, 2.8vw, 24px);
+    font-size: clamp(14px, 2.2vw, 20px);
+    line-height: clamp(16px, 2.8vw, 24px);
 }
 
 .accordion-modul>div>h2>button {
     border-bottom: 1px solid var(--dfp-color-4);
+    display: flex;
+    align-items: flex-start;
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
 }
 
 .accordion-modul>div>h2>button>div:nth-child(1) {
     font-weight: 500;
     letter-spacing: 0px;
-    font-size: clamp(24px, 4.2vw, 38px);
-    line-height: clamp(28px, 4.5vw, 38px);
+    font-size: clamp(20px, 4.2vw, 34px);
+    line-height: clamp(20px, 4.5vw, 38px);
 }
 
 .accordion-modul>div>h2>button>div:nth-child(2) {
     text-transform: uppercase;
+    position: relative;
+    top: 5px;
+    padding-right: 10px;
 }
 
 .accordion-modul>div>h2>button::after {
@@ -1251,6 +1264,31 @@ a.accordion-modul-educator-item_videoclass:hover {
 .accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_content>.educator-modul_title,
 .accordion-modul-educator-item>div>h2>button:not(.collapsed)>.accordion-modul-educator-item_heder>.educator_content>.educator-modul_footer {
     color: var(--dfp-color-0);
+}
+
+.accordion-header_images-block-top {
+    overflow: hidden;
+}
+
+.accordion-header_images-block {
+    width: 100%;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 20px;
+    margin-bottom: -20px;
+    width: 765px;
+}
+
+.accordion-header_images {
+    padding-top: 10px;
+    display: inline-flex;
+    gap: 5px;
+}
+
+.accordion-header_images>img {
+    width: 50px;
+    border: 1px solid var(--dfp-color-0);
+    border-radius: var(--dfp-radius-1);
 }
 
 /* Блок с востребованостью и практикой, элементы с тизерами*/
@@ -1701,13 +1739,16 @@ a.accordion-modul-educator-item_videoclass:hover {
 .recommended-1 .recommended_item {
     margin: 0 5px;
 }
+
 .recommended-2>div>div.slick-track {
-     display: flex;
-     align-items: stretch;
+    display: flex;
+    align-items: stretch;
 }
-.recommended-2 .recommended_item{
+
+.recommended-2 .recommended_item {
     height: auto;
 }
+
 /* Блок Ближайшие занятия*/
 .upcoming-classes-block {
     display: grid;
@@ -1964,6 +2005,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     flex-direction: row;
     justify-content: center;
 }
+
 /*--Тултип --*/
 .df-tooltip {
     display: flex;
@@ -1993,6 +2035,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     visibility: visible;
     opacity: 1;
 }
+
 .df-tooltiptext::after {
     width: 0;
     height: 0;
@@ -2006,6 +2049,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     background-image: none;
     content: '';
 }
+
 .df-tooltip_question {
     font-size: 10px;
     line-height: normal;
@@ -2023,9 +2067,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     background: var(--dfp-color-5);
     margin-right: 10px;
 }
-.df-tooltip_question:hover{
+
+.df-tooltip_question:hover {
     background: var(--dfp-color-0);
 }
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -2038,6 +2084,10 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 1200px) {
+    .accordion-header_images-block {
+        width: 655px;
+    }
+
     .df-doc1_item {
         height: fit-content;
         padding: 0 10px !important;
@@ -2196,6 +2246,9 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 992px) {
+    .accordion-header_images-block {
+        width: 490px;
+    }
 
     .payment-installments>div:nth-child(1) {
         border-right: 0px solid var(--dfp-color-11);
@@ -2259,12 +2312,19 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 768px) {
+    .accordion-header_images-block {
+        width: 325px;
+    }
+
     .discount-block_item {
         width: 100%;
     }
 }
 
 @media (max-width: 600px) {
+    .accordion-modul>div>h2>button>div:nth-child(2) {
+        top: 2px;
+    }
 
     .img-doc-slide>.right,
     .df-doc2_item>.right {
@@ -2325,9 +2385,11 @@ a.accordion-modul-educator-item_videoclass:hover {
         max-width: 175px;
         left: -5%;
     }
+
     .df-list-2>li>p {
         padding: 20px 15px 15px 20px !important;
     }
+
     .df-list-1 {
         gap: 15px;
     }
@@ -2339,6 +2401,10 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 500px) {
+    .accordion-header_images-block {
+        width: 220px;
+    }
+
     .docs-block-content {
         grid-template-columns: 100%;
         gap: 5px;
@@ -2428,7 +2494,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 
     .accordion-modul>div>h2>button::after,
     .accordion-modul>div>h2>button:not(.collapsed)::after {
-        left: -10px;
+        left: -5px;
     }
 
     .educator_img-1,
@@ -2517,6 +2583,14 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 420px) {
+    .accordion-modul_header {
+        font-size: 14px;
+    }
+
+    .accordion-modul_header>div:nth-child(2) {
+        width: 70%;
+    }
+
     .payment-installments>div:nth-child(1)>div>div:nth-child(2) {
         grid-template-columns: 1fr 1fr;
         gap: 0;
@@ -2527,5 +2601,11 @@ a.accordion-modul-educator-item_videoclass:hover {
         padding: 0 25px;
         display: grid;
         grid-template-rows: 70% 1fr;
+    }
+}
+
+@media (max-width: 375px) {
+    .accordion-header_images-block {
+        width: 160px;
     }
 }
