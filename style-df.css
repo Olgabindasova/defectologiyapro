@@ -1268,15 +1268,17 @@ a.accordion-modul-educator-item_videoclass:hover {
 
 .accordion-header_images-block-top {
     overflow: hidden;
+    height: 65px;
+    width: fit-content;
 }
 
 .accordion-header_images-block {
-    width: 100%;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     padding-bottom: 20px;
     margin-bottom: -20px;
-    width: 765px;
+    width: 550px;
+    position: static;
 }
 
 .accordion-header_images {
@@ -1290,7 +1292,35 @@ a.accordion-modul-educator-item_videoclass:hover {
     border: 1px solid var(--dfp-color-0);
     border-radius: var(--dfp-radius-1);
 }
-
+.accordion-header_attest {
+    display: flex;
+    justify-content: flex-end;
+    height: 0;
+}
+.accordion-header_attest>div {
+    width: 300px;
+    position: relative;
+    top: -55px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: clamp(15px, 2vw, 17px);
+    text-transform: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    background: var(--dfp-color-3);
+    height: 50px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border-radius: var(--dfp-radius-2);
+    left: 85px;
+    color: var(--dfp-color-0);
+}
+.accordion-header_attest>div>span{
+    font-weight: 400;
+}
 /* Блок с востребованостью и практикой, элементы с тизерами*/
 
 .practice-tizer {
@@ -2084,8 +2114,28 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 1200px) {
+    .accordion-header_attest>div {
+        width: fit-content;
+        position: relative;
+        top: 0;
+        border-radius: var(--dfp-radius-1);
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        height: fit-content;
+        padding: 5px 5%;
+        justify-content: flex-start;
+        align-items: center;
+        left: 0;
+        flex-wrap: wrap;
+    }
+    .accordion-header_attest {
+        height: fit-content;
+        justify-content: flex-start;
+        padding-top: 5px;
+    }
     .accordion-header_images-block {
-        width: 655px;
+        width: 550px;
     }
 
     .df-doc1_item {
@@ -2247,7 +2297,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 
 @media (max-width: 992px) {
     .accordion-header_images-block {
-        width: 490px;
+        width: 435px;
     }
 
     .payment-installments>div:nth-child(1) {
