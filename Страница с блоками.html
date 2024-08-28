@@ -49,6 +49,12 @@
 </head>
 
 <body>
+
+     
+  
+  
+ 
+
     <!-- Первая секция: заголовок и картинки-->
 
     <section class="py-5 df-bg-2">
@@ -3936,9 +3942,32 @@
     });
     </script> -->
 
+ 
+
+
+  <div class="block-modalnewdesign modalnewdesign df-bg-1 df-shadow">
+	<div class="container">
+        <button class=" df-button df-button-3 df-p-card " type="button">Больше не показывать</button>
+        <button class=" df-button df-button-1 df-p-card " type="button">Вернуться на старый дизайн</button>
+        <div>
+            <button class="modalnewdesign__close df-button-close" type="button"></button>
+        </div>
+    </div>
+</div>
+
+  <style>
+    
+  </style>
+  <script>
+if (document.querySelector(".block-modalnewdesign")) {
+  const container = document.querySelector(".block-modalnewdesign");
+  const apply = container.querySelector(".modalnewdesign__close");
+  apply.addEventListener("click", () => {
+    container.classList.remove("modalnewdesign");
+  });
+};
+  </script>
     <script>
-
-
         $(".active-point").click(function () {
             $(".active-point").removeClass("active");
             $(this).addClass("active");
