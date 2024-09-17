@@ -998,6 +998,28 @@ button.df-button-1 {
 .smart-time_mobile>div>a, .smart-time_mobile>div>button {
     width: 100%;
 }
+
+.price-module_pay-item {
+    display: flex;
+    background: var(--dfp-color-2);
+    border-radius: var(--dfp-radius-1);
+    border: 1px solid var(--dfp-color-4);
+    text-decoration: none;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.price-module_pay-item>div{
+    text-align: start;
+}
+.price-module_pay-item:hover{
+    border: 1px solid var(--dfp-color-0);
+    background: var(--dfp-color-3);
+}
 /* Блок с картинками - документы*/
 
 .block-img_pic {
