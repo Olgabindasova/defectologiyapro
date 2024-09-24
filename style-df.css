@@ -1544,6 +1544,9 @@ a.accordion-modul-educator-item_videoclass:hover {
 .discounts-training {
     border-top: 1px solid var(--dfp-color-5);
     max-width: 700px;
+    height: 0;
+    margin-bottom: 15px;
+    padding-bottom: 25px;
 }
 
 .discounts-training::before {
@@ -2063,7 +2066,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     grid-template-columns: 45% 1fr;
     gap: 40px;
 }
-
+.tuition-fees>div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
 /* Блоки Выдаваемые документы*/
 .df-doc1 {
     display: flex;
@@ -2587,6 +2594,10 @@ a.accordion-modul-educator-item_videoclass:hover {
         min-width: 200px !important;
         max-width: 450px !important;
     }
+    .price-module_vig_tablet {
+        left: 0;
+        margin: 10px auto;
+    }
 }
 
 @media (max-width: 992px) {
@@ -2875,6 +2886,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .mobile_procent {
         border-radius: 7px;
     }
+  
 }
 
 @media (max-width: 500px) {
