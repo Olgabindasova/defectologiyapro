@@ -86,8 +86,8 @@
     --dfp-color-4: #889EC1;
     --dfp-color-5: #1A3055;
     --dfp-color-6: #3E68A8;
-    --dfp-color-7: #2DC36A;
     --dfp-color-7-2: #03B97A;
+    --dfp-color-7: #03B97A;
     --dfp-color-8: #242424;
     --dfp-color-9: #66727F;
     --dfp-color-10: #FAFCFF;
@@ -516,7 +516,7 @@ button.df-button-1 {
 }
 
 .df-button-4.arrow::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%234F6382' viewBox='0 0 17 8'%3E%3Cpath d='m13.172.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 1 1-.708-.708L14.793 4.5H1a.5.5 0 1 1 0-1h13.793l-2.329-2.328a.5.5 0 1 1 .708-.708Z'/%3E%3C/svg%3E");
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow4-after.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
@@ -531,7 +531,7 @@ button.df-button-1 {
 }
 
 .df-button-4:hover.arrow::after {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%231A3055' viewBox='0 0 17 8'%3E%3Cpath d='m13.172.464 3.182 3.182a.5.5 0 0 1 0 .708l-3.182 3.182a.5.5 0 1 1-.708-.708L14.793 4.5H1a.5.5 0 1 1 0-1h13.793l-2.329-2.328a.5.5 0 1 1 .708-.708Z'/%3E%3C/svg%3E");
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow4-after-hover.svg");
 }
 
 .arrow-r1.arrow::after {
@@ -578,7 +578,7 @@ button.df-button-1 {
 }
 
 .df-list li::before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%232DC36A' viewBox='0 0 20 15'%3E%3Cpath d='M19.546 1.111a1.5 1.5 0 0 1 0 2.121L8.303 14.475a1.6 1.6 0 0 1-2.263 0L.454 8.89a1.5 1.5 0 1 1 2.121-2.121l4.596 4.596L17.424 1.111a1.5 1.5 0 0 1 2.122 0Z'/%3E%3C/svg%3E");
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/galochka.svg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: 20px;
@@ -973,7 +973,7 @@ button.df-button-1 {
 }
 
 .price-module_vig_decktop {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 110 110' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M0 55C0 24.6243 24.6243 0 55 0C85.3757 0 110 24.6243 110 55C110 85.3757 85.3757 110 55 110C24.6243 110 0 85.3757 0 55Z' fill='white'/%3e%3cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 55C2 84.2711 25.7289 108 55 108C84.2711 108 108 84.2711 108 55C108 25.7289 84.2711 2 55 2C25.7289 2 2 25.7289 2 55ZM55 0C24.6243 0 0 24.6243 0 55C0 85.3757 24.6243 110 55 110C85.3757 110 110 85.3757 110 55C110 24.6243 85.3757 0 55 0Z' fill='%234F6382'/%3e%3cpath d='M7 55C7 28.4903 28.4903 7 55 7C81.5097 7 103 28.4903 103 55C103 81.5097 81.5097 103 55 103C28.4903 103 7 81.5097 7 55Z' fill='%234F6382'/%3e%3c/svg%3e");
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/price-circle.svg");
     width: 130px;
     height: 130px;
 }
@@ -1019,6 +1019,13 @@ button.df-button-1 {
 .price-module_pay-item:hover{
     border: 1px solid var(--dfp-color-0);
     background: var(--dfp-color-3);
+}
+.price-module_pay-item-info {
+    cursor: auto;
+    background: var(--dfp-color-2);
+}
+.price-module_pay-item-info:hover {
+    background: var(--dfp-color-2);
 }
 /* Блок с картинками - документы*/
 
@@ -2196,6 +2203,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     border: 1px solid var(--dfp-color-0);
     transition: all 0.5s;
     opacity: 0;
+    cursor: auto;
 }
 
 .df-tooltip:hover .df-tooltiptext {
@@ -2246,6 +2254,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     color: var(--dfp-color-1);
     background: var(--dfp-color-5);
 }
+.price-module_pay-item-info:has(.df-tooltip_question:hover) {
+    background: var(--dfp-color-3);
+}
+
+
 .block-modalnewdesign {
     position: fixed;
     bottom: 0;
@@ -2254,7 +2267,6 @@ a.accordion-modul-educator-item_videoclass:hover {
     width: 100%;
     padding: 20px 0;
     box-sizing: border-box;
-
 }
 
 /*--Модальное окно для дизайна--*/
@@ -2277,7 +2289,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     box-sizing: content-box !important;
     width: 20px;
     height: 20px;
-    background: url("data:image/svg+xml;charset=UTF-8, %3csvg viewBox='0 0 100 100' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2.7955 2.7955C4.58599 1.00554 7.01411 0 9.54587 0C12.0776 0 14.5057 1.00554 16.2962 2.7955L50.0576 36.5569L83.819 2.7955C85.6198 1.05627 88.0316 0.0938937 90.5351 0.115648C93.0385 0.137402 95.4332 1.14155 97.2035 2.91181C98.9737 4.68206 99.9779 7.0768 99.9996 9.58023C100.021 12.0837 99.059 14.4955 97.3198 16.2962L63.5584 50.0576L97.3198 83.819C99.059 85.6198 100.021 88.0316 99.9996 90.5351C99.9779 93.0385 98.9737 95.4332 97.2035 97.2035C95.4332 98.9737 93.0385 99.9779 90.5351 99.9996C88.0316 100.021 85.6198 99.059 83.819 97.3198L50.0576 63.5584L16.2962 97.3198C14.4955 99.059 12.0837 100.021 9.58023 99.9996C7.0768 99.9779 4.68206 98.9737 2.91181 97.2035C1.14155 95.4332 0.137402 93.0385 0.115648 90.5351C0.0938937 88.0316 1.05627 85.6198 2.7955 83.819L36.5569 50.0576L2.7955 16.2962C1.00554 14.5057 0 12.0776 0 9.54587C0 7.01411 1.00554 4.58599 2.7955 2.7955Z' fill='white'/%3e%3c/svg%3e") center / 20px auto no-repeat;
+    background: url("https://www.defectologiya.pro/assets/images/svg/clouse-button.svg") center / 20px auto no-repeat;
     background-color: var(--dfp-color-5);
     border-radius: var(--dfp-radius-1);
     opacity: 1;
@@ -3073,4 +3085,8 @@ a.accordion-modul-educator-item_videoclass:hover {
     .accordion-header_images-block {
         width: 160px;
     }
+}
+
+.fancybox__container {
+    z-index: 99999;
 }
