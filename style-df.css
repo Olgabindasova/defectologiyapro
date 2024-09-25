@@ -794,6 +794,10 @@ button.df-button-1 {
 }
 .df-tizer.slick-slide>.df-tizer_svg {
     background: var(--dfp-color-12);
+    transition: all 0.5s;
+}
+.df-tizer.slick-slide>a.df-tizer_svg:hover {
+    background: var(--dfp-color-5);
 }
 .df-tizer.slick-slide>.df-tizer_text {
     font-size: clamp(13px, 1.7vw, 14px);
