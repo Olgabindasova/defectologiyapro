@@ -739,10 +739,15 @@ button.df-button-1 {
     box-sizing: border-box;
 }
 
+/*.df-tizers-block>div>div.slick-track {
+    margin: 0 auto;
+}*/
 .df-tizers-block>div>div.slick-track {
     margin: 0 auto;
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
 }
-
 .df-tizer {
     display: flex !important;
     flex-direction: column;
@@ -777,7 +782,24 @@ button.df-button-1 {
 .df-tizers-block>button.slick-arrow {
     display: none !important;
 }
-
+.df-tizer.slick-slide {
+    gap: 15px;
+    padding: 15px 10px 15px 10px !important;
+    justify-content: flex-start;
+    height: auto;
+    background: #fff;
+    border-radius: 15px;
+    border: 1px solid #e9f0f6;
+    box-sizing: content-box !important;
+}
+.df-tizer.slick-slide>.df-tizer_svg {
+    background: var(--dfp-color-12);
+}
+.df-tizer.slick-slide>.df-tizer_text {
+    font-size: clamp(13px, 1.7vw, 14px);
+    line-height: clamp(16px, 2.5vw, 15px);
+    width: 180px; 
+}
 /* Блоки c номерами*/
 
 .df-block-numbers {
