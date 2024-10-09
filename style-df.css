@@ -305,6 +305,7 @@ a[name].anchor {
     width: 100%;
     height: 1px;
 }
+
 /* Тень*/
 
 .df-shadow {
@@ -474,6 +475,7 @@ button.df-button-1 {
     border: 1px solid var(--dfp-color-12);
     color: var(--dfp-color-12) !important;
 }
+
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -554,6 +556,24 @@ button.df-button-1 {
 
 .df-button-4.arrow.arrow-r1[aria-expanded="true"] {
     display: none;
+}
+
+.df-icons-social {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.df-icons-social .ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__badge,
+.df-icons-social .ya-share2__container.ya-share2__container_color-scheme_blackwhite .ya-share2__mobile-popup-badge {
+    background-color: var(--dfp-color-5);
+}
+
+.df-icons-social .ya-share2__badge {
+    border-radius: 4px !important;
 }
 
 /* Списки*/
@@ -748,6 +768,7 @@ button.df-button-1 {
     align-items: stretch;
     gap: 10px;
 }
+
 .df-tizer {
     display: flex !important;
     flex-direction: column;
@@ -782,6 +803,7 @@ button.df-button-1 {
 .df-tizers-block>button.slick-arrow {
     display: none !important;
 }
+
 .df-tizer.slick-slide {
     gap: 15px;
     padding: 15px 10px 15px 10px !important;
@@ -792,18 +814,22 @@ button.df-button-1 {
     border: 1px solid #e9f0f6;
     box-sizing: content-box !important;
 }
+
 .df-tizer.slick-slide>.df-tizer_svg {
     background: var(--dfp-color-12);
     transition: all 0.5s;
 }
+
 .df-tizer.slick-slide>a.df-tizer_svg:hover {
     background: var(--dfp-color-5);
 }
+
 .df-tizer.slick-slide>.df-tizer_text {
     font-size: clamp(13px, 1.7vw, 14px);
     line-height: clamp(16px, 2.5vw, 15px);
-    width: 180px; 
+    width: 180px;
 }
+
 /* Блоки c номерами*/
 
 .df-block-numbers {
@@ -1015,13 +1041,17 @@ button.df-button-1 {
 .price-module_tablet {
     display: none;
 }
+
 .price-module_mobile {
     display: none;
 }
-.smart-time_mobile>div:nth-child(odd)  {
+
+.smart-time_mobile>div:nth-child(odd) {
     width: 25%;
 }
-.smart-time_mobile>div>a, .smart-time_mobile>div>button {
+
+.smart-time_mobile>div>a,
+.smart-time_mobile>div>button {
     width: 100%;
 }
 
@@ -1039,20 +1069,25 @@ button.df-button-1 {
     cursor: pointer;
     transition: all 0.3s;
 }
-.price-module_pay-item>div{
+
+.price-module_pay-item>div {
     text-align: start;
 }
-.price-module_pay-item:hover{
+
+.price-module_pay-item:hover {
     border: 1px solid var(--dfp-color-0);
     background: var(--dfp-color-3);
 }
+
 .price-module_pay-item-info {
     cursor: auto;
     background: var(--dfp-color-2);
 }
+
 .price-module_pay-item-info:hover {
     background: var(--dfp-color-2);
 }
+
 /* Блок с картинками - документы*/
 
 .block-img_pic {
@@ -1389,6 +1424,16 @@ button.df-button-1 {
     height: 105px;
     display: block;
     border: 1px solid var(--dfp-color-4);
+}
+
+.educator_img-3 {
+    width: 270px;
+    height: 270px;
+    display: block;
+    border: 1px solid var(--dfp-color-4);
+    position: relative;
+    top: -30px;
+    right: 30px;
 }
 
 .educator-modul_title,
@@ -2092,11 +2137,13 @@ a.accordion-modul-educator-item_videoclass:hover {
     grid-template-columns: 45% 1fr;
     gap: 40px;
 }
+
 .tuition-fees>div:nth-child(2) {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 /* Блоки Выдаваемые документы*/
 .df-doc1 {
     display: flex;
@@ -2275,7 +2322,8 @@ a.accordion-modul-educator-item_videoclass:hover {
     background: var(--dfp-color-5);
     margin-right: 10px;
 }
-.df-tooltip_question-2{
+
+.df-tooltip_question-2 {
     color: var(--dfp-color-5);
     background: var(--dfp-color-1);
 }
@@ -2283,10 +2331,12 @@ a.accordion-modul-educator-item_videoclass:hover {
 .df-tooltip_question:hover {
     background: var(--dfp-color-0);
 }
+
 .df-tooltip_question-2:hover {
     color: var(--dfp-color-1);
     background: var(--dfp-color-5);
 }
+
 .price-module_pay-item-info:has(.df-tooltip_question:hover) {
     background: var(--dfp-color-3);
 }
@@ -2336,7 +2386,60 @@ a.accordion-modul-educator-item_videoclass:hover {
     background-color: var(--dfp-color-0);
 }
 
+/* Авторский курс блок с заголовком*/
 
+.df-autor-curs {
+    display: grid;
+    grid-template-columns: 45% 0px 45%;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.df-autor-curs>div:nth-child(1) {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.df-autor-curs>div:nth-child(2) {
+    border-right: 1px solid var(--dfp-color-5);
+    height: 100%;
+}
+
+.df-autor-curs>div:nth-child(2)::before {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 25px solid transparent;
+    border-left: 25px solid var(--dfp-color-5);
+    top: 50px;
+    left: 100%;
+    background-image: none;
+    content: '';
+}
+
+.df-text-autor{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.df-text-autor span {
+    font-weight: 700;
+    color: var(--dfp-color-0);
+}
+
+.df-text-autor p {
+    font-weight: 400;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: clamp(16px, 2.5vw, 18px);
+    margin: 0;
+}
+.df-autor-block {
+    display: flex;
+    gap: 10px;
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -2359,6 +2462,10 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 1200px) {
+    .df-w-1200-100 {
+        width: 100% !important;
+    }
+
     .accordion-modul_button_stag .accordion-header_attest>div {
         top: 5px;
     }
@@ -2450,20 +2557,25 @@ a.accordion-modul-educator-item_videoclass:hover {
         width: 100%;
         margin-top: 30px;
     }
+
     .price-module_decktop {
         flex-wrap: nowrap;
     }
+
     .price-module_decktop>div:nth-child(1),
     .price-module_decktop>div:nth-child(2) {
         min-width: 300px !important;
         max-width: 450px !important;
     }
+
     .price-module_decktop>div:nth-child(1) {
         margin-bottom: 0 !important;
     }
+
     .price-block-new {
         max-width: 95%;
     }
+
     .price-module_decktop>div:nth-child(3) {
         display: none !important;
     }
@@ -2582,14 +2694,18 @@ a.accordion-modul-educator-item_videoclass:hover {
     .df-block-number {
         width: 100%;
     }
-    .price-module_decktop>div:nth-child(1), .price-module>div:nth-child(2) {
+
+    .price-module_decktop>div:nth-child(1),
+    .price-module>div:nth-child(2) {
         border-bottom: 0 !important;
     }
+
     .price-module_decktop>div:nth-child(1) {
         border-right: 1px solid var(--dfp-color-5);
         width: 340px;
         min-width: 340px !important;
-        }
+    }
+
     .price-module_decktop>div:nth-child(1)::before {
         left: 90.4% !important;
         top: 25%;
@@ -2598,28 +2714,34 @@ a.accordion-modul-educator-item_videoclass:hover {
         border-top: 0;
         transform: rotate(45deg);
     }
+
     .price-module_decktop>div:nth-child(1)>div {
         width: 340px;
         min-width: 340px;
     }
+
     .price-module_decktop>div:nth-child(2)>div:nth-child(2) {
         align-items: flex-end;
         padding-top: 20px;
     }
+
     .price-module_vig_decktop {
         left: 10px;
     }
-    .price-module_decktop>div:nth-child(2)>div>div.text-decoration-line-through, 
-    .price-module_decktop>div:nth-child(2)>div>div.price-module_vig2, 
+
+    .price-module_decktop>div:nth-child(2)>div>div.text-decoration-line-through,
+    .price-module_decktop>div:nth-child(2)>div>div.price-module_vig2,
     .price-module_decktop>div:nth-child(2)>div>div:nth-child(4) {
         display: block;
         position: relative;
         top: 0px;
     }
-   .price-module_decktop>div:nth-child(2) {
+
+    .price-module_decktop>div:nth-child(2) {
         min-width: 200px !important;
         max-width: 450px !important;
     }
+
     .price-module_vig_tablet {
         left: 0;
         margin: 10px auto;
@@ -2627,9 +2749,10 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 992px) {
-    .smart-time_mobile>div:nth-child(odd)  {
+    .smart-time_mobile>div:nth-child(odd) {
         width: fit-content;
     }
+
     /*доп стиль для мобильного меню переподготовки*/
     .menuWrapper_sticky_style {
         background: var(--dfp-color-3);
@@ -2723,9 +2846,16 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 768px) {
+    .educator_img-3 {
+        width: 150px;
+        height: 150px;
+        top: 30px;
+        right: 20px;
+    }
     .line_decktop {
         display: none;
     }
+
     .accordion-header_images-block {
         width: 325px;
     }
@@ -2739,32 +2869,60 @@ a.accordion-modul-educator-item_videoclass:hover {
         justify-content: flex-start;
         align-items: stretch;
     }
+
     .price-module_decktop>div:nth-child(1) {
         width: 300px;
         min-width: 300px !important;
         margin-right: 15px !important;
     }
+
     .price-module_decktop>div:nth-child(1)::before {
         left: 88.9% !important;
     }
+
     .price-module_decktop>div:nth-child(1)>div {
         width: 300px;
         min-width: 300px;
     }
+
     .price-module_decktop>div:nth-child(2) {
         justify-content: space-around !important;
     }
+
     .price-module_decktop>div:nth-child(1)>div {
         padding-right: 20px;
     }
-    .smart-time_mobile{
-        gap:15px !important;
+
+    .smart-time_mobile {
+        gap: 15px !important;
     }
-    .smart-time_mobile>div, .smart-time_mobile>div>a, .smart-time_mobile>div>button{
+
+    .smart-time_mobile>div,
+    .smart-time_mobile>div>a,
+    .smart-time_mobile>div>button {
         width: 100% !important;
     }
+
     .smart-time_mobile>div:nth-child(3) {
         padding: 0 !important;
+    }
+
+    .df-autor-curs {
+        grid-template-columns: 100%;
+        margin-top: 20px;
+    }
+
+    .df-autor-curs>div:nth-child(2) {
+        border-right: 0px;
+        height: 25px;
+        border-top: 1px solid var(--dfp-color-5);
+    }
+
+    .df-autor-curs>div:nth-child(2)::before {
+        border: 20px solid transparent;
+        border-top: 20px solid var(--dfp-color-5);
+        top: 0;
+        left: 20%;
     }
 }
 
@@ -2774,9 +2932,11 @@ a.accordion-modul-educator-item_videoclass:hover {
         min-width: 250px !important;
         margin-right: 15px !important;
     }
+
     .price-module_decktop>div:nth-child(1)::before {
         left: 86.9% !important;
     }
+
     .price-module_decktop>div:nth-child(1)>div {
         width: 250px;
         min-width: 250px;
@@ -2785,6 +2945,14 @@ a.accordion-modul-educator-item_videoclass:hover {
 
 
 @media (max-width: 600px) {
+    
+    .educator_img-3 {
+        width: 150px;
+        height: 150px;
+        top: 15px;
+        right: -15px;
+        margin-right: 30px;
+    }
     .modalnewdesign>div {
         gap: 10px;
     }
@@ -2874,34 +3042,42 @@ a.accordion-modul-educator-item_videoclass:hover {
     .df-button {
         font-size: 12px;
     }
-    .price-module_tablet{
+
+    .price-module_tablet {
         padding: 20px;
     }
+
     .price-module_tablet>div>div:nth-child(2) {
         grid-template-columns: 1fr;
         width: 100%;
         gap: 10px;
     }
+
     .price-module_tablet>div {
         gap: 10px;
     }
+
     .price-module_decktop {
         display: none;
     }
+
     .price-module_mobile {
         display: block;
         padding: 20px;
     }
+
     .price-module_mobile.discounts-training {
         padding: 0;
         height: 0;
         margin-bottom: 10px;
     }
+
     .price-module_mobile.discounts-training::before {
         border: 15px solid transparent;
         border-top: 20px solid var(--dfp-color-5);
         left: 10%;
     }
+
     .price-module_mobile_procent {
         display: flex;
         gap: 5px;
@@ -2912,7 +3088,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     .mobile_procent {
         border-radius: 7px;
     }
-  
+
 }
 
 @media (max-width: 500px) {
@@ -3096,7 +3272,17 @@ a.accordion-modul-educator-item_videoclass:hover {
         border-radius: var(--dfp-radius-6);
     }
 }
-
+@media (max-width: 480px) {
+    .df-autor-block {
+        display: flex;
+        gap: 10px;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .df-autor-block>div {
+        padding: 15px !important;
+    }
+}
 @media (max-width: 420px) {
     .accordion-modul_header {
         font-size: 14px;
