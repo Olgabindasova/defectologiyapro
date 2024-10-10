@@ -2440,6 +2440,15 @@ a.accordion-modul-educator-item_videoclass:hover {
     display: flex;
     gap: 10px;
 }
+
+.df-autor-block_card-promo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.df-autor-block_card-promo_title {
+    min-height: 120px;
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -2846,6 +2855,9 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 768px) {
+    .df-autor-block_card-promo {
+        grid-template-columns: 1fr;
+    }
     .educator_img-3 {
         width: 150px;
         height: 150px;
