@@ -275,6 +275,10 @@ a[name].anchor {
     background-color: var(--dfp-color-7-2);
 }
 
+.df-bg-12 {
+    background-color: var(--dfp-color-12);
+}
+
 .df-bg-tr {
     background-color: transparent !important;
     background: transparent !important;
@@ -1262,7 +1266,7 @@ button.df-button-1 {
     gap: 5px;
 }
 
- 
+
 .accordion-modul>div>.accordion-modul-item_header_bottom,
 .accordion-modul>div>h2>button {
     color: var(--dfp-color-9);
@@ -1411,9 +1415,11 @@ button.df-button-1 {
 .accordion-modul-item_attest>div:nth-child(2) {
     text-transform: uppercase;
 }
+
 .accordion-modul-item_header_bottom>button {
     border-bottom: 0px !important;
 }
+
 .educator_img>div {
     min-width: fit-content;
     width: 105px;
@@ -2389,7 +2395,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     background-color: var(--dfp-color-0);
 }
 
-/* Авторский курс блок с заголовком*/
+/* Авторский курс блоки*/
 
 .df-autor-curs {
     display: grid;
@@ -2399,10 +2405,19 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-content: space-between;
 }
 
+.df-autor-curs_smart {
+    grid-template-columns: 35% 0px 60%;
+    padding: 30px;
+}
+
 .df-autor-curs>div:nth-child(1) {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.df-autor-curs_smart>div:nth-child(1) {
+    gap: 5px;
 }
 
 .df-autor-curs>div:nth-child(2) {
@@ -2423,11 +2438,12 @@ a.accordion-modul-educator-item_videoclass:hover {
     content: '';
 }
 
-.df-text-autor{
+.df-text-autor {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
+
 .df-text-autor span {
     font-weight: 700;
     color: var(--dfp-color-0);
@@ -2439,6 +2455,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     line-height: clamp(16px, 2.5vw, 18px);
     margin: 0;
 }
+
 .df-autor-block {
     display: flex;
     gap: 10px;
@@ -2449,14 +2466,70 @@ a.accordion-modul-educator-item_videoclass:hover {
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
+
 .df-autor-block_card-promo_title {
     min-height: 120px;
 }
+
 .df-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+/*Отточие*/
+.price-list {
+    display: flex;
+    width: 100%;
+    line-height: 1.5;
+    align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    gap: 15px;
+}
+.price-list::before {
+    font-size: 14px;
+    content: "✔";
+    display: flex;
+    color: var(--dfp-color-5);
+    padding: 2px;
+    border: 1px solid;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+.price-list__title {
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    color: var(--dfp-color-5);
+    font-weight: 500;
+}
+
+.price-list__title > span {
+    white-space: nowrap;
+}
+
+.price-list__ellipsis::before {
+    content: "";
+}
+.price-list__ellipsis::after {
+    position: absolute;
+    content: '......................................................................................................';
+    font-size: 13px;
+    letter-spacing: 2px;
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+.price-list__price {
+    flex-shrink: 0;
+    margin: 0 0 0 0.4em;
+}
+
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -2866,12 +2939,14 @@ a.accordion-modul-educator-item_videoclass:hover {
     .df-autor-block_card-promo {
         grid-template-columns: 1fr;
     }
+
     .educator_img-3 {
         width: 150px;
         height: 150px;
         top: 30px;
         right: 20px;
     }
+
     .line_decktop {
         display: none;
     }
@@ -2969,7 +3044,7 @@ a.accordion-modul-educator-item_videoclass:hover {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-    
+
     .educator_img-3 {
         width: 150px;
         height: 150px;
@@ -2977,6 +3052,7 @@ a.accordion-modul-educator-item_videoclass:hover {
         right: -15px;
         margin-right: 30px;
     }
+
     .modalnewdesign>div {
         gap: 10px;
     }
@@ -3296,6 +3372,7 @@ a.accordion-modul-educator-item_videoclass:hover {
         border-radius: var(--dfp-radius-6);
     }
 }
+
 @media (max-width: 480px) {
     .df-autor-block {
         display: flex;
@@ -3303,10 +3380,12 @@ a.accordion-modul-educator-item_videoclass:hover {
         flex-direction: column;
         padding: 10px;
     }
+
     .df-autor-block>div {
         padding: 15px !important;
     }
 }
+
 @media (max-width: 420px) {
     .accordion-modul_header {
         font-size: 14px;
