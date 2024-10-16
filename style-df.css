@@ -2406,8 +2406,9 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 .df-autor-curs_smart {
-    grid-template-columns: 35% 0px 60%;
+    grid-template-columns: 33% 15px 60%;
     padding: 30px;
+    gap: 15px;
 }
 
 .df-autor-curs>div:nth-child(1) {
@@ -2433,6 +2434,24 @@ a.accordion-modul-educator-item_videoclass:hover {
     border: 25px solid transparent;
     border-left: 25px solid var(--dfp-color-5);
     top: 50px;
+    left: 100%;
+    background-image: none;
+    content: '';
+}
+
+.df-autor-curs_smart>div:nth-child(2) {
+    border-right: 1px solid var(--dfp-color-1);
+    height: 100%;
+}
+
+.df-autor-curs_smart>div:nth-child(2)::before {
+    width: 0;
+    height: 0;
+    display: block;
+    position: relative;
+    border: 15px solid transparent;
+    border-left: 15px solid var(--dfp-color-1);
+    top: 30px;
     left: 100%;
     background-image: none;
     content: '';
@@ -2476,6 +2495,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
 }
+
 /*Отточие*/
 .price-list {
     display: flex;
@@ -2486,6 +2506,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     overflow: hidden;
     gap: 15px;
 }
+
 .price-list::before {
     font-size: 14px;
     content: "✔";
@@ -2508,13 +2529,14 @@ a.accordion-modul-educator-item_videoclass:hover {
     font-weight: 500;
 }
 
-.price-list__title > span {
+.price-list__title>span {
     white-space: nowrap;
 }
 
 .price-list__ellipsis::before {
     content: "";
 }
+
 .price-list__ellipsis::after {
     position: absolute;
     content: '......................................................................................................';
@@ -2839,6 +2861,18 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 992px) {
+    .df-autor-curs_smart {
+        grid-template-columns: 45% 15px 45%;
+        padding: 30px;
+        gap: 15px;
+    }
+
+    .df-autor-curs_smart_arrow {
+        transform: rotate(90deg);
+        padding: 10px;
+        width: 50px;
+    }
+
     .smart-time_mobile>div:nth-child(odd) {
         width: fit-content;
     }
@@ -2936,6 +2970,14 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 @media (max-width: 768px) {
+
+
+    .df-autor-curs_smart_arrow {
+        transform: rotate(0deg);
+        padding: 0px;
+        width: 35px;
+    }
+
     .df-autor-block_card-promo {
         grid-template-columns: 1fr;
     }
@@ -3018,6 +3060,25 @@ a.accordion-modul-educator-item_videoclass:hover {
         border-top: 20px solid var(--dfp-color-5);
         top: 0;
         left: 20%;
+    }
+
+    .df-autor-curs_smart>div:nth-child(2) {
+        border-bottom: 1px solid var(--dfp-color-1);
+        height: 15px;
+        margin-bottom: 10px;
+    }
+
+    .df-autor-curs_smart>div:nth-child(2)::before {
+        width: 0;
+        height: 0;
+        display: block;
+        position: relative;
+        border: 15px solid transparent;
+        border-top: 15px solid var(--dfp-color-1);
+        top: 13px;
+        left: 20%;
+        background-image: none;
+        content: '';
     }
 }
 
@@ -3189,6 +3250,27 @@ a.accordion-modul-educator-item_videoclass:hover {
         border-radius: 7px;
     }
 
+}
+
+@media (max-width: 576px) {
+    .df-autor-curs_smart_arrow {
+        transform: rotate(90deg);
+        padding: 10px;
+        width: 50px;
+    }
+    .df-autor-curs_smart>div:nth-child(1) {
+        align-items: center;
+    }
+    .df-autor-curs_smart>div:nth-child(1)>div {
+        text-align: center;
+    }
+    .df-autor-curs_smart>div:nth-child(3) {
+        align-items: center !important;
+    }
+
+    .df-autor-curs_smart>div:nth-child(2)::before {
+        left: 50%;
+    }
 }
 
 @media (max-width: 500px) {
