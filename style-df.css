@@ -136,7 +136,9 @@ section {
     font-family: 'Lato', sans-serif;
     color: inherit;
 }
-
+a:hover {
+    color: inherit;
+}
 a[name].anchor {
     border-top: 35px solid transparent;
     margin-top: -35px;
@@ -305,6 +307,9 @@ a[name].anchor {
     border: 1px solid var(--dfp-color-5);
 }
 
+.df-bc-12 {
+    border: 1px solid var(--dfp-color-12);
+}
 .df-hr {
     width: 100%;
     height: 1px;
@@ -362,6 +367,9 @@ a[name].anchor {
     color: var(--dfp-color-0);
 }
 
+.df-tc-12 {
+    color: var(--dfp-color-12);
+}
 /* Радиусы*/
 
 .df-brr-1 {
@@ -2192,7 +2200,9 @@ a.accordion-modul-educator-item_videoclass:hover {
     justify-content: center;
     position: relative;
 }
-
+.zoom-pic5-df {
+    left: 0 !important;
+}
 .docs-block-content {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -3391,12 +3401,16 @@ a.accordion-modul-educator-item_videoclass:hover {
         flex-direction: column;
     }
 
-    .img_pic1 {
+    /*.img_pic1 {
         width: 260px;
         padding: 10px;
         height: 190px;
+    }*/
+    .img_pic1 {
+        width: 100%;
+        padding: 10px;
+        height: auto;
     }
-
     .img_pic2 {
         height: 190px;
         width: 140px;
