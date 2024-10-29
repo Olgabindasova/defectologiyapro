@@ -101,6 +101,7 @@
     --dfp-radius-5: 20px 0px 0px 20px;
     --dfp-radius-6: 20px 20px 0px 0px;
     --dfp-radius-7: 15px 0px 0px 15px;
+    --dfp-radius-8: 15px 15px 0px 0px;
 }
 
 .carousel__button {
@@ -403,7 +404,9 @@ a[name].anchor {
 .df-brr-7 {
     border-radius: var(--dfp-radius-7);
 }
-
+.df-brr-8 {
+    border-radius: var(--dfp-radius-8);
+}
 /* Кнопки*/
 
 .df-button,
@@ -2583,6 +2586,10 @@ a.accordion-modul-educator-item_videoclass:hover {
     flex-shrink: 0;
     margin: 0 0 0 0.4em;
 }
+
+.price-list_dop {
+width: fit-content;
+}
   /*Блок превью*/
   .df-block-prev {
     border-radius: var(--dfp-radius-7);
@@ -3013,7 +3020,7 @@ a.accordion-modul-educator-item_videoclass:hover {
 @media (max-width: 768px) {
     .df-block-prev {
         width: 100%;
-        border-radius: var(--dfp-radius-6);
+        border-radius: var(--dfp-radius-8);
     }
 
     .df-autor-curs_smart_arrow {
