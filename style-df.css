@@ -313,6 +313,10 @@ a[name].anchor {
     border: 1px solid var(--dfp-color-5);
 }
 
+.df-bc-6 {
+    border: 1px solid var(--dfp-color-6);
+}
+
 .df-bc-12 {
     border: 1px solid var(--dfp-color-12);
 }
@@ -499,6 +503,22 @@ button.df-button-1 {
     color: var(--dfp-color-12) !important;
 }
 
+.df-button-8 {
+    background-color: var(--dfp-color-6);
+    border: 1px solid var(--dfp-color-6);
+    color: var(--dfp-color-1);
+}
+
+.df-button-8:hover {
+    background-color: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-6);
+    color: var(--dfp-color-6) !important;
+}
+.df-button-red:hover {
+    background-color: var(--dfp-color-12);
+    border: 1px solid var(--dfp-color-12);
+    color: var(--dfp-color-1) !important;
+}
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -1051,6 +1071,19 @@ button.df-button-1 {
     background-image: url("https://www.defectologiya.pro/assets/images/svg/price-circle.svg");
     width: 130px;
     height: 130px;
+}
+.price-module_vig_card {
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/price-circle-card.svg");
+    width: 65px;
+    height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: contain;
 }
 
 .price-module_decktop>div:nth-child(2)>div>div.text-decoration-line-through,
@@ -2591,11 +2624,21 @@ a.accordion-modul-educator-item_videoclass:hover {
 width: fit-content;
 }
   /*Блок превью*/
+
   .df-block-prev {
     border-radius: var(--dfp-radius-7);
     width: 35%;
     margin: 0 auto;
     padding: 15px 5%;
+}
+
+.df-price-card-block {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+.df-price-card-block_dop {
+    min-height: 135px;
 }
 /* Адаптив*/
 @media (max-width: 1400px) {
@@ -2906,6 +2949,12 @@ width: fit-content;
 }
 
 @media (max-width: 992px) {
+    .df-price-card-block_dop {
+        min-height: fit-content;
+    }
+    .df-price-card-block {
+        grid-template-columns: 1fr;
+    }
     .df-block-prev {
         width: 50%;
     }
