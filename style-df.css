@@ -202,6 +202,12 @@ a[name].anchor {
     line-height: clamp(20px, 2.5vw, 22px);
 }
 
+.df-p-l {
+    font-weight: 400;
+    font-size: clamp(16px, 2.2vw, 18px);
+    line-height: clamp(16px, 2.2vw, 18px);
+}
+
 .df-p-card {
     font-weight: 400;
     font-size: clamp(13px, 1.8vw, 15px);
@@ -441,6 +447,20 @@ button.df-button-1 {
     background-color: var(--dfp-color-0);
     border: 1px solid var(--dfp-color-0);
     color: var(--dfp-color-1) !important;
+}
+
+.df-button-1-2,
+a.df-button-1-2,
+button.df-button-1 {
+    background-color: var(--dfp-color-5);
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-1) !important;
+}
+
+.df-button-1-2:hover {
+    background-color: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-5);
+    color: var(--dfp-color-5) !important;
 }
 
 .df-button-2 {
@@ -1884,6 +1904,7 @@ a.accordion-modul-educator-item_videoclass:hover {
     top: calc(44%);
     cursor: pointer;
     transition: all 0.5s;
+    z-index: 1;
 }
 .slider-for>button::before {
     width: 30px;
@@ -1909,11 +1930,11 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 .recommended-1>.left,
-.trust-us>.left,
-.img-doc-slide>.left,
-.df-doc2_item>.left,
 .slider-for> {
     left: 5px;
+}
+.df-doc2_item>.left, .img-doc-slide>.left, .trust-us>.left {
+    left: 10px;
 }
 
 .trust-us>i:hover,
@@ -2364,6 +2385,9 @@ a.accordion-modul-educator-item_videoclass:hover {
     cursor: auto;
 }
 
+.df-tooltip.df-tooltip-300 .df-tooltiptext {
+    width: 300px;
+}
 .df-tooltip:hover .df-tooltiptext {
     visibility: visible;
     opacity: 1;
@@ -2382,7 +2406,9 @@ a.accordion-modul-educator-item_videoclass:hover {
     background-image: none;
     content: '';
 }
-
+.df-tooltip-300 .df-tooltiptext::after {
+    left: 265px;
+}
 .df-tooltip_question {
     font-size: 10px;
     line-height: normal;
@@ -2640,6 +2666,59 @@ width: fit-content;
 .df-price-card-block_dop {
     min-height: 135px;
 }
+/*Блок шаги безлимитная карта*/
+.df-shagi {
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr 20px 1fr 20px 1fr;
+    gap: 10px;
+}
+.df-shagi_item{
+    display: flex;
+}
+.df-shagi_item>div:nth-child(2) {
+    padding: 15px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.df-shagi_item_line {
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.df-shagi_item_nomer {
+    border-radius: var(--dfp-radius-7);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.df-shagi_item_nomer>span {
+    color: var(--dfp-color-1);
+}
+.df-shagi_item_nomer>span:nth-child(1) {
+    font-size: 40px;
+    line-height: 35px;
+}
+.df-shagi_item_nomer>span:nth-child(2) {
+    font-size: 12px;
+}
+.df-shagi_item_title {
+    line-height: clamp(16px, 2.5vw, 18px);
+}
+.df-shagi_item_title:hover{
+   color: var(--dfp-color-5);
+}
+.df-shagi_item_text {
+     display: none; 
+}
+
+.df-block_card-promo {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap:20px
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -2662,6 +2741,9 @@ width: fit-content;
 }
 
 @media (max-width: 1200px) {
+    .df-block_card-promo {
+        grid-template-columns: 1fr 1fr;
+    }
     .df-w-1200-100 {
         width: 100% !important;
     }
@@ -2949,6 +3031,20 @@ width: fit-content;
 }
 
 @media (max-width: 992px) {
+    .df-shagi {
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    .df-shagi_item_line {
+        height: 25px;
+        align-items: center;
+    }
+    .df-shagi_item_line >img {
+        width: 20px;
+        transform: rotate(90deg);
+    }
     .df-price-card-block_dop {
         min-height: fit-content;
     }
@@ -3067,6 +3163,9 @@ width: fit-content;
 }
 
 @media (max-width: 768px) {
+    .df-block_card-promo {
+        grid-template-columns: 1fr;
+    }
     .df-block-prev {
         width: 100%;
         border-radius: var(--dfp-radius-8);
