@@ -2601,7 +2601,12 @@ a.accordion-modul-educator-item_videoclass:hover {
     overflow: hidden;
     gap: 15px;
 }
-
+a.price-list {
+    margin-bottom: 1rem;
+}
+a.price-list:hover, a.price-list:hover>.price-list__title, a.price-list:hover::before {
+    color: var(--dfp-color-12);
+}
 .price-list::before {
     font-size: 14px;
     content: "✔";
