@@ -1906,18 +1906,42 @@ a.accordion-modul-educator-item_videoclass:hover {
     transition: all 0.5s;
     z-index: 1;
 }
-.slider-for>button::before {
+.slider-for{
+    display: flex;
+}
+.slider-for>button.slick-prev:before {
+    content: url("https://www.defectologiya.pro/assets/images/svg/Arrow2.svg");
+    background: transparent !important;
+    color: transparent !important;
+    transform: rotate(0deg) !important;
+    
+}
+.slider-for>button.slick-next:before {
+    content: url("https://www.defectologiya.pro/assets/images/svg/Arrow2.svg");
+    background: transparent !important;
+    color: transparent !important;
+    transform: rotate(0deg) !important;
+}
+.slider-for>button  {
     width: 30px;
     height: 30px;
-    background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow2.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
     display: inline-block;
     position: absolute;
     top: calc(44%);
     cursor: pointer;
     transition: all 0.5s;
-    color: transparent;
+    z-index: 1;
+}
+.slider-for>button.slick-prev{
+  left: 0;
+  top: 175px;
+}
+.slider-for>button.slick-next{
+    left: 98%;
+    top: 190px;
+  }
+.slider-for>button::after{
+    display: none !important;
 }
 .recommended-1>.right,
 .trust-us>.right,
@@ -1940,11 +1964,36 @@ a.accordion-modul-educator-item_videoclass:hover {
 .trust-us>i:hover,
 .img-doc-slide>i:hover,
 .df-doc2_item>i:hover,
-.recommended-1>i:hover,
-.slider-for>button:hover  {
+.recommended-1>i:hover
+  {
     background-image: url("https://www.defectologiya.pro/assets/images/svg/Arrow1.svg");
 }
+ 
+.slider-for>button:hover::before  {
+    content: url("https://www.defectologiya.pro/assets/images/svg/Arrow1.svg");
+}
 
+.slider-nav>div>div.slick-track {
+    display: flex;
+    gap: 5px;
+    position: relative;
+    left: -2px;
+    align-content: center;
+    align-items: center;
+}
+.slider-nav>div>div.slick-track>h3{
+max-height: 100px;
+height: 100px;
+}
+.slider-nav>div>div.slick-track>h3>img{
+    object-fit: contain;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.slider-nav>div>div.slick-track>h3:hover{
+    border: 1px solid var(--dfp-color-0);
+}
 /* Меню-табы на странице переподготовки*/
 
 .menuLimiter {
@@ -2331,7 +2380,9 @@ a.accordion-modul-educator-item_videoclass:hover {
 .zoom-pic6 {
     left: 15px !important;
 }
-
+.zoom-pic8 {
+    left: 0 !important;
+}
 .df-doc1_item {
     display: flex;
     height: 0;
@@ -2681,7 +2732,6 @@ width: fit-content;
     display: flex;
 }
 .df-shagi_item>div:nth-child(2) {
-    padding: 15px;
     transition: all 0.5s;
     cursor: pointer;
 }
@@ -2711,18 +2761,51 @@ width: fit-content;
 }
 .df-shagi_item_title {
     line-height: clamp(16px, 2.5vw, 18px);
+    padding: 15px;
 }
-.df-shagi_item_title:hover{
+.df-shagi_item:hover>div:nth-child(2)>.df-shagi_item_title{
    color: var(--dfp-color-5);
 }
 .df-shagi_item_text {
-     display: none; 
+    height: 0;
+    z-index: 1;
+    line-height: clamp(14px, 2vw, 14px);
+    font-size: clamp(14px, 2vw, 14px);
+    font-weight: 500;
+    transition: all 0.5s;
+    position: relative;
+    width: calc(100% + 50px);
+    left: -50px;
+    opacity: 0;
 }
 
+.df-shagi_item_text > p{
+    background: var(--dfp-color-2);
+    padding: 10px;
+    border-radius: var(--dfp-radius-1);
+    border: 1px solid var(--dfp-color-4);
+    box-shadow: var(--dfp-shadow);
+}
+.df-shagi_item:hover>div:nth-child(2)>.df-shagi_item_title ~ .df-shagi_item_text {
+    display: block; 
+    opacity: 1;
+}
 .df-block_card-promo {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap:20px
+}
+
+.df-img-bezlimit {
+    height: calc(420px - 100px);
+}
+.df-img-bezlimit>img {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 370px;
+    top: -50px;
+    left: 10%;
 }
 /* Адаптив*/
 @media (max-width: 1400px) {
@@ -2746,6 +2829,19 @@ width: fit-content;
 }
 
 @media (max-width: 1200px) {
+
+    .slider-for>button.slick-prev{
+        left: 0;
+        top: 135px;
+      }
+      .slider-for>button.slick-next{
+          left: 98%;
+          top: 145px;
+        }
+    .df-img-bezlimit>img {
+        height: 370px;
+        top: -30px;
+    }
     .df-block_card-promo {
         grid-template-columns: 1fr 1fr;
     }
@@ -3036,6 +3132,11 @@ width: fit-content;
 }
 
 @media (max-width: 992px) {
+    .df-img-bezlimit>img {
+        height: 330px;
+        top: -10px;
+        left: 25%;
+    }
     .df-shagi {
         display: grid;
         grid-template-rows: auto;
@@ -3478,6 +3579,17 @@ width: fit-content;
 }
 
 @media (max-width: 500px) {
+    .slider-for>button.slick-prev{
+        left: 0;
+        top: 50px;
+      }
+      .slider-for>button.slick-next{
+          left: 98%;
+          top: 65px;
+        }
+    .df-img-bezlimit>img {
+        left: 10%;
+    }
     .accordion-header_images-block {
         width: 220px;
     }
@@ -3699,6 +3811,14 @@ width: fit-content;
 }
 
 @media (max-width: 375px) {
+    .df-img-bezlimit {
+        height: calc(400px - 100px);
+    }
+    .df-img-bezlimit>img {
+        height: 300px;
+        top: 0px;
+        left: 10px;
+    }
     .accordion-header_images-block {
         width: 160px;
     }
