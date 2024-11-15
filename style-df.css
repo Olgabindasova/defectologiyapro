@@ -1448,6 +1448,7 @@ button.df-button-1 {
     display: flex;
     flex-direction: column;
     z-index: 1;
+    border-bottom: transparent !important;
 }
 
 .accordion-modul-educator-item>div>h2>.accordion-button::after {
@@ -1975,11 +1976,12 @@ a.accordion-modul-educator-item_videoclass:hover {
     -webkit-transform: rotate(180deg);
 }
 
-.recommended-1>.left,
 .slider-for> {
     left: 5px;
 }
-
+.recommended-1>i.left.arrow.slick-arrow {
+    left: 5px;
+}
 .df-doc2_item>.left,
 .img-doc-slide>.left,
 .trust-us>.left {
@@ -2123,9 +2125,12 @@ a.accordion-modul-educator-item_videoclass:hover {
 }
 
 .recommended_item_label>div:nth-child(1) {
-    padding-bottom: 10px;
+    padding: 10px;
     border-bottom: 1px solid var(--dfp-color-3);
     text-align: center;
+    min-height: 65px;
+    display: flex;
+    align-items: center;
 }
 
 .recommended_item_label>div:nth-child(2) {
@@ -2671,6 +2676,10 @@ a.accordion-modul-educator-item_videoclass:hover {
     min-height: 120px;
 }
 
+.df-autor-block_card-promo_title2 {
+    min-height: 90px;
+}
+
 .df-grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -2682,10 +2691,10 @@ a.accordion-modul-educator-item_videoclass:hover {
     display: flex;
     width: 100%;
     line-height: 1.5;
-    align-items: flex-end;
+    align-items: center;
     position: relative;
     overflow: hidden;
-    gap: 15px;
+    gap: 1rem;
 }
 
 a.price-list {
@@ -2706,8 +2715,8 @@ a.price-list:hover::before {
     padding: 2px;
     border: 1px solid;
     border-radius: 50%;
-    height: 25px;
-    width: 25px;
+    height: 22px;
+    width: 22px;
     justify-content: center;
     align-items: center;
 }
@@ -2718,6 +2727,8 @@ a.price-list:hover::before {
     position: relative;
     color: var(--dfp-color-5);
     font-weight: 500;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: clamp(16px, 2.5vw, 18px);
 }
 
 .price-list__title>span {
@@ -2740,6 +2751,8 @@ a.price-list:hover::before {
 .price-list__price {
     flex-shrink: 0;
     margin: 0 0 0 0.4em;
+    font-size: clamp(13px, 1.8vw, 15px);
+    line-height: clamp(16px, 2.5vw, 18px);
 }
 
 .price-list_dop {
@@ -2892,7 +2905,7 @@ input[type=range] {
     -webkit-appearance: none;
     -moz-appearance: none;
     background: var(--dfp-color-5);
-    height: 1px;
+    height: 1.5px;
 }
 
 input[type=range]::-webkit-slider-thumb {
