@@ -1979,9 +1979,11 @@ a.accordion-modul-educator-item_videoclass:hover {
 .slider-for> {
     left: 5px;
 }
+
 .recommended-1>i.left.arrow.slick-arrow {
     left: 5px;
 }
+
 .df-doc2_item>.left,
 .img-doc-slide>.left,
 .trust-us>.left {
@@ -3033,17 +3035,21 @@ input[type=range]:focus {
     font-size: 14px;
     font-weight: 700;
 }
-.countdown::before{
+
+.countdown::before {
     content: url('https://www.defectologiya.pro/assets/images/svg/fire.svg');
     position: relative;
     padding-right: 8px;
 }
+
 .countdown>div:not(:last-child)::after {
     content: ':';
     position: relative;
     padding: 0 4px;
-  }
-.time-block, .sale-block {
+}
+
+.time-block,
+.sale-block {
     border-radius: 10px;
     padding: 5px 12px;
     width: fit-content;
@@ -3053,10 +3059,11 @@ input[type=range]:focus {
 /* Акции*/
 
 .df-promo_block {
-display: grid;
-grid-template-columns: repeat(3, 1fr);
-gap:15px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
 }
+
 .df-promo_img {
     position: relative;
     width: 99%;
@@ -3065,16 +3072,24 @@ gap:15px;
     padding-top: 66%;
     background-repeat: no-repeat;
     border-radius: var(--dfp-radius-3);
+    transition: all 0.1s;
 }
+
+.df-promo_img:hover {
+    box-shadow: var(--dfp-shadow);
+}
+
 .df-promo_img>div {
     height: 0;
     position: relative;
     bottom: 6vh;
     left: 5%;
 }
-.df-promo_text>a:hover{
+
+.df-promo_text>a:hover {
     color: var(--dfp-color-0);
 }
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .upcoming-classes-block {
@@ -3100,9 +3115,11 @@ gap:15px;
     .df-promo_img {
         border-radius: var(--dfp-radius-1);
     }
+
     .df-promo_block {
         gap: 10px;
-        }
+    }
+
     .slider-for>button.slick-prev {
         left: 0;
         top: 135px;
@@ -3569,13 +3586,16 @@ gap:15px;
 @media (max-width: 768px) {
     .df-promo_block {
         grid-template-columns: 1fr;
-        }
+    }
+
     .df-block_card-promo {
         grid-template-columns: 1fr;
     }
+
     .df-promo_img {
         border-radius: var(--dfp-radius-3);
     }
+
     .df-block-prev {
         width: 100%;
         border-radius: var(--dfp-radius-8);
