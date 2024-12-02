@@ -3079,6 +3079,38 @@ input[type=range]:focus {
     box-shadow: var(--dfp-shadow);
 }
 
+.df-promo_banner {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    align-items: end;
+    justify-content: space-between;
+}
+
+.df-promo_img_detail_text {
+    padding-left: 20px;
+    position: relative;
+    z-index: 1;
+    height: 100%;
+}
+
+.df-promo_img_detail_text a {
+    width: 70%;
+    min-width: 180px;
+}
+
+.df-promo_img_detail_text h1 {
+    line-height: clamp(22px, 3vw, 28px);
+}
+
+.df-promo_img_detail {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.df-promo_img_detail>img {
+    width: 100%;
+}
+
 .df-promo_img>div {
     height: 0;
     position: relative;
@@ -3112,6 +3144,10 @@ input[type=range]:focus {
 }
 
 @media (max-width: 1200px) {
+    .df-promo_banner {
+        grid-template-columns: 45% 55%;
+    }
+
     .df-promo_img {
         border-radius: var(--dfp-radius-1);
     }
@@ -3426,6 +3462,10 @@ input[type=range]:focus {
 }
 
 @media (max-width: 992px) {
+    .df-promo_banner {
+        grid-template-columns: 35% 65%;
+    }
+
     .cc-hero {
         grid-template-columns: 1fr;
         gap: 20px;
@@ -3910,6 +3950,11 @@ input[type=range]:focus {
 }
 
 @media (max-width: 500px) {
+    .df-promo_banner {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+
     .cc-ref {
         width: 325px;
     }
