@@ -2178,9 +2178,9 @@ a.accordion-modul-educator-item_videoclass:hover {
     height: auto;
 }
 .promo-recommended>div.slick-list>div.slick-track {
-    gap: 30px;
+    gap: 15px;
     padding: 20px;
-    left: -30px;
+    left: -20px;
 }
 .promo-recommended .trust-us_item-img {
     border: 1px solid transparent;
