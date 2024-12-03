@@ -2177,7 +2177,14 @@ a.accordion-modul-educator-item_videoclass:hover {
 .recommended-2 .recommended_item {
     height: auto;
 }
-
+.promo-recommended>div.slick-list>div.slick-track {
+    gap: 30px;
+    padding: 20px;
+    left: -30px;
+}
+.promo-recommended .trust-us_item-img {
+    border: 1px solid transparent;
+}
 /* Блок Ближайшие занятия*/
 .upcoming-classes-block {
     display: grid;
@@ -3081,7 +3088,7 @@ input[type=range]:focus {
 
 .df-promo_banner {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 45% 50%;
     align-items: end;
     justify-content: space-between;
 }
@@ -3099,7 +3106,8 @@ input[type=range]:focus {
 }
 
 .df-promo_img_detail_text h1 {
-    line-height: clamp(22px, 3vw, 28px);
+    font-size: clamp(22px, 3vw, 32px);
+    line-height: clamp(22px, 3vw, 34px);
 }
 
 .df-promo_img_detail {
@@ -3121,9 +3129,43 @@ input[type=range]:focus {
 .df-promo_text>a:hover {
     color: var(--dfp-color-0);
 }
+.recommended_item_promo {
+    min-height: 470px;
+    display: grid !important;
+    grid-template-columns: 1fr;
+    grid-template-rows: min-content 1fr;
+}
 
+.recommended_item_promo > div:nth-child(2) {
+    display: grid;
+    align-content: space-between;
+    gap: 5px;
+    grid-template-rows: 1fr 1fr min-content min-content;
+}
+.recommended_item_promo> .trust-us_item {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.recommended_item_promo> .trust-us_item >span {
+    display: block;
+    background: var(--dfp-color-4);
+    color: var(--dfp-color-1);
+    border-radius: var(--dfp-radius-1);
+    font-size: 14px;
+    font-weight: 600;
+    padding: 3px 13px;
+    position: relative;
+    top: -15px;
+    left: -15px;
+    margin-bottom: -13px;
+    letter-spacing: 0.05rem;
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
+    .recommended_item_promo {
+        min-height: 440px;
+    }
     .upcoming-classes-block {
         grid-template-columns: 300px 3fr;
     }
@@ -3144,6 +3186,9 @@ input[type=range]:focus {
 }
 
 @media (max-width: 1200px) {
+    .recommended_item_promo {
+        min-height: 480px;
+    }
     .df-promo_banner {
         grid-template-columns: 45% 55%;
     }
@@ -3463,7 +3508,7 @@ input[type=range]:focus {
 
 @media (max-width: 992px) {
     .df-promo_banner {
-        grid-template-columns: 35% 65%;
+        grid-template-columns: 40% 60%;
     }
 
     .cc-hero {
@@ -3624,6 +3669,8 @@ input[type=range]:focus {
 }
 
 @media (max-width: 768px) {
+    
+   
     .df-promo_block {
         grid-template-columns: 1fr;
     }
@@ -4194,6 +4241,9 @@ input[type=range]:focus {
 }
 
 @media (max-width: 420px) {
+    .recommended_item_promo {
+        min-height: 450px;
+    }
     .cc-ref {
         width: 260px;
     }
