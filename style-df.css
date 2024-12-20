@@ -1178,6 +1178,18 @@ button.df-button-1 {
     background: var(--dfp-color-2);
 }
 
+.price-block-new_pay{
+    min-height: 105px;
+    display: flex;
+}
+.price-block-new_pay>a{
+    max-height: 125px;
+    display: flex;
+    align-items: center;
+    font-size: clamp(18px, 2vw, 20px);
+    letter-spacing: 1px;
+}
+
 /* Блок с картинками - документы*/
 
 .block-img_pic {
@@ -3161,6 +3173,24 @@ input[type=range]:focus {
     margin-bottom: -13px;
     letter-spacing: 0.05rem;
 }
+
+.new-toy {
+    height: 0;
+    display: inline-flex;
+}
+.new-toy::after {
+    display: block;
+    content: "";
+    position: relative;
+    background-image: url("https://www.defectologiya.pro/assets/images/svg/toy.svg");
+    width: 45px;
+    height: 49px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 23px;
+    left: -18px;
+}
+
 /* Адаптив*/
 @media (max-width: 1400px) {
     .recommended_item_promo {
@@ -3669,7 +3699,15 @@ input[type=range]:focus {
 }
 
 @media (max-width: 768px) {
-    
+
+    .price-block-new_pay {
+        min-height: 70px;
+    }
+    .new-toy::after {
+        width: 40px;
+        height: 40px;
+        left: -14px;
+    }
    
     .df-promo_block {
         grid-template-columns: 1fr;
