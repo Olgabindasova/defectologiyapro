@@ -1178,11 +1178,12 @@ button.df-button-1 {
     background: var(--dfp-color-2);
 }
 
-.price-block-new_pay{
+.price-block-new_pay {
     min-height: 105px;
     display: flex;
 }
-.price-block-new_pay>a{
+
+.price-block-new_pay>a {
     max-height: 125px;
     display: flex;
     align-items: center;
@@ -2189,14 +2190,22 @@ a.accordion-modul-educator-item_videoclass:hover {
 .recommended-2 .recommended_item {
     height: auto;
 }
+
+.promo-recommended>div.slick-list {
+    min-width: 100% !important;
+}
+
 .promo-recommended>div.slick-list>div.slick-track {
     gap: 15px;
     padding: 20px;
     left: -20px;
+    min-width: 100% !important;
 }
+
 .promo-recommended .trust-us_item-img {
     border: 1px solid transparent;
 }
+
 /* Блок Ближайшие занятия*/
 .upcoming-classes-block {
     display: grid;
@@ -2863,6 +2872,7 @@ a.price-list:hover::before {
     width: calc(100% + 50px);
     left: -50px;
     opacity: 0;
+    visibility: hidden;
 }
 
 .df-shagi_item_text>p {
@@ -2874,7 +2884,7 @@ a.price-list:hover::before {
 }
 
 .df-shagi_item:hover>div:nth-child(2)>.df-shagi_item_title~.df-shagi_item_text {
-    display: block;
+   visibility: visible;
     opacity: 1;
 }
 
@@ -3141,6 +3151,7 @@ input[type=range]:focus {
 .df-promo_text>a:hover {
     color: var(--dfp-color-0);
 }
+
 .recommended_item_promo {
     min-height: 470px;
     display: grid !important;
@@ -3148,18 +3159,20 @@ input[type=range]:focus {
     grid-template-rows: min-content 1fr;
 }
 
-.recommended_item_promo > div:nth-child(2) {
+.recommended_item_promo>div:nth-child(2) {
     display: grid;
     align-content: space-between;
     gap: 5px;
     grid-template-rows: 1fr 1fr min-content min-content;
 }
-.recommended_item_promo> .trust-us_item {
+
+.recommended_item_promo>.trust-us_item {
     display: flex;
     flex-direction: column;
     align-items: end;
 }
-.recommended_item_promo> .trust-us_item >span {
+
+.recommended_item_promo>.trust-us_item>span {
     display: block;
     background: var(--dfp-color-4);
     color: var(--dfp-color-1);
@@ -3178,6 +3191,7 @@ input[type=range]:focus {
     height: 0;
     display: inline-flex;
 }
+
 .new-toy::after {
     display: block;
     content: "";
@@ -3196,6 +3210,7 @@ input[type=range]:focus {
     .recommended_item_promo {
         min-height: 440px;
     }
+
     .upcoming-classes-block {
         grid-template-columns: 300px 3fr;
     }
@@ -3219,6 +3234,7 @@ input[type=range]:focus {
     .recommended_item_promo {
         min-height: 480px;
     }
+
     .df-promo_banner {
         grid-template-columns: 45% 55%;
     }
@@ -3703,12 +3719,13 @@ input[type=range]:focus {
     .price-block-new_pay {
         min-height: 70px;
     }
+
     .new-toy::after {
         width: 40px;
         height: 40px;
         left: -14px;
     }
-   
+
     .df-promo_block {
         grid-template-columns: 1fr;
     }
@@ -4282,6 +4299,7 @@ input[type=range]:focus {
     .recommended_item_promo {
         min-height: 450px;
     }
+
     .cc-ref {
         width: 260px;
     }
