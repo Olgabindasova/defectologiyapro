@@ -3205,6 +3205,29 @@ input[type=range]:focus {
     left: -18px;
 }
 
+/*Практика*/
+.df-practik-block{
+    margin-left: 40px;
+}
+.df-practik {
+    display: grid;
+    grid-template-columns: 370px 1fr;
+}
+.df-practik>div:nth-child(1) {
+    position: relative;
+    top: -50px;
+    left: -50px;
+}
+.df-practik>div:nth-child(2) {
+    position: relative;
+    left: -20px;
+}
+.df-practik>div:nth-child(2)>div.h-0 {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    top: -30px;
+}
 /* Адаптив*/
 @media (max-width: 1400px) {
     .recommended_item_promo {
