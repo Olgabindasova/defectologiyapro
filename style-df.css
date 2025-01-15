@@ -147,7 +147,15 @@ a {
 a:hover {
     color: inherit;
 }
-
+a.link:hover{
+    color: var(--dfp-color-4) !important;
+}
+a.link>svg{
+    fill: var(--dfp-color-0);
+}
+a.link:hover>svg{
+    fill: var(--dfp-color-4);
+}
 a[name].anchor {
     border-top: 35px solid transparent;
     margin-top: -35px;
@@ -671,8 +679,6 @@ button.df-button-1 {
     border: 1px solid var(--dfp-color-4);
     color: var(--dfp-color-1);
     border-radius: var(--dfp-radius-1) !important;
-    height: 40px;
-    padding: 0 15px !important;
     align-items: center;
 }
 
@@ -3267,16 +3273,37 @@ input[type=range]:focus {
 }
 .df-practik_price_doclink {
     display: grid;
-    grid-template-columns: 190px 1fr;
+    grid-template-columns: 200px 1fr;
     align-items: center;
     padding: 15px;
 }
 .df-practik_price_doclink>a {
     position: relative;
     left: -30px;
+    min-width: 215px;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px !important;
+}
+
+.df-sertifikat-block {
+    display: grid;
+    grid-template-columns: repeat(6,0.15fr);
+    gap: 10px;
+    justify-items: center;
+    justify-content: center;
+}
+.df-sertifikat-block>div>a{
+    margin: 0;
+    padding: 5px;
+    width: 205px !important;
+    height: 275px !important;
 }
 /* Адаптив*/
 @media (max-width: 1400px) {
+    .df-sertifikat-block {
+        grid-template-columns: repeat(4,0.15fr);
+    }
     .recommended_item_promo {
         min-height: 440px;
     }
@@ -3623,6 +3650,9 @@ input[type=range]:focus {
 }
 
 @media (max-width: 992px) {
+    .df-sertifikat-block {
+        grid-template-columns: repeat(3,0.15fr);
+    }
     .df-promo_banner {
         grid-template-columns: 40% 60%;
     }
@@ -3785,7 +3815,9 @@ input[type=range]:focus {
 }
 
 @media (max-width: 768px) {
-
+    .df-sertifikat-block {
+        grid-template-columns: repeat(2,0.15fr);
+    }
     .price-block-new_pay {
         min-height: 70px;
     }
