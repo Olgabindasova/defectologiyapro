@@ -171,14 +171,14 @@ a[name].anchor {
 
 .df-text-xl {
     letter-spacing: -2px;
-    font-size: clamp(50px, 6vw, 70px);
-    line-height: clamp(45px, 6vw, 65px);
+    font-size: clamp(50px, 5.5vw, 70px);
+    line-height: clamp(45px, 5.5vw, 65px);
 }
 
 .df-text-l {
     letter-spacing: 0px;
-    font-size: clamp(32px, 5vw, 48px);
-    line-height: clamp(28px, 5vw, 44px);
+    font-size: clamp(32px, 4.5vw, 48px);
+    line-height: clamp(28px, 4.5vw, 44px);
 }
 
 .df-h1 {
@@ -3349,31 +3349,32 @@ input[type=range]:focus {
 
 .list1b-inp>li.form-check::before {
     position: absolute;
-    top: 3px;
+    top: 0px;
     left: 45px;
     font-size: 15px;
     border-radius: 5px;
-    width: 20px;
-    height: 20px;
+    padding: 5px;
+    width: 23px;
+    height: 23px;
     display: flex;
     font-weight: 600;
     color: var(--dfp-color-1);
     background: var(--dfp-color-4);
     counter-increment: li;
     content: counter(li);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
     align-items: center;
     justify-content: center;
 }
 
 .list1b-inp>li.form-check>input {
     position: absolute;
-    top: -1px;
+    top: -4px;
     left: 69px;
     border-radius: 5px;
-    width: 20px;
-    height: 20px;
+    width: 23px;
+    height: 23px;
     background: transparent;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
@@ -3383,6 +3384,11 @@ input[type=range]:focus {
 .list1b-inp>li.form-check>input.form-check-input:focus {
     border-color: var(--dfp-color-5);
     box-shadow: 0 0 0 .25rem var(--dfp-color-5);
+    background-image: none;
+}
+
+.list1b-inp>li.form-check>input.form-check-input:checked[type=radio] {
+    background-image: none !important;
 }
 
 .list1b-inp>li.form-check:after {
@@ -3406,18 +3412,47 @@ input[type=range]:focus {
 
 /* Адаптив*/
 @media (max-width: 1400px) {
+    .df-practik {
+        margin-bottom: 0;
+    }
+
     .df-practik_price {
         grid-template-columns: 1fr;
         padding: 0 !important;
         position: relative;
         top: -30px;
     }
+
+    .df-practik_price>div:nth-child(1) {
+        gap: 10px !important;
+        padding-bottom: 20px;
+    }
+
+    .df-practik_price>div:nth-child(2) {
+        padding: 0 !important;
+        gap: 10px !important;
+    }
+
+    .df-practik_price>div:nth-child(1)>div:nth-child(3) {
+        width: fit-content;
+        margin-left: 50px;
+    }
+
     .df-practik>div:nth-child(1) {
         height: fit-content;
     }
-    .df-practik_price {
-        grid-template-columns: 1fr;
+
+    .df-practik_price_doclink {
+        padding: 10px;
     }
+
+    .df-practik_price_doclink>a {
+        left: -20px;
+        padding: 6px !important;
+        font-size: 13px;
+        min-width: 200px;
+    }
+
     .df-sertifikat-block {
         grid-template-columns: repeat(3, 0.15fr);
         gap: 30px;
@@ -3769,6 +3804,27 @@ input[type=range]:focus {
 }
 
 @media (max-width: 992px) {
+    .df-practik_price_doclink {
+        grid-template-columns: 1fr;
+    }
+
+    .df-practik_price_doclink>a {
+        top: -15px;
+        margin-bottom: -10px;
+    }
+
+    .df-practik {
+        grid-template-columns: 250px 1fr;
+    }
+
+    .df-practik>div:nth-child(1)>div {
+        gap: 15px;
+    }
+
+    .df-practik>div:nth-child(1) {
+        top: 25px;
+    }
+
     .df-sertifikat-block {
         grid-template-columns: repeat(3, 0.15fr);
     }
@@ -3935,6 +3991,54 @@ input[type=range]:focus {
 }
 
 @media (max-width: 768px) {
+    .df-practik_price>div:nth-child(1)>div:nth-child(3) {
+        width: 100%;
+        margin-left: 0;
+        max-width: 270px;
+        margin-bottom: 10px;
+    }
+
+    .df-practik>div:nth-child(2)>div.h-0 {
+        top: 40px;
+    }
+
+    .df-practik_price {
+        top: -10px;
+    }
+
+    .df-practik>div:nth-child(2) {
+        left: 0;
+        padding: 20px 30px;
+    }
+
+    .df-practik-block {
+        margin-left: 0;
+    }
+
+    .df-practik {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .df-practik>div:nth-child(1) {
+        top: 0;
+        left: 0;
+    }
+
+    .df-practik_price>div:nth-child(2) {
+        gap: 25px !important;
+    }
+
+    .df-practik_price_doclink>a {
+        top: -25px;
+        left: 0;
+        margin-bottom: -15px;
+    }
+
+    .df-practik_price_doclink {
+        padding: 15px 20px;
+    }
+
     .df-sertifikat-block {
         grid-template-columns: repeat(2, 0.15fr);
     }
@@ -4506,6 +4610,11 @@ input[type=range]:focus {
 }
 
 @media (max-width: 480px) {
+
+    .df-sertifikat-block {
+        grid-template-columns: repeat(1, 0.15fr);
+    }
+
     .df-autor-block {
         display: flex;
         gap: 10px;
@@ -4519,6 +4628,7 @@ input[type=range]:focus {
 }
 
 @media (max-width: 420px) {
+
     .recommended_item_promo {
         min-height: 450px;
     }
