@@ -4018,6 +4018,7 @@ input[type=range]:focus {
     .df-practik {
         grid-template-columns: 1fr;
         justify-items: center;
+        justify-content: center;
     }
 
     .df-practik>div:nth-child(1) {
@@ -4379,6 +4380,16 @@ input[type=range]:focus {
 }
 
 @media (max-width: 500px) {
+
+    .list1b-inp>li.form-check {
+        padding: 0px 15px 0px 35px;
+    }
+    .list1b-inp>li.form-check::before {
+        left: 5px;
+    }
+    .list1b-inp>li.form-check>input {
+        left: 29px;
+    }
     .df-promo_banner {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -4610,6 +4621,10 @@ input[type=range]:focus {
 }
 
 @media (max-width: 480px) {
+    .df-practik>div:nth-child(2)>div.h-0 {
+        top: 0;
+
+    }
 
     .df-sertifikat-block {
         grid-template-columns: repeat(1, 0.15fr);
@@ -4671,6 +4686,12 @@ input[type=range]:focus {
 }
 
 @media (max-width: 375px) {
+    .df-practik>div:nth-child(1) {
+        width: 250px;
+    }
+    .df-practik_time {
+       flex-direction: column !important;
+    }
     .df-img-bezlimit {
         height: calc(400px - 100px);
     }
