@@ -2860,7 +2860,7 @@ a.price-list:hover::before {
 }
 
 .df-price-card-block_dop {
-    min-height: 135px;
+    min-height: 150px;
 }
 
 /*Блок шаги безлимитная карта*/
@@ -3512,7 +3512,9 @@ input[type=range]:focus {
         height: 370px;
         top: -30px;
     }
-
+    .df-price-card-block_dop {
+        min-height: 180px;
+    }
     .df-block_card-promo {
         grid-template-columns: 1fr 1fr;
     }
