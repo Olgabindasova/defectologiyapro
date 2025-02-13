@@ -1216,8 +1216,8 @@ button.df-button-1 {
 
 .price-module_vig_card {
     background-image: url("https://www.defectologiya.pro/assets/images/svg/price-circle-card.svg");
-    width: 65px;
-    height: 65px;
+    width: 70px;
+    height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1226,8 +1226,11 @@ button.df-button-1 {
     position: relative;
     background-repeat: no-repeat;
     background-size: contain;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 13px;
+    text-align: center;
 }
-
 .price-module_decktop>div:nth-child(2)>div>div.text-decoration-line-through,
 .price-module_decktop>div:nth-child(2)>div>div.price-module_vig2,
 .price-module_decktop>div:nth-child(2)>div>div:nth-child(4) {
