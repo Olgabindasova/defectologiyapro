@@ -690,12 +690,73 @@ button.df-button-1 {
     align-items: center;
 }
 
+.df-button-9.df-button-9-1 {
+    background-color: var(--dfp-color-7);
+    border: 1px solid var(--dfp-color-7);
+}
+
+.df-button-9.df-button-9-2,
+.df-button-9.df-button-9-3 {
+    background-color: var(--dfp-color-6);
+    border: 1px solid var(--dfp-color-6);
+}
+
+.df-button-9.df-button-9-3 {
+    background-color: var(--dfp-color-6);
+    border: 1px solid var(--dfp-color-6);
+}
+
+.df-button-9.df-button-9-4 {
+    background-color: var(--dfp-color-5);
+    border: 1px solid var(--dfp-color-5);
+}
+
 .df-button-9:hover {
     background-color: var(--dfp-color-0);
     border: 1px solid var(--dfp-color-0);
     color: var(--dfp-color-1);
 }
 
+.df-button_inert {
+    pointer-events: none;
+    cursor: default;
+}
+
+.df-btn-group.btn-group>.btn-group:not(:last-child)>.btn,
+.df-btn-group.btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
+    border-radius: 0 0 0 var(--dfp-radius-2);
+}
+
+.df-btn-group.btn-group>.btn-group:not(:first-child)>.btn,
+.df-btn-group.btn-group>.btn:nth-child(n+3),
+.df-btn-group.btn-group>:not(.btn-check)+.btn {
+    border-radius: 0 var(--dfp-radius-2) var(--dfp-radius-2) 0;
+}
+
+.df-btn-group>.btn {
+    padding: 10px 25px;
+    background: var(--dfp-color-1);
+}
+
+.df-btn-group>.btn.btn-outline-primary:hover {
+    background: var(--dfp-color-5) !important;
+}
+
+.df-btn-group>.btn.btn-outline-primary.active:focus {
+    box-shadow: none !important;
+    background: var(--dfp-color-6);
+    border-color: var(--dfp-color-6) !important;
+    color: var(--dfp-color-1);
+}
+
+.df-btn-group>.btn.btn-outline-primary.active {
+    background: var(--dfp-color-5);
+    color: var(--dfp-color-1);
+}
+.df-btn-group>.btn.btn-outline-primary:nth-child(2).active {
+    background: var(--dfp-color-12) !important;
+    border-color: var(--dfp-color-12) !important;
+}
 /* Списки*/
 
 .df-list {
@@ -3269,12 +3330,14 @@ input[type=range]:focus {
     display: grid;
     grid-template-columns: 370px 1fr;
     margin-bottom: -50px;
+    padding-bottom: 25px;
 }
 
 .df-practik>div:nth-child(1) {
     position: relative;
     top: -50px;
     left: -50px;
+    height: fit-content;
 }
 
 .df-practik>div:nth-child(2) {
@@ -3332,7 +3395,7 @@ input[type=range]:focus {
     counter-reset: li;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
 }
 
 .list1b-inp>li.form-check {
@@ -3410,34 +3473,80 @@ input[type=range]:focus {
     width: 100%;
 }
 
+.df-progress-bar>.progress {
+    height: 23px;
+    border-radius: 6px;
+    background: var(--dfp-color-3);
+}
 
-.price-module_pay_button, .price-module_pay_button>form, .price-module_pay_button>form>button,
-.discounts-training_pay_button, .discounts-training_pay_button>form, .discounts-training_pay_button>form>button {
+.df-progress-bar>.progress>.progress-bar {
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    align-items: start;
+    border-radius: 6px;
+}
+
+.price-module_pay_button,
+.price-module_pay_button>form,
+.price-module_pay_button>form>button,
+.discounts-training_pay_button,
+.discounts-training_pay_button>form,
+.discounts-training_pay_button>form>button {
     width: 100% !important;
 }
-.price-module_pay_button>form>button{
+
+.price-module_pay_button>form>button {
     color: var(--dfp-color-1) !important;
     border: var(--dfp-color-0) !important;
     background: var(--dfp-color-0) !important;
     text-decoration: none;
     text-transform: none !important;
 }
-.price-module_pay_button>form>button:hover{
+
+.price-module_pay_button>form>button:hover {
     border: var(--dfp-color-4) !important;
-    background: var(--dfp-color-4) !important; 
+    background: var(--dfp-color-4) !important;
 }
-.discounts-training_pay_button>form>button{
+
+.discounts-training_pay_button>form>button {
     color: var(--dfp-color-1) !important;
     border: var(--dfp-color-5) !important;
     background: var(--dfp-color-5) !important;
     text-decoration: none;
     text-transform: none !important;
 }
-.discounts-training_pay_button>form>button:hover{
+
+.discounts-training_pay_button>form>button:hover {
     border: var(--dfp-color-0) !important;
-    background: var(--dfp-color-0) !important; 
+    background: var(--dfp-color-0) !important;
 }
+
+.df-video-fill {
+    fill: var(--dfp-color-7);
+}
+
+@keyframes blink {
+    0% {
+        transform: scale(1.0);
+    }
+
+    50% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1.0);
+    }
+}
+
+.df-practik-live-broadcast>svg {
+    animation: blink 1500ms infinite;
+}
+
+
 /* Адаптив*/
+
 @media (max-width: 1400px) {
     .df-practik {
         margin-bottom: 0;
@@ -3539,9 +3648,11 @@ input[type=range]:focus {
         height: 370px;
         top: -30px;
     }
+
     .df-price-card-block_dop {
         min-height: 180px;
     }
+
     .df-block_card-promo {
         grid-template-columns: 1fr 1fr;
     }
@@ -4020,6 +4131,9 @@ input[type=range]:focus {
 }
 
 @media (max-width: 768px) {
+    .df-promo_banner {
+        grid-template-columns: 1fr;
+    }
     .df-practik_price>div:nth-child(1)>div:nth-child(3) {
         width: 100%;
         margin-left: 0;
@@ -4413,12 +4527,15 @@ input[type=range]:focus {
     .list1b-inp>li.form-check {
         padding: 0px 15px 0px 35px;
     }
+
     .list1b-inp>li.form-check::before {
         left: 5px;
     }
+
     .list1b-inp>li.form-check>input {
         left: 29px;
     }
+
     .df-promo_banner {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -4718,9 +4835,11 @@ input[type=range]:focus {
     .df-practik>div:nth-child(1) {
         width: 250px;
     }
+
     .df-practik_time {
-       flex-direction: column !important;
+        flex-direction: column !important;
     }
+
     .df-img-bezlimit {
         height: calc(400px - 100px);
     }
