@@ -353,6 +353,9 @@ a[name].anchor {
 .df-bc-12 {
     border: 1px solid var(--dfp-color-12);
 }
+.df-bc-tr {
+    border: 1px solid transparent !important;
+}
 
 .df-hr {
     width: 100%;
@@ -581,7 +584,16 @@ button.df-button-1 {
     border: 1px solid var(--dfp-color-12);
     color: var(--dfp-color-1) !important;
 }
-
+.df-button-green {
+    background-color: var(--dfp-color-7);
+    border: 1px solid var(--dfp-color-7);
+    color: var(--dfp-color-1);
+}
+.df-button-green:hover {
+    background-color: var(--dfp-color-0);
+    border: 1px solid var(--dfp-color-0);
+    color: var(--dfp-color-1) !important;
+}
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -756,6 +768,27 @@ button.df-button-1 {
 .df-btn-group>.btn.btn-outline-primary:nth-child(2).active {
     background: var(--dfp-color-12) !important;
     border-color: var(--dfp-color-12) !important;
+}
+
+.df-popap-close {
+    box-sizing: content-box !important;
+    width: 20px;
+    height: 20px;
+    color: #4f6382;
+    background: url("https://www.defectologiya.pro/assets/images/svg/menu-clouse-mobile.svg") center/20px auto no-repeat !important;
+    background-color: #fff !important;
+    border-radius: 8px;
+    opacity: 1;
+    margin: 0;
+    padding: 5px;
+    transition: .5s;
+    order: 2;
+    border: 1px solid var(--dfp-color-0);
+}
+.df-popap-close:hover {
+    color: #fff;
+    background: url("https://www.defectologiya.pro/assets/images/svg/menu-clouse-mobile-hover.svg") center/20px auto no-repeat !important;
+    background-color: #889ec1 !important;
 }
 /* Списки*/
 
@@ -2276,7 +2309,11 @@ a.accordion-modul-educator-item_videoclass:hover {
     width: 100% !important;
     margin-bottom: -10px;
 }
+.recommended_item_img_rutub {
+    height: 45vh;
+    max-height: 500px;
 
+}
 
 .recommended_item_icon {
     top: -50% !important;
