@@ -3532,6 +3532,44 @@ input[type=range]:focus {
     color: var(--dfp-color-5);
 }
 
+.df-test_list1b-inp{
+    counter-reset: none;
+}
+
+.df-test_list1b-inp>li.form-check::before {
+    counter-increment: none;
+    content: none;
+    position: absolute;
+    top: 0px;
+    left: 45px;
+    font-size: 15px;
+    border-radius: 50%;
+    padding: 5px;
+    width: 23px;
+    height: 23px;
+    display: flex;
+    font-weight: 600;
+    color: var(--dfp-color-1);
+    background: var(--dfp-color-4);
+    -webkit-transition-duration: .3s;
+    transition-duration: .3s;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.list1b-inp.df-test_list1b-inp>li.form-check>input {
+    position: absolute;
+    top: -4px;
+    left: 69px;
+    border-radius: 50%;
+    width: 23px;
+    height: 23px;
+    background: var(--dfp-color-3);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    border: 1px solid var(--dfp-color-4);
+    cursor: pointer;
+}
 .df-progress-bar>.progress {
     height: 23px;
     border-radius: 6px;
@@ -3881,7 +3919,20 @@ input[type=range]:focus {
 .df-test-page>div.container, .df-test-page>div.container>div, .df-test-page>div.container>div>div {
     height: 100%;
 }
-
+.df-test-page_number {
+    background: var(--dfp-color-12);
+    color: var(--dfp-color-1);
+    border-radius: 50%;
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.df-test-page_question {
+    height: fit-content !important;
+}
 /* Адаптив*/
 
 @media (max-width: 1400px) {
