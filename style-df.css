@@ -3913,8 +3913,9 @@ input[type=range]:focus {
 
 /* Страница теста */
 
-.df-test-page{
-    height: 100vh;
+.df-test-page {
+    height: fit-content;
+    min-height: 100vh;
 }
 .df-test-page>div.container, .df-test-page>div.container>div, .df-test-page>div.container>div>div {
     height: 100%;
@@ -4925,6 +4926,9 @@ input[type=range]:focus {
         left: 5px;
         float: none;
         margin-left: 0;
+    }
+    .list1b-inp.df-test_list1b-inp>li.form-check>input {
+        left: 0;
     }
 
     .df-promo_banner {
