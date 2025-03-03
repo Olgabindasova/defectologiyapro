@@ -598,6 +598,18 @@ button.df-button-1 {
     color: var(--dfp-color-1) !important;
 }
 
+.df-button-10 {
+    background-color: var(--dfp-color-7);
+    border: 1px solid var(--dfp-color-7);
+    color: var(--dfp-color-1);
+}
+
+.df-button-10:hover {
+    background-color: var(--dfp-color-1);
+    border: 1px solid var(--dfp-color-7);
+    color: var(--dfp-color-7) !important;
+}
+
 .df-button-4 {
     padding: 10px 0px 5px 5px;
     cursor: pointer;
@@ -3532,7 +3544,7 @@ input[type=range]:focus {
     color: var(--dfp-color-5);
 }
 
-.df-test_list1b-inp{
+.df-test_list1b-inp {
     counter-reset: none;
 }
 
@@ -3557,6 +3569,7 @@ input[type=range]:focus {
     justify-content: center;
     cursor: pointer;
 }
+
 .list1b-inp.df-test_list1b-inp>li.form-check>input {
     position: absolute;
     top: -4px;
@@ -3570,6 +3583,15 @@ input[type=range]:focus {
     border: 1px solid var(--dfp-color-4);
     cursor: pointer;
 }
+
+.list1b-inp.df-test_list1b-inp>li.form-check>input.form-check-input:focus,
+.list1b-inp.df-test_list1b-inp>li.form-check:hover>input.form-check-input {
+    border-color: var(--dfp-color-5);
+    box-shadow: 0 0 0 .20rem var(--dfp-color-5);
+    background-image: none;
+    background-color: var(--dfp-color-4);
+}
+
 .df-progress-bar>.progress {
     height: 23px;
     border-radius: 6px;
@@ -3660,8 +3682,8 @@ input[type=range]:focus {
     font-weight: 500;
     box-sizing: content-box;
     transition: all 0.3s;
-    height: 25px;
-    max-height: 40px;
+    height: 35px;
+    min-height: 35px;
 }
 
 .df-kpk>.tab-content>.tab-pane .accordion-modul_header {
@@ -3786,7 +3808,9 @@ input[type=range]:focus {
     border-bottom: 1px solid var(--dfp-color-4);
     position: relative;
 }
-
+/*.df-kpk .accordion-modul>div>h2>button::after {
+    left: 0px;
+}*/
 .df-kpk_list1b>li:last-child {
     border-top: 10px solid var(--dfp-color-7);
 }
@@ -3812,7 +3836,7 @@ input[type=range]:focus {
     border: 1.5px solid var(--dfp-color-4);
     border-bottom: 0px;
     border-radius: 50% 50% 0 0;
-    padding: 20px 20px 0 20px;
+    padding: 15px 15px 0 15px;
     position: relative;
 }
 
@@ -3821,6 +3845,10 @@ input[type=range]:focus {
     border: 1.5px solid var(--dfp-color-4);
     border-top: 0px;
     border-radius: 0 0 15px 15px;
+    margin-top: -10px;
+    position: relative;
+    top: -10px;
+    padding: 5px;
 }
 
 .df-kpk_payment_label {
@@ -3857,14 +3885,14 @@ input[type=range]:focus {
 .df-kpk_payment_time>div>div:nth-child(1) {
     font-weight: 500;
     letter-spacing: 0px;
-    font-size: clamp(24px, 4vw, 36px);
+    font-size: clamp(24px, 4vw, 34px);
     line-height: clamp(28px, 4.5vw, 38px);
 }
 
 .df-kpk_payment_time>div>div:nth-child(2) {
     font-weight: 800;
     letter-spacing: -2px;
-    font-size: clamp(40px, 5vw, 57px);
+    font-size: clamp(36px, 4.3vw, 52px);
     line-height: clamp(35px, 5vw, 50px);
     display: flex;
     align-items: flex-end;
@@ -3882,34 +3910,97 @@ input[type=range]:focus {
 .df-kpk_payment>div:nth-child(1) .df-kpk_payment_time {
     border-color: var(--dfp-color-4);
 }
+
 .df-kpk_payment>div:nth-child(1) .df-kpk_payment_time>div {
     background: var(--dfp-color-4);
 }
+
 .df-kpk_payment>div:nth-child(2) .df-kpk_payment_time {
     border-color: var(--dfp-color-0);
 }
+
 .df-kpk_payment>div:nth-child(2) .df-kpk_payment_time>div {
     background: var(--dfp-color-0);
 }
+
 .df-kpk_payment>div:nth-child(3) .df-kpk_payment_time {
     border-color: var(--dfp-color-6);
 }
+
 .df-kpk_payment>div:nth-child(3) .df-kpk_payment_time>div {
     background: var(--dfp-color-6);
 }
+
 .df-kpk_payment>div:nth-child(4) .df-kpk_payment_time {
     border-color: var(--dfp-color-5);
 }
+
 .df-kpk_payment>div:nth-child(4) .df-kpk_payment_time>div {
     background: var(--dfp-color-5);
 }
+
 .df-kpk_payment>div:nth-child(5) .df-kpk_payment_time {
     border-color: var(--dfp-color-12);
 }
+
 .df-kpk_payment>div:nth-child(5) .df-kpk_payment_time>div {
     background: var(--dfp-color-12);
 }
 
+.df-kpk_payment .price-list {
+    gap: 3px !important;
+    margin-bottom: 10px !important;
+}
+
+.df-kpk_payment .price-list::before {
+    font-size: 10px;
+    height: 16px;
+    width: 16px;
+}
+
+.df-kpk_payment .price-list__title {
+    font-size: 13px;
+    line-height: 15px;
+}
+
+.df-kpk_payment .price-list__price {
+    font-size: 12px;
+    line-height: 15px;
+    margin: 0;
+    letter-spacing: -0.2px;
+    font-weight: 600;
+}
+
+.df-kpk_payment .price-list__ellipsis::after {
+    position: absolute;
+    content: '......................................................................................................';
+    font-size: 10px;
+    letter-spacing: 1px;
+    padding-top: 1px;
+    padding-left: 5px;
+}
+
+.df-kpk_payment .df-button-10 {
+    text-align: center;
+    white-space: normal;
+}
+
+.df-kpk_payment {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
+}
+.df-kpk_payment_price {
+    display: grid;
+    gap: 10px;
+    padding: 15px 0;
+}
+.df-kpk_payment_price>div:nth-child(2) {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 0.7fr 1fr;
+    align-items: end;
+}
 
 /* Страница теста */
 
@@ -3917,9 +4008,13 @@ input[type=range]:focus {
     height: fit-content;
     min-height: 100vh;
 }
-.df-test-page>div.container, .df-test-page>div.container>div, .df-test-page>div.container>div>div {
+
+.df-test-page>div.container,
+.df-test-page>div.container>div,
+.df-test-page>div.container>div>div {
     height: 100%;
 }
+
 .df-test-page_number {
     background: var(--dfp-color-12);
     color: var(--dfp-color-1);
@@ -3931,9 +4026,11 @@ input[type=range]:focus {
     justify-content: center;
     align-items: center;
 }
+
 .df-test-page_question {
     height: fit-content !important;
 }
+
 /* Адаптив*/
 
 @media (max-width: 1400px) {
@@ -4007,6 +4104,15 @@ input[type=range]:focus {
 }
 
 @media (max-width: 1200px) {
+    .df-kpk_payment_price>div:nth-child(2) {
+        gap: 5px;
+        grid-template-columns: 1fr;
+        align-items: end;
+        justify-items: center;
+    }
+    .df-kpk_payment_price>div:nth-child(1) {
+        text-align: center;
+    }
     .recommended_item_promo {
         min-height: 480px;
     }
@@ -4333,6 +4439,17 @@ input[type=range]:focus {
 }
 
 @media (max-width: 992px) {
+    .df-kpk_payment {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .df-kpk_payment>div {
+        width: 40%;
+    }
+
     .df-practik_price_doclink {
         grid-template-columns: 1fr;
     }
@@ -4885,6 +5002,20 @@ input[type=range]:focus {
 }
 
 @media (max-width: 576px) {
+    .df-kpk_payment>div {
+        width: 60%;
+    }
+    .df-kpk_payment_time>div>div:nth-child(2) {
+        font-size: 15vw;
+        line-height: 15vw;
+    }
+    .df-kpk_payment_time>div>div:nth-child(2)>span {
+        font-size: 5vw;
+        line-height: 5vw;
+        display: block;
+        position: relative;
+        top: -0.8vh;
+    }
     .cc-hero {
         padding: 40px 20px;
     }
@@ -4927,6 +5058,7 @@ input[type=range]:focus {
         float: none;
         margin-left: 0;
     }
+
     .list1b-inp.df-test_list1b-inp>li.form-check>input {
         left: 0;
     }
@@ -5184,6 +5316,10 @@ input[type=range]:focus {
 }
 
 @media (max-width: 420px) {
+
+    .df-kpk_payment>div {
+        width: 75%;
+    }
 
     .recommended_item_promo {
         min-height: 450px;
